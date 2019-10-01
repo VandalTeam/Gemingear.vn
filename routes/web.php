@@ -14,9 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('admin', function () {
-    return view('admin.template.admin_template');
-});
 Route::get('customer', function () {
     return view('customer.home');
+});
+Route::get('insert', function () {
+    DB::table('users')->insert([
+        ['name' => 'nhiben','email' => str_random(5).'.com','password' => bcrypt('benbacker')],
+    ]);
+});
+Route::get('login', 'Signin@Logout');
+Route::post('signin', 'Signin@Login');
+Route::group(['middleware' => ['AuthMiddleware']], function () {
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('category', 'Category@index');
+        Route::get('category/delete/{id}', 'Category@delete');
+        Route::post('category/insert', 'Category@insert');
+        Route::post('category/edit', 'Category@edit');
+        Route::post('category/update/{id}', 'Category@update');
+        //
+        Route::get('subcategory/{url}', 'Subcategory@index');
+        Route::post('subcategory/insert', 'Subcategory@insert');
+        Route::post('subcategory/edit', 'Subcategory@edit');
+        Route::get('subcategory/delete/{id}', 'Subcategory@delete');
+        Route::post('subcategory/update/{id}', 'Subcategory@update');
+    });
 });

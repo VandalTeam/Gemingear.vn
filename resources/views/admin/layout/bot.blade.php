@@ -38,3 +38,21 @@
         @endif
     });
  </script>     
+<script>
+    $(document).ready(function () {
+        $('.delete').click(function (e) { 
+            e.preventDefault();
+            var href = $(this).attr('href');
+            // alert(href);
+            Swal.fire({
+            title: 'Bạn có chắc muốn xóa?',
+            text: "Dữ liệu sẽ bị mất hoàn toàn!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '<a href="'+href+'" style="color:white;">Delete</a>'
+            })
+        });
+    });
+</script> 

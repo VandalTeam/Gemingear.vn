@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use  Illuminate\View\View;
 
 class Handler extends ExceptionHandler
 {
@@ -46,6 +47,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        // if ($this->isHttpException($exception)) {
+        //     if ($exception->getStatusCode() == 404) {
+        //         return response()->view('admin.template.signin_template', [], 404);
+        //     }
+        // }
         return parent::render($request, $exception);
     }
 }

@@ -1,6 +1,6 @@
 @extends('admin.template.admin_template')
 @section('head')
-    <link rel="stylesheet" href="{{asset('assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('content')
@@ -80,7 +80,7 @@
                                                 <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}>"
                                                         data-toggle="modal" data-target="#exampleModal"><i
                                                             class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                                <a href="/admin/category/delete/{{$item->id}}?>"><button
+                                                <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
                                                         class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                         Xóa</button></a>
                                             </td>
@@ -97,15 +97,15 @@
     </div>
 @endsection
 @section('bot')
-    <script src="{{asset('assets/bundles/datatablescripts.bundle.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
+    <script src="{{asset('assets/admin/bundles/datatablescripts.bundle.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
 
-    <script src="{{asset('assets/js/pages/tables/jquery-datatable.js')}}"></script>
+    <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
     <script>
         $.ajaxSetup({
             headers: {
