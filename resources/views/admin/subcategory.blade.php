@@ -140,6 +140,13 @@
                     }
                 });
             });
+            $('.add-form-subcategory').click(function(e) {
+                e.preventDefault();
+                for (var i = 1; i < 3; i++) {
+                    $(".modal-body :nth-child(" + i + ")input").val('');
+                    $("#exampleModal form").attr('action', '/admin/subcategory/insert');
+                }
+            });
         });
     </script>
 @endsection
