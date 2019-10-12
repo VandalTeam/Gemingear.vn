@@ -9,6 +9,10 @@ function getUser(){
 function Category(){
     return DB::table('category')->get();
 }
+function Subcategory($id){
+    $where = array('category_id'=>$id);
+    return DB::table('subcategory')->where($where)->get();
+}
 
 function status($request,$where){
     if($where){
