@@ -37,21 +37,23 @@
                         @csrf
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Tên Danh Mục</label>
+                            <label>Tên Danh Mục </label>
                                 <input type="text" class="form-control" name="name" />
                             </div>
                             <div class="form-group">
-                                    <label>Tên loại sản phẩm</label>
-                                    <select class="form-control show-tick ms" id="selector" name="category_id" placeholder="--> Chọn loại sản phẩm <--">
-                                        @foreach (Category() as $item)
-                                            <option value="{{$item->id}}" name="category_id">{{$item->name}}</option>
+                                    <label>Tên mục sản phẩm</label>
+                                    <select class="form-control show-tick ms" id="selector" placeholder="--> Chọn loại sản phẩm <--">
+                                        @foreach ($category as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                             </div>
                             <div class="form-group">
                                     <label>Tên loại sản phẩm</label>
-                                    <select class="form-control show-tick ms" id="selector" name="category_id" placeholder="--> Chọn loại sản phẩm <--">
-                                       
+                                    <select class="form-control show-tick ms" id="selector" name="subcategory_id" placeholder="--> Chọn loại sản phẩm <--">
+                                        @foreach ($subcategory as $item)
+                                            <option value="{{$item->id}}" name="subcategory_id">{{$item->name}}</option>
+                                        @endforeach
                                     </select>
                             </div>
                         </div>
@@ -147,5 +149,8 @@
                 });
             });
         });
+    </script>
+    <script>
+        
     </script>
 @endsection

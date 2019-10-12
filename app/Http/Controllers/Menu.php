@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Menu_model;
 use App\Subcategory_model;
+use App\Category_model;
 
 class Menu extends Controller
 {
@@ -13,18 +14,20 @@ class Menu extends Controller
     {
         $this->model = new Menu_model();
         $this->subcategory = new Subcategory_model();
+        $this->category = new Category_model();
     }
     
-    public function index($url){
-        $where = array('subcategory.url'=>$url);
-        $data = $this->model->getInfo();
-        $subcategory = $this->subcategory->eloquentjoin(null);
 
-        // echo "<pre>";
-        // print_r ($subcategory);
-        // echo "</pre>";
-        // die;
-        return view('admin.menu',['menu'=>$data,'subcategory'=>$subcategory]);
+    public function index($url,$uri){
+        $where = array('category.url'=>$url);
+        $data = $this->model->getInfo();
+        $subcategory = $this->subcategory->eloquentjoin($where)->toArray();
+        $category = $this->category->getInfo()->toArray();
+        $new = BenSort($subcategory,$uri,'url');
+        $newcategory = BenSort($category,$url,'url');
+        
+        // $sub = $this->category->with('subcategory')->get()->toArray();
+        return view('admin.menu',['menu'=>$data,'category'=>json_decode(json_encode($newcategory)),'subcategory'=>json_decode(json_encode($new))]);
     }
     public function insert(Request $res){
         $data = $res->except('_token');

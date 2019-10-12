@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 function getUser(){
     return Auth::user();
@@ -9,6 +10,7 @@ function getUser(){
 function Category(){
     return DB::table('category')->get();
 }
+
 function Subcategory($id){
     $where = array('category_id'=>$id);
     return DB::table('subcategory')->where($where)->get();
@@ -20,6 +22,14 @@ function status($request,$where){
     }else{
         $request->session()->flash('fail', 'Thất Bại');
    }
+}
+
+function BenSort($data,$value,$arrkey){
+    $key = array_search($value, array_column($data, $arrkey));
+    $arr = array($data[$key]);
+    unset($data[$key]);
+    $new=array_merge($arr,$data);
+    return $new;
 }
 
 function to_slug($str) {
