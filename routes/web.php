@@ -42,6 +42,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::get('menu/{url}/{uri}', 'Menu@index');
         Route::post('menu/insert', 'Menu@insert');
         Route::post('menu/edit', 'Menu@edit');
+        Route::post('menu/getmenu', 'Menu@getmenu');
         Route::get('menu/delete/{id}', 'Menu@delete');
         Route::post('menu/update/{id}', 'Menu@update');
     });

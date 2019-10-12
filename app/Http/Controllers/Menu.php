@@ -20,7 +20,7 @@ class Menu extends Controller
 
     public function index($url,$uri){
         $where = array('category.url'=>$url);
-        $data = $this->model->getInfo();
+        $data = $this->model->join(array('subcategory.url'=>$uri));
         $subcategory = $this->subcategory->eloquentjoin($where)->toArray();
         $category = $this->category->getInfo()->toArray();
         $new = BenSort($subcategory,$uri,'url');
@@ -38,6 +38,11 @@ class Menu extends Controller
     public function edit(Request $res){
         $where = $res->except('_token');
         $data = $this->model->getInfo($where);
+        echo json_encode($data);
+    }
+    public function getmenu(Request $res){
+        $where = $res->except('_token');
+        $data = $this->subcategory->getInfo($where);
         echo json_encode($data);
     }
     public function delete($id,Request $res){
