@@ -7,8 +7,13 @@ function getUser(){
     return Auth::user();
 }
 function Category(){
-    return DB::table('category')->get();
+   return DB::table('category')->get();
 }
+function Subcategory()
+{
+    return DB::table('subcategory')->get();
+}
+
 
 function status($request,$where){
     if($where){

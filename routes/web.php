@@ -37,5 +37,19 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('subcategory/edit', 'Subcategory@edit');
         Route::get('subcategory/delete/{id}', 'Subcategory@delete');
         Route::post('subcategory/update/{id}', 'Subcategory@update');
+        //
+        Route::get('Users','Users@index');
+        Route::post('Users/insert','Users@insert');
+        Route::post('Users/edit','Users@edit');
+        Route::get('Users/delete/{id}','Users@delete');
+        Route::post('Users/update/{id}','Users@update');
+        //
+        Route::get('Products','Products@index');
+        Route::post('Products/new','Products@new');
+        Route::post('Products/insert','Products@insert');
+        Route::post('Products/loadsub','Products@loadsub');
+        Route::get('Products/delete/{id}','Products@delete');
+        Route::post('Products/update/{id}','Products@update');
+        Route::post('Products/edit/{id}','Products@edit');
     });
 });

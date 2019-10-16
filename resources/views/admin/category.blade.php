@@ -57,7 +57,7 @@
                     <div class="card">
                         <div class="header">
                             <h2><strong>Basic</strong> Examples </h2>
-                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light"
+                            <div class="float-right"><button type="button" style="margin-top: -50px;" class=" insertcategory btn btn-primary waves-effect waves-light"
                                 data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                         </div>
@@ -129,6 +129,15 @@
                         $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
+            });
+        });
+    </script>
+      <script>
+        $(document).ready(function(){
+            $('.insertcategory').click(function (e) { 
+                e.preventDefault();
+                $(".modal-body :nth-child(1) input").val('');
+                $("#exampleModal form").attr('action', document.URL+'/insert');
             });
         });
     </script>

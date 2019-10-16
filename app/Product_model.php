@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menu_model extends Model
+class Product_model extends ModelSetting
 {
     //
-    protected $table = 'menu';
+    protected $table = 'products';
     public $timestamps = false;
 }
