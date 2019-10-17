@@ -72,20 +72,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $i=1?> @foreach ($category as $item)
-                                        <tr>
-                                            <td>{{$i}}</td>
-                                            <td>{{$item->name}}</td>
-                                            <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                                <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}>"
-                                                        data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                                <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
-                                                        class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
-                                                        Xóa</button></a>
-                                            </td>
-                                        </tr>
-                                    <?php $i++?> @endforeach 
                                     </tbody>
                                 </table>
                             </div>
