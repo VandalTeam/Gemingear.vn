@@ -26,17 +26,19 @@ Route::get('login', 'Signin@Logout');
 Route::post('signin', 'Signin@Login');
 Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::group(['prefix' => 'admin'], function () {
+        //Category
         Route::get('category', 'Category@index');
         Route::get('category/delete/{id}', 'Category@delete');
         Route::post('category/insert', 'Category@insert');
         Route::post('category/edit', 'Category@edit');
         Route::post('category/update/{id}', 'Category@update');
-        //
+        //Subcategory
         Route::get('subcategory/{url}', 'Subcategory@index');
         Route::post('subcategory/insert', 'Subcategory@insert');
         Route::post('subcategory/edit', 'Subcategory@edit');
         Route::get('subcategory/delete/{id}', 'Subcategory@delete');
         Route::post('subcategory/update/{id}', 'Subcategory@update');
+
         //
         Route::get('Users','Users@index');
         Route::post('Users/insert','Users@insert');
@@ -51,5 +53,14 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::get('Products/delete/{id}','Products@delete');
         Route::post('Products/update/{id}','Products@update');
         Route::post('Products/edit/{id}','Products@edit');
+
+        //Menu
+        Route::get('menu/{url}/{uri}', 'Menu@index');
+        Route::post('menu/insert', 'Menu@insert');
+        Route::post('menu/edit', 'Menu@edit');
+        Route::post('menu/getmenu', 'Menu@getmenu');
+        Route::get('menu/delete/{id}', 'Menu@delete');
+        Route::post('menu/update/{id}', 'Menu@update');
+
     });
 });

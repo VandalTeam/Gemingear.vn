@@ -57,7 +57,11 @@
                     <div class="card">
                         <div class="header">
                             <h2><strong>Basic</strong> Examples </h2>
+<<<<<<< HEAD
                             <div class="float-right"><button type="button" style="margin-top: -50px;" class=" insertcategory btn btn-primary waves-effect waves-light"
+=======
+                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light add-form-category"
+>>>>>>> Ben_DevPHP
                                 data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                         </div>
@@ -72,20 +76,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $i=1?> @foreach ($category as $item)
-                                        <tr>
-                                            <td>{{$i}}</td>
-                                            <td>{{$item->name}}</td>
-                                            <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                                <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}>"
-                                                        data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                                <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
-                                                        class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
-                                                        Xóa</button></a>
-                                            </td>
-                                        </tr>
-                                    <?php $i++?> @endforeach 
                                     </tbody>
                                 </table>
                             </div>
@@ -129,6 +119,11 @@
                         $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
+            });
+            $('.add-form-category').click(function(e) {
+                e.preventDefault();
+                    $(".modal-body :nth-child(1) input").val('');
+                    $("#exampleModal form").attr('action', '/admin/category/insert');
             });
         });
     </script>
