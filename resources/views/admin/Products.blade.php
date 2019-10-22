@@ -49,10 +49,13 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Tên sản phẩm</th>
-                                    <th>Category_id</th>
-                                    <th>Subcategory_id</th>
-                                    <th>description</th>
-                                    <th>price</th>
+                                    <th>Mục sản phẩm</th>
+                                    <th>Loại sản phẩm</th>
+                                    <th>CT_Loại sản phẩm</th>
+                                    <th>Giá sản phẩm</th>
+                                    <th>Khuyến mãi</th>
+                                    <th>Ngày KM</th>
+                                    <th>Tình trạng</th>
                                     <th>Chức năng</th>
 
                                 </tr>
@@ -62,10 +65,13 @@
                                 <tr>
                                     <td>{{$i}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->category_id}}</td>
-                                    <td>{{$item->subcategory_id}}</td>
-                                    <td>{{$item->description}}</td>
+                                    <td>{{$item->category_name}}</td>
+                                    <td>{{$item->subcategory_name}}</td>
+                                    <td>{{$item->menu_name}}</td>
                                     <td>{{$item->price}}</td>
+                                    <td>{{$item->sale_price}}</td>
+                                    <td>{{$item->date_start}}</td>
+                                    <td>{{$item->instock}}</td>
                                     <td width="30%" class="footable-last-visible" style="display: table-cell;">
                                         <form action="/admin/Products/edit/{{$item->id}}" method="post">
                                             @csrf

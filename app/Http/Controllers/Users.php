@@ -9,7 +9,7 @@ class Users extends Controller
     public $timestamps = false;
     public function index(User $model){
        $data=$model->all();
-       return view('admin.Users',['Users'=>$data]);
+       return view('admin.users',['Users'=>$data]);
     }
     public function insert(Request $res,User $model){
         $data = $res->except('_token'); 

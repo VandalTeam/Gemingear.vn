@@ -38,8 +38,13 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>Tên sản phẩm</label>
+                                        @if (isset($products))
                                         <input type="text" class="form-control" name="name" value=" {{$products->name}}"
-                                            required />
+                                        required /> 
+                                        @else
+                                        <input type="text" class="form-control" name="name" 
+                                        required /> 
+                                        @endif
                                     </div>
                                     <div class="body">
                                         <div class="row clearfix">
@@ -49,7 +54,7 @@
                                                     required>
                                                     <option selected disabled>--> Chọn mục hàng <--</option>
                                                             <?php foreach (Category() as $item) {?> <option 
-                                                            @if(($item->id == $products->category_id)&&($products->category_id!=0))
+                                                            @if((isset($products))&&($item->id == $products->category_id))
                                                             selected
                                                             @endif
                                                             value="<?= $item->id?>"><?= $item->name?></option>
@@ -60,10 +65,15 @@
                                                 <label>Loại hàng</label>
                                                 <select class="form-control ms" id="select-subcategory"
                                                     name="menu_id" selected>
-                                                    @if(($item->id ==$products->subcategory_id)&&($products->subcategory_id!=0))
-                                                    <option selected value="{{$item->id}}"" name=" subcategory_id">
-                                                        {{$item->name}}
-                                                    </option>
+                                                    @if (isset($Sub))
+                                                    <optgroup label="{{$Sub->name}}">
+                                                        @foreach ($Menu as $item)
+                                                        <option 
+                                                        @if ($products->menu_id===$item->id)
+                                                            selected
+                                                        @endif
+                                                        value="<?= $item->id." ".$Sub->id?>"><?= $item->name?></option>
+                                                        @endforeach
                                                     @endif
                                                 </select>
                                             </div>
@@ -80,8 +90,14 @@
                                                             <span class="input-group-text"><i
                                                             class="zmdi zmdi-money"></i></span>
                                                         </div>
+                                                        @if (isset($products))
                                                         <input type="text" class="form-control"
                                                             placeholder="Ex: 100,000,000,000 vnđ" name="price" required value="{{$products->price}}">
+                                                        @else
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Ex: 100,000,000,000 vnđ" name="price" required >
+                                                        @endif
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,8 +109,13 @@
                                                             <span class="input-group-text"><i
                                                                     class="zmdi zmdi-money"></i></span>
                                                         </div>
+                                                        @if (isset($products))
                                                         <input type="text" class="form-control"
-                                                            placeholder="Ex: 100,000,000,000 vnđ" name="sale_price" value="{{$products->sale_price}}">
+                                                            placeholder="Ex: 100,000,000,000 vnđ" name="sale_price" required value="{{$products->sale_price}}">
+                                                        @else
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Ex: 100,000,000,000 vnđ" name="sale_price" required >
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -104,9 +125,16 @@
                                         <div class="header">
                                             <h2><strong >Mô tả</strong></h2>
                                         </div>
+                                        @if (isset($products))
                                         <textarea class="summernote" name="description" >
-                                                <?php echo $products->description; ?>
-                                        </textarea>
+                                            <?php echo $products->description; ?>
+                                    </textarea>
+                                        @else
+                                        <textarea class="summernote" name="description" >
+                                    </textarea>
+                                        @endif
+
+                                        
                                     </div>
                                     <div class="header">
                                         <h2><strong>Hoạt động khuyến mãi</strong></h2>
@@ -119,7 +147,10 @@
                                                             class="zmdi zmdi-calendar"></i></span>
                                                 </div>
                                                 <input type="date" class="form-control" name="date_start"
-                                                    value="{{ $products->date_start}}?>">
+                                                @if (isset($products))
+                                                value="<?php echo $products->date_start; ?>"
+                                                @endif
+                                                    >
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -129,7 +160,10 @@
                                                             class="zmdi zmdi-calendar"></i></span>
                                                 </div>
                                                 <input type="date" class="form-control "
-                                                    value="{{ $products->date_end}}?>" name="date_end">
+                                                @if (isset($products))
+                                                value="{{ $products->date_end}}?>"
+                                                @endif
+                                                     name="date_end">
                                             </div>
                                         </div>
                                     </div>
@@ -193,7 +227,11 @@
                                             <div class="form-group">
                                                 <label>URL image</label>
                                                 <input type="text" class="form-control" name="url"
-                                                    value="{{$products->url}}">
+                                                @if (isset($products))
+                                                value="{{$products->url}}"
+                                                @endif
+                                                    >
+                                                    
                                             </div>
                                         </div>
                                     </div>
