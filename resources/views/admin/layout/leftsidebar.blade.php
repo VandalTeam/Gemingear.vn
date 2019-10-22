@@ -43,7 +43,7 @@
                 @foreach (Category() as $item)
                 <li class="<?php if($uri==$item->url){echo 'active open';}?>"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-hc-fw"></i><span>{{$item->name}}</span></a>
                     <ul class="ml-menu test" style="margin-left: 45px;">
-                        @foreach (Subcategory($item->id) as $item1)
+                        @foreach (Subcategory1($item->id) as $item1)
                             <li class="<?php if($url==$item1->url){echo 'active open';}?>"><a href="/admin/menu/<?= $item->url?>/<?= $item1->url?>"><i class="zmdi zmdi-hc-fw"></i><span>{{$item1->name}}</span></a></li>
                         @endforeach
                     </ul>

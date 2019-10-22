@@ -16,7 +16,7 @@ function Subcategory()
 }
 
 
-function Subcategory($id){
+function Subcategory1($id){
     $where = array('category_id'=>$id);
     return DB::table('subcategory')->where($where)->get();
 }
