@@ -22,7 +22,8 @@ Route::get('insert', function () {
         ['name' => 'nhiben','email' => str_random(5).'.com','password' => bcrypt('benbacker')],
     ]);
 });
-Route::get('login', 'Signin@Logout');
+Route::get('logout', 'Signin@logout');
+Route::get('login', 'Signin@signin');
 Route::post('signin', 'Signin@Login');
 Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::group(['prefix' => 'admin'], function () {
@@ -49,3 +50,8 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
 });
 
 Route::get('eloquent', 'Eloquent@test');
+
+Route::post('customer/signup', 'Customer@signup');
+Route::get('customer/update/{email}', 'Customer@update');
+Route::post('customer/login', 'Customer@login');
+Route::get('customer/logout', 'Customer@logout');

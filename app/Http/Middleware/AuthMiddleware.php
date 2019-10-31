@@ -16,10 +16,10 @@ class AuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()==true){
+        if(Auth::check()==true && Auth::user()->role == 0){
             return $next($request);
         }else{
-            return redirect('/login');
+            return redirect('/logout');
         }
     }
 }

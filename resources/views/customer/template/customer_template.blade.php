@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
 @include('customer.layout.head')
 <body>
+    @include('customer.layout.login')
     @include('customer.layout.menu')
     @yield('slider')
     @yield('content')
