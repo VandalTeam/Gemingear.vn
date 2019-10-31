@@ -7,9 +7,16 @@ use Illuminate\Support\Facades\Auth;
 
 class Signin extends Controller
 {
+    public function signin(){
+        if(isset(Auth::user()->name)){
+            return \redirect('/admin/category');
+        }else{
+            return view('admin.template.signin_template');
+        }
+    }
     public function Logout(){
         Auth::logout();
-        return view('admin.template.signin_template');
+        return \redirect('/login');
     }
     public function Login(Request $request){
         $data = $request->except('_token');
