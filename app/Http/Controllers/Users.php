@@ -17,6 +17,7 @@ class Users extends Controller
         $model->name=$object->name;
         $model->email=$object->email;
         $model->password=bcrypt($object->password);
+        $model->role=$object->role;
         $model->save();
         return redirect($_SERVER['HTTP_REFERER']);
     }
@@ -31,6 +32,7 @@ class Users extends Controller
         $user->name=$object->name;
         $user->email=$object->email;
         $user->password=bcrypt($object->password);
+        $model->role=$object->role;
         $user->save();
         return redirect($_SERVER['HTTP_REFERER']);
     }

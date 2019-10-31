@@ -45,6 +45,12 @@
                             <input type="text" class="form-control Email" name="email" />
                             <label>Mật khẩu</label>
                             <input type="password" class="form-control password" name="password" />
+                              <label for="">Quyền</label>
+                              <select  class="form-control role show-tick ms" name="role" id="role">
+                                <option value="" selected disabled hidden>--> Chọn quyền <--</option>
+                                <option value="admin">admin</option>
+                                <option value="nhanvien">Nhân viên</option>
+                              </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -76,6 +82,7 @@
                                         <th>STT</th>
                                         <th>Tên User</th>
                                         <th>Email</th>
+                                        <th>Quyền</th>
                                         <th>Chức năng</th>
 
                                     </tr>
@@ -86,6 +93,7 @@
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->email}}</td>
+                                        <td>{{$item->role}}</td>
                                         <td width="30%" class="footable-last-visible" style="display: table-cell;">
                                             <a><button class="btn btn-primary btn-sm edituser" data-id="{{$item->id}}"
                                                     data-toggle="modal" data-target="#exampleModal"><i
@@ -135,6 +143,7 @@
                     success: function(res) {
                         $(".tenDN").val(res[0].name);
                         $(".Email").val(res[0].email);
+                        $(".role option[value="+res[0].role+"]").attr('selected','selected');
                         $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
@@ -146,6 +155,7 @@
             $('.insertcategory').click(function (e) { 
                 e.preventDefault();
                 $(".modal-body :nth-child(1) input").val('');
+                $("#exampleModal form").attr('action', document.URL+'/insert');
             });
         });
 </script>

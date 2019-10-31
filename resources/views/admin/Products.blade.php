@@ -49,13 +49,11 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Tên sản phẩm</th>
-                                    <th>Mục sản phẩm</th>
-                                    <th>Loại sản phẩm</th>
-                                    <th>CT_Loại sản phẩm</th>
                                     <th>Giá sản phẩm</th>
-                                    <th>Khuyến mãi</th>
-                                    <th>Ngày KM</th>
                                     <th>Tình trạng</th>
+                                    <th>Loại sản phẩm</th>
+                                    <th>Hãng sản xuất</th>
+                                    <th>Khuyến mãi</th>
                                     <th>Chức năng</th>
 
                                 </tr>
@@ -65,21 +63,21 @@
                                 <tr>
                                     <td>{{$i}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->category_name}}</td>
-                                    <td>{{$item->subcategory_name}}</td>
-                                    <td>{{$item->menu_name}}</td>
                                     <td>{{$item->price}}</td>
-                                    <td>{{$item->sale_price}}</td>
-                                    <td>{{$item->date_start}}</td>
-                                    <td>{{$item->instock}}</td>
+                                    <td>{{$item->in_stock}}</td>
+                                    <td>{{$item->subcategory_name}}</td>
+                                    <td>{{$item->promotion_name}}</td>
+                                    <td>{{$item->brand_name}}</td>
+   
                                     <td width="30%" class="footable-last-visible" style="display: table-cell;">
                                         <form action="/admin/Products/edit/{{$item->id}}" method="post">
                                             @csrf
                                             <button class="btn btn-primary btn-sm editproduct" data-id="{{$item->id}}"><i
                                                     class="zmdi zmdi-edit"></i> Sửa</button>
+                                             <button class="btn btn-danger btn-sm delete" data-id="{{$item->id}}">
+                                                            <i class="zmdi zmdi-delete"></i>Xóa</button>
                                         </form>
-                                        <button class="btn btn-danger btn-sm delete" data-id="{{$item->id}}">
-                                            <i class="zmdi zmdi-delete"></i>Xóa</button>
+                                        
                                     </td>
                                 </tr>
                                 <?php $i++?> @endforeach

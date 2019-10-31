@@ -15,13 +15,14 @@ class Orders extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable();
-            $table->text('address')->nullable();
-            $table->string('tel')->nullable();
+            $table->string('name_customer')->nullable();
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
+            $table->string('address')->nullable();
             $table->string('total')->nullable();
             $table->integer('status')->nullable()->comment('0 Chưa/1 Gửi');
             $table->text('note')->nullable();
+            $table->integer('customer_id');
             $table->timestamps();
         });
     }

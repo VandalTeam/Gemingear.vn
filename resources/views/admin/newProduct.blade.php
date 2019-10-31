@@ -40,10 +40,9 @@
                                         <label>Tên sản phẩm</label>
                                         @if (isset($products))
                                         <input type="text" class="form-control" name="name" value=" {{$products->name}}"
-                                        required /> 
+                                            required />
                                         @else
-                                        <input type="text" class="form-control" name="name" 
-                                        required /> 
+                                        <input type="text" class="form-control" name="name" required />
                                         @endif
                                     </div>
                                     <div class="body">
@@ -53,8 +52,9 @@
                                                 <select class="form-control ms" id="select-category" name="category_id"
                                                     required>
                                                     <option selected disabled>--> Chọn mục hàng <--</option>
-                                                            <?php foreach (Category() as $item) {?> <option 
-                                                            @if((isset($products))&&($item->id == $products->category_id))
+                                                            <?php foreach (Category() as $item) {?> <option
+                                                            @if((isset($Sub))&&($item->id ==
+                                                            $Sub->category_id))
                                                             selected
                                                             @endif
                                                             value="<?= $item->id?>"><?= $item->name?></option>
@@ -63,18 +63,17 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <label>Loại hàng</label>
-                                                <select class="form-control ms" id="select-subcategory"
-                                                    name="menu_id" selected>
-                                                    @if (isset($Sub))
-                                                    <optgroup label="{{$Sub->name}}">
-                                                        @foreach ($Menu as $item)
-                                                        <option 
-                                                        @if ($products->menu_id===$item->id)
+                                                <select class="form-control ms" id="select-subcategory" name="subcategory_id"
+                                                    selected>
+                                                    @if (isset($products))
+                                                        @foreach ($Subfull as $item)
+                                                        <option @if ($products->subcategory_id===$item->id)
                                                             selected
-                                                        @endif
-                                                        value="<?= $item->id." ".$Sub->id?>"><?= $item->name?></option>
+                                                            @endif
+                                                            value="<?= $item->id?>"><?= $item->name?>
+                                                        </option>
                                                         @endforeach
-                                                    @endif
+                                                        @endif
                                                 </select>
                                             </div>
                                         </div>
@@ -88,85 +87,51 @@
                                                     <div class="input-group masked-input mb-3">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i
-                                                            class="zmdi zmdi-money"></i></span>
-                                                        </div>
-                                                        @if (isset($products))
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Ex: 100,000,000,000 vnđ" name="price" required value="{{$products->price}}">
-                                                        @else
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Ex: 100,000,000,000 vnđ" name="price" required >
-                                                        @endif
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label>Giá khuyến mãi</label>
-                                                    <div class="input-group masked-input mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><i
                                                                     class="zmdi zmdi-money"></i></span>
                                                         </div>
                                                         @if (isset($products))
                                                         <input type="text" class="form-control"
-                                                            placeholder="Ex: 100,000,000,000 vnđ" name="sale_price" required value="{{$products->sale_price}}">
+                                                            placeholder="Ex: 100,000,000,000 vnđ" name="price" required
+                                                            value="{{$products->price}}">
                                                         @else
                                                         <input type="text" class="form-control"
-                                                            placeholder="Ex: 100,000,000,000 vnđ" name="sale_price" required >
+                                                            placeholder="Ex: 100,000,000,000 vnđ" name="price" required>
                                                         @endif
+
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Hãng sản xuất</label>
+                                                <select class="form-control ms" id="select-brand" name="brand_id"
+                                                    required>
+                                                    <option selected disabled>--> Chọn hãng sản xuất <--</option>
+                                                            <?php foreach (Brand() as $item) {?> <option
+                                                            @if((isset($products))&&($item->id == $products->brand_id))
+                                                            selected
+                                                            @endif
+                                                            value="<?= $item->id?>"><?= $item->name?></option>
+                                                    <?php }?>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="header">
-                                            <h2><strong >Mô tả</strong></h2>
+                                            <h2><strong>Mô tả</strong></h2>
                                         </div>
                                         @if (isset($products))
-                                        <textarea class="summernote" name="description" >
+                                        <textarea class="summernote" name="description">
                                             <?php echo $products->description; ?>
                                     </textarea>
                                         @else
-                                        <textarea class="summernote" name="description" >
+                                        <textarea class="summernote" name="description">
                                     </textarea>
                                         @endif
 
-                                        
+
                                     </div>
-                                    <div class="header">
-                                        <h2><strong>Hoạt động khuyến mãi</strong></h2>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="zmdi zmdi-calendar"></i></span>
-                                                </div>
-                                                <input type="date" class="form-control" name="date_start"
-                                                @if (isset($products))
-                                                value="<?php echo $products->date_start; ?>"
-                                                @endif
-                                                    >
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="zmdi zmdi-calendar"></i></span>
-                                                </div>
-                                                <input type="date" class="form-control "
-                                                @if (isset($products))
-                                                value="{{ $products->date_end}}?>"
-                                                @endif
-                                                     name="date_end">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="header">
                                         <h2>Hình ảnh sản phẩm</h2>
                                     </div>
@@ -206,34 +171,36 @@
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
-                                            <label>Loại hàng</label>
-                                            <select class="form-control show-tick ms" name="instock" required>
-                                                <option value="" selected disabled>-->Chọn loại hàng <--</option>
-                                                @if ($method==="insert")
-                                                <option value="0" >Còn hàng</option>
-                                                <option value="1" style="color:red;" >Hết hàng</option>
-                                                @else
-                                                    @if ($products->instock==0)
-                                                    <option value="0" selected>Còn hàng</option>
-                                                    <option value="1" style="color:red;" >Hết hàng</option>
-                                                    @else
-                                                    <option value="0" >Còn hàng</option>
-                                                    <option value="1" style="color:red;" selected>Hết hàng</option>
-                                                    @endif
-                                                @endif 
+                                            <label>Khuyến mãi</label>
+                                            <select class="form-control ms" id="select-promotion" name="promotion_id"
+                                                required>
+                                                <option selected disabled>--> Chọn khuyến mãi <--</option>
+                                                        <?php foreach (Promotion() as $item) {?> <option
+                                                        @if((isset($products))&&($item->id == $products->promotion_id))
+                                                        selected
+                                                        @endif
+                                                        value="<?= $item->id?>"><?= $item->name." ".$item->sale_present."%"?></option>
+                                                <?php }?>
                                             </select>
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>URL image</label>
-                                                <input type="text" class="form-control" name="url"
-                                                @if (isset($products))
-                                                value="{{$products->url}}"
+                                            <label>Loại hàng</label>
+                                            <select class="form-control show-tick ms" name="instock" required>
+                                                <option value="" selected disabled>-->Chọn loại hàng <--</option> 
+                                                @if($method==="insert" ) <option value="0">Còn hàng</option>
+                                                <option value="1" style="color:red;">Hết hàng</option>
+                                                @else
+                                                @if ($products->in_stock==0)
+                                                <option value="0" selected>Còn hàng</option>
+                                                <option value="1" style="color:red;">Hết hàng</option>
+                                                @else
+                                                <option value="0">Còn hàng</option>
+                                                <option value="1" style="color:red;" selected>Hết hàng</option>
                                                 @endif
-                                                    >
-                                                    
-                                            </div>
+                                                @endif
+                                            </select>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="modal-footer">

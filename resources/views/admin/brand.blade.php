@@ -30,16 +30,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm mục sản phẩm</h5>
+                    <h5 class="modal-title suaHSX" id="exampleModalLabel">Thêm hãng sản xuất</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/category/insert')}}" method="post">
+                <form action="{{ url('admin/brand/insert')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Tên mục sản phẩm</label>
+                            <label>Tên hãng sản xuất</label>
                             <input type="text" class="form-control" name="name" />
                         </div>
                     </div>
@@ -71,21 +71,21 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tên Danh Mục</th>
+                                        <th>Tên Hãng</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $i=1?> @foreach ($category as $item)
+                                    <?php $i=1?> @foreach ($brand as $item)
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
                                         <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                            <a><button class="btn btn-primary btn-sm editcategory"
+                                            <a><button class="btn btn-primary btn-sm editbrand"
                                                     data-id="{{$item->id}}>" data-toggle="modal"
                                                     data-target="#exampleModal"><i class="zmdi zmdi-edit"></i>
                                                     Sửa</button></a>
-                                            <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
+                                            <a class="delete" href="/admin/brand/delete/{{$item->id}}"><button
                                                     class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                     Xóa</button></a>
                                         </td>
@@ -118,12 +118,12 @@
             }
         });
         $(document).ready(function() {
-            $('.editcategory').click(function(e) {
+            $('.editbrand').click(function(e) {
                 e.preventDefault();
                 var idCategory = $(this).attr('data-id');
                 $.ajax({
                     type: "post",
-                    url: "/admin/category/edit",
+                    url: "/admin/brand/edit",
                     data: {
                         'id': idCategory
                     },

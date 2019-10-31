@@ -16,9 +16,10 @@ class OrderDetail extends Migration
         Schema::create('order_detail', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('order_id')->nullable();
-            $table->text('product')->nullable();
+            $table->text('product_id')->nullable();
             $table->integer('price')->nullable();
             $table->integer('qty')->nullable();
+            $table->integer('price_sale')->nullable();
             $table->timestamps();
         });
     }

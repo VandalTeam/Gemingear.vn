@@ -11,10 +11,10 @@ class Product_model extends ModelSetting
     public $timestamps = false;
     public function getfullInfo(){
         return DB::table('products')
-        ->join('category','category.id','=','products.category_id')
-        ->join('menu','menu.id','=','products.menu_id')
-        ->join('subcategory','subcategory.id','=','menu.subcategory_id')
-        ->select('products.*','category.name as category_name','subcategory.name as subcategory_name','menu.name as menu_name')
+        ->join('promotions','promotions.id','=','products.promotion_id')
+        ->join('brands','brands.id','=','products.brand_id')
+        ->join('subcategory','subcategory.id','=','products.subcategory_id')
+        ->select('products.*','promotions.name as promotion_name','subcategory.name as subcategory_name','brands.name as brand_name')
         ->get();
     
     }

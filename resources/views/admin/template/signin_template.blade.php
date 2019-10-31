@@ -51,7 +51,7 @@
                                 <input id="remember_me" type="checkbox">
                                 <label for="remember_me">Remember Me</label>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">SIGN
+                            <button type="submit" class="btn btn-primary btn-block waves-effect waves-light dn">SIGN
                                 IN</button>
                         </div>
                     </form>
@@ -67,6 +67,7 @@
     <!-- Success or fail -->
     <script type="text/javascript">
         $(document).ready(function () {
+           
            @if(Session:: has('fail'))
            Swal.fire({
                 type: 'error',
@@ -75,8 +76,9 @@
                 text: 'Đăng nhập thất bại',
             });
            @endif
+
         });
-     </script>     
+     </script>  
 </body>
 
 

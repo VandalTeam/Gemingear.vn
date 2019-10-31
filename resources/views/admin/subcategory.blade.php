@@ -65,7 +65,7 @@
                     <div class="card">
                         <div class="header">
                             <h2><strong>Basic</strong> Examples </h2>
-                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light"
+                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light add-form-subcategory"
                                 data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                         </div>

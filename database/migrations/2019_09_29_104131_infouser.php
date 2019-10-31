@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Menu extends Migration
+class infouser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Menu extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
+        Schema::create('infouser', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable();
-            $table->text('url')->nullable();
-            $table->integer('subcategory_id')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class Menu extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::dropIfExists('infouser');
     }
 }
