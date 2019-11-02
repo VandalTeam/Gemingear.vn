@@ -46,7 +46,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::get('Users/delete/{id}','Users@delete');
         Route::post('Users/update/{id}','Users@update');
         //
-        Route::get('Products','Products@index');
+        Route::get('products','Products@index');
         Route::post('Products/new','Products@new');
         Route::post('Products/insert','Products@insert');
         Route::post('Products/loadsub','Products@loadsub');

@@ -26,8 +26,6 @@
                     class="zmdi zmdi-hc-fw"></i><span>Users</span></a></li>
         <li class="cl <?php if($menu=='category'){echo 'active open';}?>" ><a href="{{url('admin/category')}}"><i
                     class="zmdi zmdi-hc-fw"></i><span>Category</span></a></li>
-        <li class="cl <?php if($menu=='Products'){echo 'active open';}?>" ><a href="{{url('admin/Products')}}"><i
-                    class="zmdi zmdi-hc-fw"></i><span>Products</span></a></li>
         <li class="cl <?php if($menu=='subcategory'){echo 'active open';}?>" ><a href="javascript:void(0);"
                 class="menu-toggle"><i class="zmdi zmdi-hc-fw"></i><span>Subcategory</span></a>
             <ul class="ml-menu">
@@ -38,6 +36,8 @@
                 @endforeach
             </ul>
         </li>
+        <li class="cl <?php if($menu=='products'){echo 'active open';}?>" ><a href="{{url('admin/products')}}"><i
+            class="zmdi zmdi-hc-fw"></i><span>Products</span></a></li>
         <li class="<?php if($menu=='promotions'){echo 'active open';}?> promotions"><a href="{{url('admin/promotion')}}"><i
             class="zmdi zmdi-hc-fw"></i><span>Promotion</span></a></li>
             <li class="<?php if($menu=='brands'){echo 'active open';}?> promotions"><a href="{{url('admin/brand')}}"><i

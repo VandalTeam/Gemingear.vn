@@ -15,7 +15,7 @@ class Products extends Controller
     }
     public function index(){
         $data = $this->model->getfullInfo();
-        return view('admin.products',['Product'=>$data]);
+        return view('admin.products',['product'=>$data]);
     }
     public function new(){
         return view('admin.newProduct',['method'=>'insert']);

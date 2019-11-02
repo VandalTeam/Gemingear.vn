@@ -16,33 +16,6 @@
                                 <a class="button" href="shop.html">DISCOVER NOW</a>
                             </div>
                         </div>
-                        <div class="single_slider swiper-slide d-flex align-items-center"
-                            data-bgimg="{{asset('assets/customer/img/slider/slider2.jpg')}}">
-                            <div class="slider_content">
-                                <h3>big sale products</h3>
-                                <h1>wooden minimalist <br> chair 2019</h1>
-                                <p>discount <span> -50% off</span> this week</p>
-                                <a class="button" href="shop.html">DISCOVER NOW</a>
-                            </div>
-                        </div>
-                        <div class="single_slider swiper-slide d-flex align-items-center"
-                            data-bgimg="{{asset('assets/customer/img/slider/slider3.jpg')}}">
-                            <div class="slider_content color_white">
-                                <h3>new arrivals</h3>
-                                <h1>business <br> off mobile apps</h1>
-                                <p>discount <span> -10% off</span> this week</p>
-                                <a class="button" href="shop.html">DISCOVER NOW</a>
-                            </div>
-                        </div>
-                        <div class="single_slider swiper-slide d-flex align-items-center"
-                            data-bgimg="{{asset('assets/customer/img/slider/slider4.jpg')}}">
-                            <div class="slider_content color_white">
-                                <h3>new arrivals</h3>
-                                <h1>cellphone <br> new model 2019</h1>
-                                <p>discount <span> -60% off</span> this week</p>
-                                <a class="button" href="shop.html">DISCOVER NOW</a>
-                            </div>
-                        </div>
                     </div>
                     <!-- Add Arrows -->
 
