@@ -1,21 +1,41 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Request;
 
 function getUser(){
-    return Auth::user();
+    $data= Auth::user();
 }
 function Category(){
-    return DB::table('category')->get();
+   return DB::table('category')->get();
 }
-
-function Subcategory($id){
-    $where = array('category_id'=>$id);
-    return DB::table('subcategory')->where($where)->get();
+function Brand(){
+    return DB::table('brands')->get();
+ }
+ function Promotion(){
+    return DB::table('promotions')->get();
+ }
+function Subcategory_id($id)
+{
+    return DB::table('subcategory')->where('category_id',$id)->get();
 }
+function Subcategory()
+{
+    return DB::table('subcategory')->get();
 
+}
+function Products()
+{
+     return DB::table('products')
+    ->join('promotions','promotions.id','=','products.promotion_id')
+    ->join('brands','brands.id','=','products.brand_id')
+    ->join('subcategory','subcategory.id','=','products.subcategory_id')
+    ->select('products.*','promotions.name as promotion_name','subcategory.name as subcategory_name','brands.name as brand_name')
+    ->get();
+
+}
 function status($request,$where){
     if($where){
         $request->session()->flash('success', 'Thành Công');

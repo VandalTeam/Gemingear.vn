@@ -30,19 +30,32 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm mục sản phẩm</h5>
+                    <h5 class="modal-title suaTen" id="exampleModalLabel">Thêm khuyến mãi</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/category/insert')}}" method="post">
+                <form action="{{ url('admin/promotion/insert')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Tên mục sản phẩm</label>
+                            <label>Tên khuyến mãi</label>
                             <input type="text" class="form-control" name="name" />
                         </div>
+                        <div class="form-group">
+                            <label>Ngày bắt đầu</label>
+                            <input type="date" class="form-control" name="date_start" />
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày kết thúc</label>
+                            <input type="date" class="form-control" name="date_end" />
+                        </div>
+                        <div class="form-group">
+                            <label>Phần trăm khuyến mãi</label>
+                            <input type="number" class="form-control" name="sale_present" />
+                        </div>
                     </div>
+   
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
                         <button type="submit" class="btn btn-primary">Lưu</button>
@@ -61,7 +74,7 @@
                         <h2><strong>Basic</strong> Examples </h2>
 
                         <div class="float-right"><button type="button" style="margin-top: -50px;"
-                                class=" insertcategory btn btn-primary waves-effect waves-light add-form-category " data-toggle="modal"
+                                class=" insertpromotion btn btn-primary waves-effect waves-light" data-toggle="modal"
                                 data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                     </div>
@@ -71,21 +84,27 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tên Danh Mục</th>
+                                        <th>Tên khuyến mãi</th>
+                                        <th>Ngày bắt đầu</th>
+                                        <th>Ngày kết thúc</th>
+                                        <th>Phần trăm khuyến mãi</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $i=1?> @foreach ($category as $item)
+                                    <?php $i=1?> @foreach ($promotion as $item)
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
+                                        <td>{{$item->date_start}}</td>
+                                        <td>{{$item->date_end}}</td>
+                                        <td>{{$item->sale_present}}</td>
                                         <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                            <a><button class="btn btn-primary btn-sm editcategory"
+                                            <a><button class="btn btn-primary btn-sm editpromotion"
                                                     data-id="{{$item->id}}>" data-toggle="modal"
                                                     data-target="#exampleModal"><i class="zmdi zmdi-edit"></i>
                                                     Sửa</button></a>
-                                            <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
+                                            <a class="delete" href="/admin/promotion/delete/{{$item->id}}"><button
                                                     class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                     Xóa</button></a>
                                         </td>
@@ -109,7 +128,6 @@
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
-
 <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
 <script>
     $.ajaxSetup({
@@ -118,31 +136,30 @@
             }
         });
         $(document).ready(function() {
-            $('.editcategory').click(function(e) {
+            $('.editpromotion').click(function(e) {
                 e.preventDefault();
                 var idCategory = $(this).attr('data-id');
                 $.ajax({
                     type: "post",
-                    url: "/admin/category/edit",
+                    url: "/admin/promotion/edit",
                     data: {
                         'id': idCategory
                     },
                     dataType: "json",
                     success: function(res) {
-                        // alert(res[0].id)
+                        $(".suaTen").text("Sửa khuyến mãi");
                         $(".modal-body :nth-child(1) input").val(res[0].name);
+                        $(".modal-body :nth-child(2) input").val(res[0].date_start);
+                        $(".modal-body :nth-child(3) input").val(res[0].date_end);
+                        $(".modal-body :nth-child(4) input").val(res[0].sale_present);
                         $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
             });
-        });
-</script>
-<script>
-    $(document).ready(function(){
-            $('.insertcategory').click(function (e) { 
+            $('.add-form-promotion').click(function(e) {
                 e.preventDefault();
-                $(".modal-body :nth-child(1) input").val('');
-                $("#exampleModal form").attr('action', document.URL+'/insert');
+                    $(".modal-body :nth-child(1) input").val('');
+                    $("#exampleModal form").attr('action', '/admin/promotion/insert');
             });
         });
 </script>

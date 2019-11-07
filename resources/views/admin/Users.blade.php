@@ -30,17 +30,27 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm mục sản phẩm</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm mục người dùng</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/category/insert')}}" method="post">
+                <form action="{{ url('admin/Users/insert')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Tên mục sản phẩm</label>
-                            <input type="text" class="form-control" name="name" />
+                            <label>Tên người dùng</label>
+                            <input type="text" class="form-control tenDN" name="name" />
+                            <label>Email</label>
+                            <input type="text" class="form-control Email" name="email" />
+                            <label>Mật khẩu</label>
+                            <input type="password" class="form-control password" name="password" />
+                              <label for="">Quyền</label>
+                              <select  class="form-control role show-tick ms" name="role" id="role">
+                                <option value="" selected disabled hidden>--> Chọn quyền <--</option>
+                                <option value="admin">admin</option>
+                                <option value="nhanvien">Nhân viên</option>
+                              </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -59,9 +69,8 @@
                 <div class="card">
                     <div class="header">
                         <h2><strong>Basic</strong> Examples </h2>
-
                         <div class="float-right"><button type="button" style="margin-top: -50px;"
-                                class=" insertcategory btn btn-primary waves-effect waves-light add-form-category " data-toggle="modal"
+                                class="insertcategory btn btn-primary waves-effect waves-light" data-toggle="modal"
                                 data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                     </div>
@@ -71,23 +80,26 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tên Danh Mục</th>
+                                        <th>Tên User</th>
+                                        <th>Email</th>
+                                        <th>Quyền</th>
                                         <th>Chức năng</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $i=1?> @foreach ($category as $item)
+                                    <?php $i=1?> @foreach ($Users as $item)
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
-                                        <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                            <a><button class="btn btn-primary btn-sm editcategory"
-                                                    data-id="{{$item->id}}>" data-toggle="modal"
-                                                    data-target="#exampleModal"><i class="zmdi zmdi-edit"></i>
-                                                    Sửa</button></a>
-                                            <a class="delete" href="/admin/category/delete/{{$item->id}}"><button
-                                                    class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
-                                                    Xóa</button></a>
+                                        <td>{{$item->email}}</td>
+                                        <td>{{$item->role}}</td>
+                                        <td width="30%" class="footable-last-visible" style="display: table-cell;">
+                                            <a><button class="btn btn-primary btn-sm edituser" data-id="{{$item->id}}"
+                                                    data-toggle="modal" data-target="#exampleModal"><i
+                                                        class="zmdi zmdi-edit"></i> Sửa</button></a>
+                                            <button class="btn btn-danger btn-sm delete" data-id="{{$item->id}}">
+                                                <i class="zmdi zmdi-delete"></i>Xóa</button>
                                         </td>
                                     </tr>
                                     <?php $i++?> @endforeach
@@ -118,19 +130,20 @@
             }
         });
         $(document).ready(function() {
-            $('.editcategory').click(function(e) {
+            $('.edituser').click(function(e) {
                 e.preventDefault();
-                var idCategory = $(this).attr('data-id');
+                var iduser = $(this).attr('data-id');
                 $.ajax({
                     type: "post",
-                    url: "/admin/category/edit",
+                    url: "/admin/Users/edit",
                     data: {
-                        'id': idCategory
+                        'id': iduser
                     },
                     dataType: "json",
                     success: function(res) {
-                        // alert(res[0].id)
-                        $(".modal-body :nth-child(1) input").val(res[0].name);
+                        $(".tenDN").val(res[0].name);
+                        $(".Email").val(res[0].email);
+                        $(".role option[value="+res[0].role+"]").attr('selected','selected');
                         $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
@@ -146,4 +159,32 @@
             });
         });
 </script>
+<script>
+    $(document).ready(function()
+        {
+            $('.delete').click(function (e) { 
+                e.preventDefault();
+                var iduser = $(this).attr('data-id');
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '<a href="/admin/Users/delete/'+iduser+' "style="color:white;">Yes, delete it!</a>'
+                    }).then((result) => {
+                    if (result.value) {
+                        Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                        )
+                        
+                    }
+                    })
+            });
+        });
+</script>
+
 @endsection

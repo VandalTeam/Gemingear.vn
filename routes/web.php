@@ -39,13 +39,41 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('subcategory/edit', 'Subcategory@edit');
         Route::get('subcategory/delete/{id}', 'Subcategory@delete');
         Route::post('subcategory/update/{id}', 'Subcategory@update');
-        //Menu
-        Route::get('menu/{url}/{uri}', 'Menu@index');
-        Route::post('menu/insert', 'Menu@insert');
-        Route::post('menu/edit', 'Menu@edit');
-        Route::post('menu/getmenu', 'Menu@getmenu');
-        Route::get('menu/delete/{id}', 'Menu@delete');
-        Route::post('menu/update/{id}', 'Menu@update');
+
+        //
+        Route::get('Users','Users@index');
+        Route::post('Users/insert','Users@insert');
+        Route::post('Users/edit','Users@edit');
+        Route::get('Users/delete/{id}','Users@delete');
+        Route::post('Users/update/{id}','Users@update');
+        //
+        Route::get('product','Products@index');
+        Route::post('product/new','Products@new');
+        Route::post('product/insert','Products@insert');
+        Route::post('product/loadsub','Products@loadsub');
+        Route::get('product/delete/{id}','Products@delete');
+        Route::post('product/update/{id}','Products@update');
+        Route::post('product/edit/{id}','Products@edit');
+
+        //Khuyến mãi
+        Route::get('promotion', 'Promotion@index');
+        Route::post('promotion/insert', 'Promotion@insert');
+        Route::post('promotion/edit', 'Promotion@edit');
+        Route::get('promotion/delete/{id}', 'Promotion@delete');
+        Route::post('promotion/update/{id}', 'Promotion@update');
+
+         //Hãng sản xuất
+         Route::get('brand', 'Brand@index');
+         Route::post('brand/insert', 'Brand@insert');
+         Route::post('brand/edit', 'Brand@edit');
+         Route::get('brand/delete/{id}', 'Brand@delete');
+         Route::post('brand/update/{id}', 'Brand@update');
+         //Bannar marketing
+         Route::get('banner', 'Banner@index');
+         Route::post('brand/insert', 'Brand@insert');
+         Route::post('brand/edit', 'Brand@edit');
+         Route::get('brand/delete/{id}', 'Brand@delete');
+         Route::post('brand/update/{id}', 'Brand@update');
     });
 });
 
@@ -55,3 +83,4 @@ Route::post('customer/signup', 'Customer@signup');
 Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
+

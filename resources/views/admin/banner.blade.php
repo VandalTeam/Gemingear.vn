@@ -1,6 +1,7 @@
 @extends('admin.template.admin_template')
 @section('head')
 <link rel="stylesheet" href="{{asset('assets/admin/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/admin/plugins/dropify/css/dropify.min.css')}}">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('content')
@@ -30,37 +31,36 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm Danh Mục</h5>
+                    <h5 class="modal-title suaTen" id="exampleModalLabel">Thêm khuyến mãi</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/menu/insert')}}" method="post">
+                <form action="{{ url('admin/promotion/insert')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Tên Danh Mục </label>
+                            <label>Tên chiến dịch</label>
                             <input type="text" class="form-control" name="name" />
                         </div>
                         <div class="form-group">
-                            <label>Tên mục sản phẩm</label>
-                            <select class="form-control show-tick ms" id="select-category"
-                                placeholder="--> Chọn loại sản phẩm <--">
-                                @foreach ($category as $item)
-                                <option value="{{$item->id}}">{{$item->name}}</option>
-                                @endforeach
+                            <select class="form-control ms" id="select-promotion" name="promotion_id" required>
+                                <option selected disabled>--> Chọn khuyến mãi <--</option>
+                                </option>
+                                <option>Khuyến mãi</option>
+                                </option>
+                                <option>Khuyến mãi</option>
+                                </option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Tên loại sản phẩm</label>
-                            <select class="form-control show-tick ms" id="select-subcategory" name="subcategory_id"
-                                placeholder="--> Chọn loại sản phẩm <--">
-                                @foreach ($subcategory as $item)
-                                <option value="{{$item->id}}" name="subcategory_id">{{$item->name}}</option>
-                                @endforeach
-                            </select>
+                            <label>Hình ảnh</label>
+                            <div class="body">
+                                <input type="file" class="dropify">
+                            </div>
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
                         <button type="submit" class="btn btn-primary">Lưu</button>
@@ -77,8 +77,9 @@
                 <div class="card">
                     <div class="header">
                         <h2><strong>Basic</strong> Examples </h2>
+
                         <div class="float-right"><button type="button" style="margin-top: -50px;"
-                                class="btn btn-primary waves-effect waves-light add-form-menu" data-toggle="modal"
+                                class=" insertpromotion btn btn-primary waves-effect waves-light" data-toggle="modal"
                                 data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                     </div>
@@ -88,28 +89,28 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tên Danh Mục</th>
+                                        <th>Tên chiến dịch</th>
+                                        <th>URL</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php
-                                    $i =1 @endphp @foreach ($menu as $item)
+                                    <?php $i=1?> @foreach ($banner as $item)
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
+                                        <td>{{$item->url}}</td>
                                         <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                            <a><button class="btn btn-primary btn-sm editmenu"
-                                            data-id="{{$item->id}}" data-toggle="modal"
+                                            <a><button class="btn btn-primary btn-sm editpromotion"
+                                                    data-id="{{$item->id}}>" data-toggle="modal"
                                                     data-target="#exampleModal"><i class="zmdi zmdi-edit"></i>
                                                     Sửa</button></a>
-                                            <a href="/admin/subcategory/delete/{{$item->id}}" class="delete"><button
+                                            <a class="delete" href="/admin/promotion/delete/{{$item->id}}"><button
                                                     class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                     Xóa</button></a>
                                         </td>
                                     </tr>
-                                    @php $i++;
-                                    @endphp @endforeach
+                                    <?php $i++?> @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -122,13 +123,8 @@
 @endsection
 @section('bot')
 <script src="{{asset('assets/admin/bundles/datatablescripts.bundle.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
-<script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
-
+<script src="{{asset('assets/admin/plugins/dropify/js/dropify.min.js')}}"></script>
+<script src="{{asset('assets/admin/js/pages/forms/dropify.js')}}"></script>
 <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
 <script>
     $.ajaxSetup({
@@ -137,53 +133,30 @@
             }
         });
         $(document).ready(function() {
-            $('.editmenu').click(function(e) {
+            $('.editpromotion').click(function(e) {
                 e.preventDefault();
-                var idMenu = $(this).attr('data-id');
+                var idCategory = $(this).attr('data-id');
                 $.ajax({
                     type: "post",
-                    url: "/admin/menu/edit",
+                    url: "/admin/promotion/edit",
                     data: {
-                        'id': idMenu
+                        'id': idCategory
                     },
                     dataType: "json",
                     success: function(res) {
-                        // alert(res[0].id)
+                        $(".suaTen").text("Sửa khuyến mãi");
                         $(".modal-body :nth-child(1) input").val(res[0].name);
-                        $("#exampleModal form").attr('action', '/admin/menu/update/'+res[0].id);
+                        $(".modal-body :nth-child(2) input").val(res[0].date_start);
+                        $(".modal-body :nth-child(3) input").val(res[0].date_end);
+                        $(".modal-body :nth-child(4) input").val(res[0].sale_present);
+                        $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
                     }
                 });
             });
-            $('.add-form-menu').click(function(e) {
+            $('.add-form-promotion').click(function(e) {
                 e.preventDefault();
                     $(".modal-body :nth-child(1) input").val('');
-                    $("#exampleModal form").attr('action', '/admin/menu/insert');
-            });
-        });
-</script>
-{{-- get subcategory to category --}}
-<script>
-    $(document).ready(function() {
-            $("#select-category").change(function(e) {
-                e.preventDefault();
-                $('#select-subcategory').prop('disabled', false);
-                var idCategory = $("#select-category").val();
-                $.ajax({
-                    type: "post",
-                    url: "/admin/menu/getmenu",
-                    data: {
-                        'category_id': idCategory
-                    },
-                    dataType: "json",
-                    success: function(res) {
-                        $('#select-subcategory').find('option').remove().end();
-                        for (var k in res) {
-                            $('#select-subcategory').append($('<option></option>').attr('value',
-                                res[k].id).text(res[k].name));
-                        }
-                        // console.log(k);
-                    }
-                });
+                    $("#exampleModal form").attr('action', '/admin/promotion/insert');
             });
         });
 </script>
