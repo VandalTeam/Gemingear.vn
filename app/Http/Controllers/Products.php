@@ -43,6 +43,11 @@ class Products extends Controller
     public function insert(Request $res){
         $data = array('name'=>$res->name,'subcategory_id'=>$res->subcategory_id,'description'=>$res->description,'promotion_id'=>$res->promotion_id,'brand_id'=>$res->brand_id,'price'=>$res->price,'in_stock'=>$res->instock,'img_link'=>$res->image1);
         $data = $data + array('url'=>to_slug($res['name']));
+        
+        echo "<pre>";
+        print_r ($data);
+        echo "</pre>";
+        die;
         status($res,$this->model->insertInfo($data));
         return redirect('admin/Products');
     }

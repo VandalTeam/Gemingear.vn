@@ -16,15 +16,14 @@
 
                                                 <h2
                                                     style="font-family:Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-weight:500;font-size:20px;color:#4f545c;letter-spacing:0.27px">
-                                                    Hey Võ Nhật Bảo,</h2>
-                                                <p>It looks like someone tried to log into your Discord account from a
-                                                    new location. If this is you, follow the link below to authorize
-                                                    logging in from this location on your account. If this isn't you, we
-                                                    suggest changing your password as soon as possible.</p>
-                                                <p><strong>IP Address:</strong>
-                                                    171<span>.</span>248<span>.</span>111<span>.</span>175<br>
-                                                    <strong>Location:</strong> Ho Chi Minh City, Ho Chi Minh, Vietnam
-                                                </p>
+                                                    Xin chào {{$e_message['name']}},</h2>
+                                                <p style="color:black">Cám ơn Quý khách đã xác nhận địa chỉ email đăng
+                                                    ký tại Gemingear.vn,
+                                                    qua https://Gemingear.vn. Chúng tôi đã nhận được thông tin đăng ký
+                                                    xác nhận địa chỉ email của Quý khách như sau:
+                                                    Email: {{$e_message['email']}}
+                                                    Nếu thông tin trên chính xác, Quý khách vui lòng xác nhận theo đường
+                                                    dẫn sau:</p>
                                             </div>
                                         </td>
                                     </tr>
@@ -37,12 +36,25 @@
                                                     <tr>
                                                         <td style="border:none;border-radius:3px;color:white;padding:15px 19px"
                                                             align="center" valign="middle" bgcolor="#7289DA"><a
-                                                                href="https://discordapp.com/authorize-ip?token=WzYyNDUwMjEyNTM3MTg1MDc2MywiMTcxLjI0OC4xMTEuMTc1Il0.Xa8naA.RK90HMPMpe7gyKjXekqE9J5NfwU"
-                                                                style="text-decoration:none;line-height:100%;background:#7289da;color:white;font-family:Ubuntu,Helvetica,Arial,sans-serif;font-size:15px;font-weight:normal;text-transform:none;margin:0px">Verify
-                                                                Login</a></td>
+                                                                href="{{$e_message['link']}}"
+                                                                style="text-decoration:none;line-height:100%;background:#7289da;color:white;font-family:Ubuntu,Helvetica,Arial,sans-serif;font-size:15px;font-weight:normal;text-transform:none;margin:0px">
+                                                                Xác nhận thông tin</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="word-break:break-word;font-size:0px;padding:0px" align="left">
+                                            <div style="color:#737f8d;font-family:Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-size:16px;line-height:24px;text-align:left">
+                                                <p style="color:black">Nếu có bất kỳ thắc mắc, câu hỏi nào, mời Quý khách liên hệ bộ phận 
+                                                    hỗ trợ và chăm sóc khách hàng tại http://trogiup.Gemingear.vn. 
+                                                    Chúng tôi luôn sẵn sàng hỗ trợ Quý khách.
+                                                    <br>
+                                                    Trân Trọng,<br>
+                                                    Công ty TNHH Gemingear
+                                                </p>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>

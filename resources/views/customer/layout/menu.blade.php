@@ -97,11 +97,9 @@
                             <div class="hover_category">
                                 <select class="select_option" name="select" id="categori1">
                                     <option selected value="1">All Categories</option>
-                                    <?php $i=1?>
                                     @foreach (Category() as $item)
-                                        <option value="{{$i}}">{{$item->name}}</option>
-                                        <?php $i++?>
-                                    @endforeach
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @endforeach
                                 </select>
                             </div>
                             <div class="search_box">
@@ -211,6 +209,36 @@
 <header>
     <div class="main_header">
         <div class="container">
+
+            <!--header top start-->
+            <div class="header_top">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-5">
+
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <div class="header_top_settings text-right main_menu menu_position">
+                            <ul>
+                                @if (isset(getUser()->name))
+                                <li>
+                                        <img style="border-radius: 50%;" src="https://vcdn-ione.vnecdn.net/2019/07/03/0-1-4015-1562137097.jpg" alt="Smiley face" width="50" height="50">
+                                        <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{getUser()->name}}<i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown" style="position: initial;">
+                                        <div class="dropdown-menu" style="margin-top: 16px;" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="/customer/logout">Đăng xuất  <i class="fas fa-sign-out-alt"></i></a>
+                                        </div>
+                                      </div>
+                                </li>
+                                @else
+                                <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Đăng nhập</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#signupModalCenter">Đăng ký</a></li>
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header top start-->
 
             <!--header middel start-->
             <div class="header_middle sticky-header">
@@ -396,12 +424,9 @@
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">All Categories</option>
-                                        <?php $i=1?>
                                         @foreach (Category() as $item)
-                                            <option value="{{$i}}">{{$item->name}}</option>
-                                            <?php $i++?>
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
-                                
                                     </select>
                                 </div>
                                 <div class="search_box">

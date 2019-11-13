@@ -8,14 +8,21 @@ use Illuminate\Support\Facades\Auth;
 
 class Signin extends Controller
 {
+    public function signin(){
+        if(isset(Auth::user()->name)){
+            return \redirect('/admin/category');
+        }else{
+            return view('admin.template.signin_template');
+        }
+    }
     public function Logout(){
         Auth::logout();
-        return view('admin.template.signin_template');
+        return \redirect('/login');
     }
     public function Login(Request $request,User $model){
 
         $data = $request->except('_token');
-        $user=$model->where('name',$data['name'])->get()->toArray();
+        $user=$model->where('email',$data['email'])->get()->toArray();
         if(Auth::attempt($data)){
             $request->session()->flash('login', 'Đăng nhập thành công');
             return view('admin.template.admin_template',['user'=>$user[0]]);

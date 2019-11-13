@@ -134,7 +134,6 @@
                     },
                     dataType: "json",
                     success: function(res) {
-                        // alert(res[0].id)
                         $(".modal-body :nth-child(1) input").val(res[0].name);
                         $("#exampleModal form").attr('action', '/admin/subcategory/update/'+res[0].id);
                     }
