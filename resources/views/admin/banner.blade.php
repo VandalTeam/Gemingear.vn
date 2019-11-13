@@ -31,33 +31,27 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title suaTen" id="exampleModalLabel">Thêm khuyến mãi</h5>
+                    <h5 class="modal-title suaTen" id="exampleModalLabel">Thêm chiến dịch</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/promotion/insert')}}" method="post">
+                <form action="" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Tên chiến dịch</label>
-                            <input type="text" class="form-control" name="name" />
+                            <input type="text" class="form-control" name="name"/>
                         </div>
                         <div class="form-group">
-                            <select class="form-control ms" id="select-promotion" name="promotion_id" required>
-                                <option selected disabled>--> Chọn khuyến mãi <--</option>
-                                </option>
-                                <option>Khuyến mãi</option>
-                                </option>
-                                <option>Khuyến mãi</option>
-                                </option>
+                            <select class="form-control ms" id="select-banner" name="role" required>
+                                <option value="0" selected disabled>--> Chọn khuyến mãi <--</option> </option>
+                                <option value="1">Khuyến mãi</option>
+                                <option value="2">Chiến dịch</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group-image">
                             <label>Hình ảnh</label>
-                            <div class="body">
-                                <input type="file" class="dropify">
-                            </div>
                         </div>
                     </div>
 
@@ -79,7 +73,7 @@
                         <h2><strong>Basic</strong> Examples </h2>
 
                         <div class="float-right"><button type="button" style="margin-top: -50px;"
-                                class=" insertpromotion btn btn-primary waves-effect waves-light" data-toggle="modal"
+                                class=" add-form-banner btn btn-primary waves-effect waves-light" data-toggle="modal"
                                 data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                     </div>
@@ -90,6 +84,7 @@
                                     <tr>
                                         <th>STT</th>
                                         <th>Tên chiến dịch</th>
+                                        <th>Loại chiến dịch</th>
                                         <th>URL</th>
                                         <th>Chức năng</th>
                                     </tr>
@@ -99,13 +94,14 @@
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
+                                        <td><?php if($item->role==1){echo 'Khuyến mãi';}else{echo 'Chiến dịch';}?></td>
                                         <td>{{$item->url}}</td>
                                         <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                            <a><button class="btn btn-primary btn-sm editpromotion"
+                                            <a><button class="btn btn-primary btn-sm editcategory" 
                                                     data-id="{{$item->id}}>" data-toggle="modal"
                                                     data-target="#exampleModal"><i class="zmdi zmdi-edit"></i>
                                                     Sửa</button></a>
-                                            <a class="delete" href="/admin/promotion/delete/{{$item->id}}"><button
+                                            <a class="delete" href="/admin/banner/delete/{{$item->id}}"><button
                                                     class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                     Xóa</button></a>
                                         </td>
@@ -131,33 +127,36 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        });
-        $(document).ready(function() {
-            $('.editpromotion').click(function(e) {
-                e.preventDefault();
-                var idCategory = $(this).attr('data-id');
-                $.ajax({
-                    type: "post",
-                    url: "/admin/promotion/edit",
-                    data: {
-                        'id': idCategory
-                    },
-                    dataType: "json",
-                    success: function(res) {
-                        $(".suaTen").text("Sửa khuyến mãi");
-                        $(".modal-body :nth-child(1) input").val(res[0].name);
-                        $(".modal-body :nth-child(2) input").val(res[0].date_start);
-                        $(".modal-body :nth-child(3) input").val(res[0].date_end);
-                        $(".modal-body :nth-child(4) input").val(res[0].sale_present);
-                        $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
-                    }
-                });
-            });
-            $('.add-form-promotion').click(function(e) {
-                e.preventDefault();
-                    $(".modal-body :nth-child(1) input").val('');
-                    $("#exampleModal form").attr('action', '/admin/promotion/insert');
+    });
+    $(document).ready(function() {
+        $('.editcategory').click(function(e) {
+            e.preventDefault();
+            var idbanner = $(this).attr('data-id');
+            $.ajax({
+                type: "post",
+                url: "/admin/banner/edit",
+                data: {
+                    'id': idbanner
+                },
+                dataType: "json",
+                success: function(res) {
+                    $(".modal-body .form-group input").val(res[0].name);
+                    $("#exampleModal .form-group-image .dropify-wrapper").remove();
+                    $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img" data-default-file="http://gemingear.vn/storage/'+res[0].url+'"/>');
+                    $(`#select-banner option[value=${res[0].role}]`).attr('selected', 'selected');
+                    $('.dropify').dropify();
+                    $("#exampleModal form").attr('action', '/admin/banner/update/'+res[0].id);
+                }
             });
         });
+        $('.add-form-banner').click(function(e) {
+            e.preventDefault();
+            $("#exampleModal .form-group-image .dropify-wrapper").remove();
+            $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img"/>');
+            $('.dropify').dropify();
+            $(".modal-body :nth-child(1) input").val('');
+            $("#exampleModal form").attr('action', '/admin/banner/insert');
+        });
+    });
 </script>
 @endsection

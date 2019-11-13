@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Home@index');
+    
 Route::get('customer', function () {
     return view('customer.home');
 });
@@ -70,10 +69,10 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
          Route::post('brand/update/{id}', 'Brand@update');
          //Bannar marketing
          Route::get('banner', 'Banner@index');
-         Route::post('brand/insert', 'Brand@insert');
-         Route::post('brand/edit', 'Brand@edit');
-         Route::get('brand/delete/{id}', 'Brand@delete');
-         Route::post('brand/update/{id}', 'Brand@update');
+         Route::post('banner/insert', 'Banner@insert');
+         Route::post('banner/edit', 'Banner@edit');
+         Route::get('banner/delete/{id}', 'Banner@delete');
+         Route::post('banner/update/{id}', 'Banner@update');
     });
 });
 
