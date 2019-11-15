@@ -64,18 +64,18 @@
                                     <td>{{$i}}</td>
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->price}}</td>
-                                    <td>{{$item->in_stock}}</td>
                                     <td>{{$item->subcategory_name}}</td>
-                                    <td>{{$item->promotion_name}}</td>
                                     <td>{{$item->brand_name}}</td>
-   
-                                    <td width="30%" class="footable-last-visible" style="display: table-cell;">
-                                        <form action="/admin/products/edit/{{$item->id}}" method="post">
+                                    <td>{{$item->promotion_name}}</td>
+                                    <td><?php if($item->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></td>
+                                    <td width="16%" class="footable-last-visible" style="display: table-cell;">
+                                        <form action="/admin/product/edit/{{$item->id}}" method="post">
                                             @csrf
                                             <button class="btn btn-primary btn-sm editproduct" data-id="{{$item->id}}"><i
                                                     class="zmdi zmdi-edit"></i> Sửa</button>
-                                             <button class="btn btn-danger btn-sm delete" data-id="{{$item->id}}">
-                                                            <i class="zmdi zmdi-delete"></i>Xóa</button>
+                                            <a class="delete" href="/admin/product/delete/{{$item->id}}">
+                                            <button class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
+                                                Xóa</button></a>
                                         </form>
                                         
                                     </td>
@@ -103,57 +103,4 @@
             });
         });
 </script>
-<script>
-    $(document).ready(function()
-        {
-            $('.delete').click(function (e) { 
-                e.preventDefault();
-                var idPro = $(this).attr('data-id');
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: '<a href="/admin/product/delete/'+idPro+'" style="color:white;">Yes, delete it!</a>'
-                    }).then((result) => {
-                    if (result.value) {
-                        Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                        )
-                    }
-                    })
-            });
-        });
-</script>
-{{-- <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        $(document).ready(function() {
-            $('.editproduct').click(function(e) {
-                e.preventDefault();
-                var idProduct = $(this).attr('data-id');
-                alert(idProduct);
-                $.ajax({
-                    type: "post",
-                    url: "/admin/category/edit",
-                    data: {
-                        'id': idCategory
-                    },
-                    dataType: "json",
-                    success: function(res) {
-
-                        $(".modal-body :nth-child(1) input").val(res[0].name);
-                        $("#exampleModal form").attr('action', document.URL+'/update/'+res[0].id);
-                    }
-                });
-            });
-        });
-    </script> --}}
 @endsection

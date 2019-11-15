@@ -7,34 +7,24 @@
             <div class="col-lg-6 offset-lg-3 col-md-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <?php $i=0;?>
+                        @foreach ($banner as $item)
+                            @if ($item->role == 2)
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?=$i?>" class="<?php if($i==0){echo 'active';}?>"></li>
+                            <?php $i++?>
+                            @endif
+                        @endforeach
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href=""><img
-                                    src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
-                                    class="d-block w-100"></a>
-                        </div>
+                        <?php $i=0;?>
                         @foreach ($banner as $item)
-                        <div class="carousel-item">
-                                <a href=""><img
-                                        src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
-                                        class="d-block w-100"></a>
+                        @if ($item->role == 2)
+                        <div class="carousel-item <?php if($i==0){echo 'active';}?>">
+                            <a href=""><img src="http://gemingear.vn/storage/<?=$item->url?>" class="d-block w-100"></a>
                         </div>
+                        <?php $i++;?>
+                        @endif
                         @endforeach
-                        <div class="carousel-item">
-                                <a href=""><img
-                                        src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
-                                        class="d-block w-100"></a>
-                        </div><div class="carousel-item">
-                                <a href=""><img
-                                        src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
-                                        class="d-block w-100"></a>
-                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -60,11 +50,13 @@
                 <!--banner area start-->
                 <div class="sidebar_banner_area">
                     @foreach ($banner as $item)
-                    <figure class="single_banner mb-20">
-                        <div class="banner_thumb" style="width:100%">
-                            <a href="shop.html"><img src="http://gemingear.vn/storage/<?=$item->url?>" alt=""></a>
-                        </div>
-                    </figure>
+                    @if ($item->role==1)
+                        <figure class="single_banner mb-20">
+                            <div class="banner_thumb" style="width:100%">
+                                <a href="shop.html"><img src="http://gemingear.vn/storage/<?=$item->url?>" alt=""></a>
+                            </div>
+                        </figure> 
+                    @endif
                     @endforeach
                 </div>
                 <!--banner area end-->

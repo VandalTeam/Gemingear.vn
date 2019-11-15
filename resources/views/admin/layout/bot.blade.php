@@ -2,6 +2,7 @@
 <script src="{{asset('assets/admin/bundles/vendorscripts.bundle.js')}}"></script>
 <script src="{{asset('assets/admin/bundles/mainscripts.bundle.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.1.0/async.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -40,19 +41,22 @@
  </script>     
 <script>
     $(document).ready(function () {
-        $('.delete').click(function (e) { 
+        $('.delete').click(async function (e) { 
             e.preventDefault();
             var href = $(this).attr('href');
-            // alert(href);
-            Swal.fire({
+            const { value: success } = await Swal.fire({
             title: 'Bạn có chắc muốn xóa?',
             text: "Dữ liệu sẽ bị mất hoàn toàn!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '<a href="'+href+'" style="color:white;">Delete</a>'
+            cancelButtonText: 'Trở về',
             })
+
+            if (success) {
+                window.location = href;
+            }
         });
     });
 </script> 
