@@ -12,7 +12,7 @@ class ModelSetting extends Model
 
     public function getInfo($where = null){
         if(empty($where)){
-            return DB::table($this->table)->get();
+            return DB::table($this->table)->orderBy('id','DESC')->get();
         }else{
             return DB::table($this->table)->where($where)->get();
         }

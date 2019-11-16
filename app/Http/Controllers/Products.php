@@ -15,10 +15,10 @@ class Products extends Controller
     }
     public function index(){
         $data = $this->model->getfullInfo();
-        return view('admin.products',['Product'=>$data]);
+        return view('admin.products',['product'=>$data]);
     }
     public function new(){
-        return view('admin.newProduct',['method'=>'insert']);
+        return view('admin.newproduct',['method'=>'insert']);
     }
     public function loadsub(Request $res, Subcategory_model $model)
     {
@@ -33,35 +33,78 @@ class Products extends Controller
         echo $option;
     }
     public function edit($id,Subcategory_model $Submodel){
-        $where = array('id'=>$id);
-        $data = $this->model->getInfo($where)->toArray();
-        $subfull=$Submodel->getInfo()->toArray();
-        $Sub=$Submodel->getInfo(array('id'=>$data[0]->subcategory_id))->toArray();
-        return view('admin.newProduct',['products'=>$data[0],'method'=>'update/'.$id,'Sub'=>$Sub[0],'Subfull'=>$subfull]);
-     
+        $where = array('product.id'=>$id);
+        $data = $this->model->product_edit($where);
+        return view('admin.newproduct',['products'=>$data[0]]);
     }
     public function insert(Request $res){
-        $data = array('name'=>$res->name,'subcategory_id'=>$res->subcategory_id,'description'=>$res->description,'promotion_id'=>$res->promotion_id,'brand_id'=>$res->brand_id,'price'=>$res->price,'in_stock'=>$res->instock,'img_link'=>$res->image1);
-        $data = $data + array('url'=>to_slug($res['name']));
-        
-        echo "<pre>";
-        print_r ($data);
-        echo "</pre>";
-        die;
-        status($res,$this->model->insertInfo($data));
-        return redirect('admin/Products');
+
+        $data = $res->except('description', 'img', 'files', '_token','category_id');
+        $img_link = "";
+        if ($res->has('img')) {
+            $file = $res->img;
+            $img_link=$img_link.$file[0]->store('uploads');
+            for ($i = 1; $i < count($file); $i++) {
+                if ($file[$i]->store('uploads')) {
+                    $img_link = $img_link. "&" . $file[$i]->store('uploads') ;
+                }
+            }
+        }
+        $data = $data + array(
+            'image' => $img_link,
+            'url' => to_slug($res['name']),
+            'description' => $this->parse_base64($res->description)
+        );
+        status($res, $this->model->insertInfo($data));
+        return redirect('admin/product');
     }
     public function delete(Request $res,$id){
         $where = array('id'=>$id);
         status($res,$this->model->deleteInfo($where));
-        return redirect('admin/Products');
+        return redirect('admin/product');
          
     }
     public function update(Request $res,$id){
         $where = array('id'=>$id);
-        $data = array('name'=>$res->name,'subcategory_id'=>$res->subcategory_id,'promotion_id'=>$res->promotion_id,'brand_id'=>$res->brand_id,'price'=>$res->price,'in_stock'=>$res->instock,'img_link'=>$res->image1);
+        $data = $res->except('description', 'img', 'files', '_token','category_id');
+        $img_link = "";
+        if ($res->has('img')) {
+            $file = $res->img;
+            $img_link=$img_link.$file[0]->store('uploads');
+            for ($i = 1; $i < count($file); $i++) {
+                if ($file[$i]->store('uploads')) {
+                    $img_link = $img_link. "&" . $file[$i]->store('uploads') ;
+                }
+            }
+            $data = $data + array('image' => $img_link,);
+        }
+        $data = $data + array(
+            'url' => to_slug($res['name']),
+            'description' => $this->parse_base64($res->description)
+        );
         status($res,$this->model->updateInfo($where,$data));
-        $data1 = $this->model->getfullInfo();
-        return redirect('admin/Products');
+        return redirect('admin/product');
     }
+
+    function parse_base64($txt)
+    {
+        $dom = new \DomDocument();
+        $dom->loadHtml('<?xml encoding="utf-8" ?>' . $txt, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $k => $img) {
+            $data = $img->getAttribute('src');
+            if(strpos($data,'uploads')==false){
+                list($type, $data) = explode(';', $data);
+                list(, $data)      = explode(',', $data);
+                $data = base64_decode($data);
+                $image_name = "/uploads/" . time() . $k . '.png';
+                $path = public_path() . $image_name;
+                file_put_contents($path, $data);
+                $img->removeAttribute('src');
+                $img->setAttribute('src', $image_name);
+            }
+        }
+        return $dom->saveHTML();
+    }
+
 }

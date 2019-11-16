@@ -22,9 +22,10 @@ class Signin extends Controller
     public function Login(Request $request,User $model){
 
         $data = $request->except('_token');
-        $user=$model->where('email',$data['email'])->get()->toArray();
+       // $user=$model->where('email',$data['email'])->get()->toArray();
         if(Auth::attempt($data)){
             $request->session()->flash('login', 'Đăng nhập thành công');
+            return redirect('/admin/category');
             return view('admin.template.admin_template',['user'=>$user[0]]);
         }else{
             $request->session()->flash('fail', 'Đăng nhập thất bại');

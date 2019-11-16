@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Home@index');
+    
 Route::get('customer', function () {
     return view('customer.home');
 });
@@ -47,13 +46,13 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::get('Users/delete/{id}','Users@delete');
         Route::post('Users/update/{id}','Users@update');
         //
-        Route::get('Products','Products@index');
-        Route::post('Products/new','Products@new');
-        Route::post('Products/insert','Products@insert');
-        Route::post('Products/loadsub','Products@loadsub');
-        Route::get('Products/delete/{id}','Products@delete');
-        Route::post('Products/update/{id}','Products@update');
-        Route::post('Products/edit/{id}','Products@edit');
+        Route::get('product','Products@index');
+        Route::post('product/new','Products@new');
+        Route::post('product/insert','Products@insert');
+        Route::post('product/loadsub','Products@loadsub');
+        Route::get('product/delete/{id}','Products@delete');
+        Route::post('product/update/{id}','Products@update');
+        Route::post('product/edit/{id}','Products@edit');
 
         //Khuyến mãi
         Route::get('promotion', 'Promotion@index');
@@ -68,9 +67,14 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
          Route::post('brand/edit', 'Brand@edit');
          Route::get('brand/delete/{id}', 'Brand@delete');
          Route::post('brand/update/{id}', 'Brand@update');
+         //Bannar marketing
+         Route::get('banner', 'Banner@index');
+         Route::post('banner/insert', 'Banner@insert');
+         Route::post('banner/edit', 'Banner@edit');
+         Route::get('banner/delete/{id}', 'Banner@delete');
+         Route::post('banner/update/{id}', 'Banner@update');
     });
 });
-
 
 Route::get('eloquent', 'Eloquent@test');
 
