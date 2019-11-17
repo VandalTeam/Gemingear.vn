@@ -142,7 +142,7 @@
                 success: function(res) {
                     $(".modal-body .form-group input").val(res[0].name);
                     $("#exampleModal .form-group-image .dropify-wrapper").remove();
-                    $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img" data-default-file="http://gemingear.vn/storage/'+res[0].url+'" multiple/>');
+                    $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img" data-default-file="D:/Gemingear.vn/storage/app/public/'+res[0].url+'" />');
                     $(`#select-banner option[value=${res[0].role}]`).attr('selected', 'selected');
                     $('.dropify').dropify();
                     $("#exampleModal form").attr('action', '/admin/banner/update/'+res[0].id);
@@ -152,7 +152,7 @@
         $('.add-form-banner').click(function(e) {
             e.preventDefault();
             $("#exampleModal .form-group-image .dropify-wrapper").remove();
-            $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img" multiple/>');
+            $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img"/>');
             $('.dropify').dropify();
             $(".modal-body :nth-child(1) input").val('');
             $("#exampleModal form").attr('action', '/admin/banner/insert');

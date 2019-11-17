@@ -195,15 +195,15 @@
                 <div class="row align-items-center">
                     <div class="column1 col-lg-3 col-md-6">
                         <div class="categories_menu">
-                            <div class="categories_title">
+                            <div class="categories_title active">
                                 <h2 class="categori_toggle">ALL CATEGORIES</h2>
                             </div>
-                            <div class="categories_menu_toggle">
+                            <div class="categories_menu_toggle style="display: none;">
                                 <ul>
                                     @foreach (Category() as $ca)
                                     <li class="menu_item_children"><a href="#">{{$ca->name}} <i
                                         class="fa fa-angle-right"></i></a>
-                                        <ul class="categories_mega_menu">
+                                        <ul class="categories_mega_menu" >
                                             @foreach (Subcategory_id($ca->id) as $item)
                                             <li class="menu_item_children"><a href="#">{{$item->name}}</a>
                                             </li>
