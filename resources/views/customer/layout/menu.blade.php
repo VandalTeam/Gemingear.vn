@@ -18,11 +18,11 @@
                             <ul>
                                 @if (isset(getUser()->name))
                                 <li>
-                                        <img style="border-radius: 50%;" src="https://vcdn-ione.vnecdn.net/2019/07/03/0-1-4015-1562137097.jpg" alt="Smiley face" width="50" height="50">
+                                        <img style="border-radius: 50%;" src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQlQRcdKUJqI7daplq6AmTxkE5uQe3TZtHeaqtqc-IUpK4tkaYrg5taRdg0KrZoeyR0&_nc_ht=scontent.fsgn2-1.fna&oh=3d61076fd88d28c9c3ce6519350c7e84&oe=5E520E1B" alt="Smiley face" width="30" height="30">
                                         <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{getUser()->name}}<i class="fa fa-angle-down"></i></a>
                                 <div class="dropdown" style="position: initial;">
                                         <div class="dropdown-menu" style="margin-top: 16px;" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="/customer/logout">Đăng xuất  <i class="fas fa-sign-out-alt"></i></a>
+                                          <a class="dropdown-item" href="/customer/logout">Đăng xuất</a>
                                         </div>
                                       </div>
                                 </li>

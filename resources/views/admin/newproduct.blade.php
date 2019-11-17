@@ -128,7 +128,7 @@
                                         </div>
                                         <div class="body">
                                             <input type="file" class="dropify" name="img[]" data-height="500px" 
-                                            multiple data-default-file="<?php if(isset($products)){echo 'http://gemingear.vn/storage/'.explode('&', $products->image)[0];}?>" 
+                                            multiple data-default-file="<?php if(isset($products)){ if(strpos($products->image,'uploads')==false){ echo $products->image;} else{echo 'http://gemingear.vn/storage/'.explode('&', $products->image)[0];}}?>" 
                                             data-allowed-file-extensions="jpg png">
                                         </div>
                                     </div>

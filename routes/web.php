@@ -83,3 +83,6 @@ Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 
+Route::get('admin/', function () {
+    return view('admin.layout.wrapper');
+});

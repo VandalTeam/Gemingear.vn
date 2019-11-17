@@ -21,7 +21,7 @@
                         @foreach ($banner as $item)
                         @if ($item->role == 2)
                         <div class="carousel-item <?php if($i==0){echo 'active';}?>">
-                            <a href=""><img src="http://gemingear.vn/storage/<?=$item->url?>" class="d-block w-100"></a>
+                            <a href=""><img src="http://doanweb1234.com/storage/<?=$item->url?>" class="d-block w-100"></a>
                         </div>
                         <?php $i++;?>
                         @endif

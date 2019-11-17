@@ -37,7 +37,6 @@
         $('#register').click(function (e) { 
             e.preventDefault();
             var x = $("#signupModalCenter input[name=email]").val();
-            alert(x);
             $('.alert-danger').remove();
             $('.alert-success').remove();
             $.ajax({
@@ -58,7 +57,7 @@
                   	    });
                     }else{
                         $('.notify').show();
-                  		$('.notify').append('div class="alert alert-danger"><p>'+data.success+'</p></div>');
+                  		$('.notify').append('<div class="alert alert-danger"><p>'+data.success+'</p></div>');
                         $("#form-signup")[0].reset();
                     }
                 }

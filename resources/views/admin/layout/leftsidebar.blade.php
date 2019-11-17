@@ -10,8 +10,8 @@
                 <a class="image" href="profile.html"><img src="{{asset('assets/admin/images/profile_av.jpg')}}"
                         alt="User"></a>
                 <div class="detail">
-                <h4 >admin</h4>
-                <small>admin@gmail.com</small>
+                <h4 >{{getUser()->name}}</h4>
+                <small>{{getUser()->email}}</small>
                 </div>
             </div>
         </li>
