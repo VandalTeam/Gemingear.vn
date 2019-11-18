@@ -20,7 +20,6 @@ class Customer extends Controller
     {
         $this->users = new Users();
     }
-    
     public function login(Request $request){
         $data = $request->except('_token');
         if(Auth::attempt($data)){
@@ -54,7 +53,7 @@ class Customer extends Controller
         $this->users->role = '1';
         $message = array(
             'name' => $res->input('last_name').' '.$res->input('first_name'),
-            'link' => 'http://doanweb1234.com/'.$res->input('email'),
+            'link' => 'http://doanweb1234.com/customer/update/'.$res->input('email'),
             'email' => $res->input('email'),
         );
         if($this->users->save()){

@@ -5,8 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 function getUser(){
-    return  Auth::user();
-
+    return Auth::user();
 }
 function Category(){
    return DB::table('category')->get();
