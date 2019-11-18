@@ -148,6 +148,7 @@ Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 
+Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
 Route::get('admin/index', function () {
     return view('admin.layout.wrapper');
 });

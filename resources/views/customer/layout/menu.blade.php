@@ -203,19 +203,28 @@
                             </div>
                             <div class="categories_menu_toggle" >
                                 <ul>
-                                    @foreach (Category() as $ca)
-                                    <li class="menu_item_children"><a href="#">{{$ca->name}} <i
+                                    @foreach (Category() as $category)
+                                    <li class="menu_item_children"><a href="#">{{$category->name}} <i
                                         class="fa fa-angle-right"></i></a>
                                         <ul class="categories_mega_menu" >
-                                            @foreach (Subcategory_id($ca->id) as $item)
-                                            <li class="menu_item_children"><a href="#">{{$item->name}}</a>
+                                            @foreach (Subcategory_id($category->id) as $subcategory)
+                                            <li class="menu_item_children"><a href="#">{{$subcategory->name}}</a>
                                                 <ul class="categorie_sub_menu">
-                                                    @foreach (Brand_sub($item->id) as $item)
-                                                        <li><a href="#">{{$item->brand_name}}</a></li>
+                                                    @foreach (Brand_sub($subcategory->id) as $brand)
+                                                        <li value="{{$subcategory->id."-".$brand->brand_id}}"><a href="/{{$category->url."/".$subcategory->url."/".$brand->brand_url}}">{{$brand->brand_name}}</a></li>
                                                     @endforeach
                                                 </ul>
                                             </li>
                                             @endforeach
+                                            <li class="menu_item_children"><a href="#">Giá tiền</a>
+                                                <ul class="categorie_sub_menu">
+                                                    <li value="8-11"><a href="#">Từ 8 đến 11 triệu</a></li>
+                                                    <li value="12-16"><a href="#">Từ 12 đến 16 triệu</a></li>
+                                                    <li value="17-25"><a href="#">Từ 17 đến 25 triệu</a></li>
+                                                    <li value="26-30"><a href="#">Từ 26 đến 30 triệu</a></li>
+                                                    <li value="30"><a href="#">Trên 30 triệu</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                     @endforeach

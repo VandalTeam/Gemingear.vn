@@ -20,7 +20,7 @@ function Brand(){
     ->where('subcategory_id',$sub_id)
     ->join('series','series.id','=','product.series_id')
     ->join('brands','brands.id','=','series.brand_id')
-    ->select('brands.name as brand_name')
+    ->select('brands.name as brand_name','brands.id as brand_id','brands.url as brand_url')
     ->distinct()
     ->get();
  }
