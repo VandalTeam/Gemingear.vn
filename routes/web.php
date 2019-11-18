@@ -82,4 +82,5 @@ Route::post('customer/signup', 'Customer@signup');
 Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
+Route::get('products/{url}', 'Home@detail');
 

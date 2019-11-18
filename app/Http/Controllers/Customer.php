@@ -19,13 +19,12 @@ class Customer extends Controller
     {
         $this->users = new Users();
     }
-    
     public function login(Request $request){
         $data = $request->except('_token');
         if(Auth::attempt($data)){
             $this->authorize('customer');
             $request->session()->flash('login', 'Đăng nhập thành công');
-            return redirect('/customer');
+            return redirect('');
         }else{
             $request->session()->flash('fail', 'Đăng nhập thất bại');
             return redirect()->back();
@@ -33,7 +32,7 @@ class Customer extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect('/customer');
+        return redirect('');
     }
     public function signup(Request $res){
         $validator = \Validator::make($res->all(), [
@@ -53,7 +52,7 @@ class Customer extends Controller
         $this->users->role = '1';
         $message = array(
             'name' => $res->input('last_name').' '.$res->input('first_name'),
-            'link' => 'http://127.0.0.1:8000/customer/update/'.$res->input('email'),
+            'link' => 'http://gemingear.vn/customer/update/'.$res->input('email'),
             'email' => $res->input('email'),
         );
         if($this->users->save()){
@@ -67,7 +66,7 @@ class Customer extends Controller
     public function update($email){
         $where = array('email'=>$email);
         if($this->users->updateInfo($where,array('active'=>1))){
-            return Redirect::to('http://127.0.0.1:8000/customer');
+            return Redirect::to('http://gemingear.vn');
         }else{
             return redirect()->back();
         }
