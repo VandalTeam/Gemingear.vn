@@ -10,4 +10,5 @@
     <link rel="stylesheet" href="{{asset('assets/admin/plugins/bootstrap/css/bootstrap.min.css')}}">
     <!-- Custom Css -->
     <link rel="stylesheet" href="{{asset('assets/admin/css/style.min.css')}}">
+    <script src="https://kit.fontawesome.com/772d975d92.js" crossorigin="anonymous"></script>
 </head>

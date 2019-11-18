@@ -28,23 +28,23 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Thêm Danh Mục</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm Series</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="{{ url('admin/subcategory/insert')}}" method="post">
+                    <form action="{{ url('admin/series/insert')}}" method="post">
                         @csrf
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Tên Danh Mục</label>
+                                <label>Tên Series</label>
                                 <input type="text" class="form-control" name="name" />
                             </div>
                             <div class="form-group">
-                                    <label>Tên loại sản phẩm</label>
-                                    <select class="form-control show-tick ms" id="selector" name="category_id" placeholder="--> Chọn loại sản phẩm <--">
-                                        @foreach ($category as $item)
-                                            <option value="{{$item->id}}" name="category_id">{{$item->name}}</option>
+                                    <label>Tên hãng sản xuất</label>
+                                    <select class="form-control show-tick ms" id="selector" name="brand_id" placeholder="--> Chọn loại sản phẩm <--">
+                                        @foreach ($brand as $item)
+                                            <option value="{{$item->id}}" name="brand_id">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                             </div>
@@ -65,7 +65,7 @@
                     <div class="card">
                         <div class="header">
                             <h2><strong>Basic</strong> Examples </h2>
-                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light add-form-subcategory"
+                            <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light add-form-series"
                                 data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
                         </div>
@@ -75,21 +75,21 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên Danh Mục</th>
+                                            <th>Tên Series</th>
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @php
-                                    $i =1 @endphp @foreach ($subcategory as $item)
+                                    $i =1 @endphp @foreach ($series as $item)
                                         <tr>
                                             <td>{{$i}}</td>
                                             <td>{{$item->name}}</td>
                                             <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                                <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}"
+                                                <a><button class="btn btn-primary btn-sm editseries" data-id="{{$item->id}}"
                                                         data-toggle="modal" data-target="#exampleModal"><i
                                                             class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                                <a href="/admin/subcategory/delete/{{$item->id}}" class="delete"><button
+                                                <a href="/admin/series/delete/{{$item->id}}" class="delete"><button
                                                         class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                         Xóa</button></a>
                                             </td>
@@ -117,35 +117,40 @@
 
     <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
     <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        $(document).ready(function() {
-            $('.editcategory').click(function(e) {
-                e.preventDefault();
-                var idCategory = $(this).attr('data-id');
-                $.ajax({
-                    type: "post",
-                    url: "/admin/subcategory/edit",
-                    data: {
-                        'id': idCategory
-                    },
-                    dataType: "json",
-                    success: function(res) {
-                        $(".modal-body :nth-child(1) input").val(res[0].name);
-                        $("#exampleModal form").attr('action', '/admin/subcategory/update/'+res[0].id);
-                    }
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $(document).ready(function() {
+                $('.editseries').click(function(e) {
+                    e.preventDefault();
+                    var idSeries = $(this).attr('data-id');
+                    alert(idSeries);
+                    $.ajax({
+                        type: "post",
+                        url: "/admin/series/edit",
+                        data: {
+                            'id': idSeries
+                        },
+                        dataType: "json",
+                        success: function(res) {
+                            $(".modal-body :nth-child(1) input").val(res[0].name);
+                            $("#exampleModal form").attr('action', '/admin/series/update/'+res[0].id);
+                        }
+                    });
                 });
             });
-            $('.add-form-subcategory').click(function(e) {
+        </script>
+    <script>
+        $(document).ready(function () {
+            $('.add-form-series').click(function(e) {
                 e.preventDefault();
                 for (var i = 1; i < 3; i++) {
                     $(".modal-body :nth-child(" + i + ")input").val('');
                 }
-                $("#exampleModal form").attr('action', '/admin/subcategory/insert');
+                $("#exampleModal form").attr('action', '/admin/series/insert');
             });
         });
     </script>
-@endsection
+    @endsection

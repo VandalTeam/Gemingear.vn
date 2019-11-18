@@ -11,25 +11,28 @@
             <div class="header_top">
                 <div class="row align-items-center">
                     <div class="col-lg-4 col-md-5">
-
+                            
                     </div>
                     <div class="col-lg-8 col-md-7">
                         <div class="header_top_settings text-right main_menu menu_position">
                             <ul>
+                                <li><a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a></li>
+                                <li><a href="#"><i class="fas fa-bell"></i>Thông báo</a></li>
                                 @if (isset(getUser()->name))
                                 <li>
                                         <img style="border-radius: 50%;" src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQlQRcdKUJqI7daplq6AmTxkE5uQe3TZtHeaqtqc-IUpK4tkaYrg5taRdg0KrZoeyR0&_nc_ht=scontent.fsgn2-1.fna&oh=3d61076fd88d28c9c3ce6519350c7e84&oe=5E520E1B" alt="Smiley face" width="30" height="30">
                                         <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{getUser()->name}}<i class="fa fa-angle-down"></i></a>
                                 <div class="dropdown" style="position: initial;">
                                         <div class="dropdown-menu" style="margin-top: 16px;" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Đơn mua</a>
                                           <a class="dropdown-item" href="/customer/logout">Đăng xuất</a>
                                         </div>
-                                      </div>
                                 </li>
                                 @else
                                 <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Đăng nhập</a></li>
                                 <li><a href="#" data-toggle="modal" data-target="#signupModalCenter">Đăng ký</a></li>
                                 @endif
+                                <li></li>
                             </ul>
                         </div>
                     </div>
@@ -195,10 +198,10 @@
                 <div class="row align-items-center">
                     <div class="column1 col-lg-3 col-md-6">
                         <div class="categories_menu">
-                            <div class="categories_title active">
+                            <div class="categories_title ">
                                 <h2 class="categori_toggle">ALL CATEGORIES</h2>
                             </div>
-                            <div class="categories_menu_toggle style="display: none;">
+                            <div class="categories_menu_toggle" >
                                 <ul>
                                     @foreach (Category() as $ca)
                                     <li class="menu_item_children"><a href="#">{{$ca->name}} <i
@@ -206,6 +209,11 @@
                                         <ul class="categories_mega_menu" >
                                             @foreach (Subcategory_id($ca->id) as $item)
                                             <li class="menu_item_children"><a href="#">{{$item->name}}</a>
+                                                <ul class="categorie_sub_menu">
+                                                    @foreach (Brand_sub($item->id) as $item)
+                                                        <li><a href="#">{{$item->brand_name}}</a></li>
+                                                    @endforeach
+                                                </ul>
                                             </li>
                                             @endforeach
                                         </ul>

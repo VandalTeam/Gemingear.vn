@@ -142,7 +142,7 @@
                 success: function(res) {
                     $(".modal-body .form-group input").val(res[0].name);
                     $("#exampleModal .form-group-image .dropify-wrapper").remove();
-                    $("#exampleModal .form-group-image").append('<input type="file" class="dropify" name="img" data-default-file="D:/Gemingear.vn/storage/app/public/'+res[0].url+'" />');
+                    $("#exampleModal .form-group-image").append('<input type="file" accept=".webp,.png,.jpg" class="dropify" name="img"  data-default-file="http://doanweb1234.com/storage/'+res[0].url+'" />');
                     $(`#select-banner option[value=${res[0].role}]`).attr('selected', 'selected');
                     $('.dropify').dropify();
                     $("#exampleModal form").attr('action', '/admin/banner/update/'+res[0].id);

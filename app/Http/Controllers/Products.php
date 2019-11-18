@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Product_model;
+use App\Serie_model;
 use Illuminate\Http\Request;
 use DateTime;
 use App\Subcategory_model;
@@ -32,6 +33,18 @@ class Products extends Controller
         }
         echo $option;
     }
+    public function loadser(Request $res, Serie_model $model)
+    {
+        $where = $res->except('_token');
+        $data = $model->where($where)->get()->toArray();
+        $option="";
+        
+        for($i=0;$i<count($data);$i++)
+        {
+            $option=$option."<option  value='".$data[$i]['id']."'>".$data[$i]['name']."</option>";
+        }
+        echo $option;
+    }
     public function edit($id,Subcategory_model $Submodel){
         $where = array('product.id'=>$id);
         $data = $this->model->product_edit($where);
@@ -39,7 +52,7 @@ class Products extends Controller
     }
     public function insert(Request $res){
 
-        $data = $res->except('description', 'img', 'files', '_token','category_id');
+        $data = $res->except('description', 'img', 'files', '_token','category_id','brand_id');
         $img_link = "";
         if ($res->has('img')) {
             $file = $res->img;

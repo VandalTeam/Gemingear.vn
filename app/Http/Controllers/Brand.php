@@ -19,6 +19,7 @@ class Brand extends Controller
     }
     public function insert(Request $res){
         $data = $res->except('_token');
+        $data = $data + array('url'=>to_slug($res['name']));
         status($res,$this->model->insertInfo($data));
         return redirect($_SERVER['HTTP_REFERER']);
     }
@@ -35,6 +36,7 @@ class Brand extends Controller
     public function update(Request $res,$id){
         $where = array('id'=>$id);
         $data = $res->except('_token');
+        $data = $data + array('url'=>to_slug($res['name']));
         status($res,$this->model->updateInfo($where,$data));
         return redirect($_SERVER['HTTP_REFERER']);
     }

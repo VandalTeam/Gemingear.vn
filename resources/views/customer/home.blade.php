@@ -21,7 +21,7 @@
                         @foreach ($banner as $item)
                         @if ($item->role == 2)
                         <div class="carousel-item <?php if($i==0){echo 'active';}?>">
-                            <a href=""><img src="file:///D:/Gemingear.vn/storage/app/public/<?=$item->url?>" class="d-block w-100"></a>
+                            <a href=""><img src="http://doanweb1234.com/storage/<?=$item->url?>" class="d-block w-100"></a>
                         </div>
                         <?php $i++;?>
                         @endif
@@ -39,12 +39,12 @@
                 <div class="categories_product_inner">
                     <div class="single_categories_product banner_thumb" style="width:50%">
                         <a href="shop.html"><img
-                                src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
+                                src="https://theme.hstatic.net/1000026716/1000440777/14/solid2.jpg?v=7887"
                                 alt=""></a>
                     </div>
                     <div class="single_categories_product banner_thumb" style="width:50%">
                         <a href="shop.html"><img
-                                src="http://theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=7857"
+                                src="https://theme.hstatic.net/1000026716/1000440777/14/solid3.jpg?v=7887"
                                 alt=""></a>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     @if ($item->role==1)
                     <figure class="single_banner mb-20">
                         <div class="banner_thumb" style="width:100%">
-                            <a href="shop.html"><img src="http://gemingear.vn/storage/<?=$item->url?>" alt=""></a>
+                            <a href="shop.html"><img src="http://doanweb1234.com/storage/<?=$item->url?>" alt=""></a>
                         </div>
                     </figure>
                     @endif

@@ -45,12 +45,12 @@
                             <input type="text" class="form-control Email" name="email" />
                             <label>Mật khẩu</label>
                             <input type="password" class="form-control password" name="password" />
-                              <label for="">Quyền</label>
-                              <select  class="form-control role show-tick ms" name="role" id="role">
-                                <option value="" selected disabled hidden>--> Chọn quyền <--</option>
-                                <option value="admin">admin</option>
+                            <label for="">Quyền</label>
+                            <select class="form-control role show-tick ms" name="role" id="role">
+                                <option value="" selected disabled hidden>--> Chọn quyền <--</option> <option
+                                        value="admin">admin</option>
                                 <option value="nhanvien">Nhân viên</option>
-                              </select>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -98,8 +98,9 @@
                                             <a><button class="btn btn-primary btn-sm edituser" data-id="{{$item->id}}"
                                                     data-toggle="modal" data-target="#exampleModal"><i
                                                         class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                            <button class="btn btn-danger btn-sm delete" data-id="{{$item->id}}">
-                                                <i class="zmdi zmdi-delete"></i>Xóa</button>
+                                            <a class="delete" href="/admin/Users/delete/{{$item->id}}">
+                                                <button class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
+                                                    Xóa</button></a>
                                         </td>
                                     </tr>
                                     <?php $i++?> @endforeach
@@ -159,7 +160,7 @@
             });
         });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function()
         {
             $('.delete').click(function (e) { 
@@ -185,6 +186,6 @@
                     })
             });
         });
-</script>
+</script> --}}
 
 @endsection
