@@ -56,7 +56,7 @@
                   	    });
                     }else{
                         $('.notify').show();
-                  		$('.notify').append('div class="alert alert-danger"><p>'+data.success+'</p></div>');
+                  		$('.notify').append('<div class="alert alert-danger"><p>'+data.success+'</p></div>');
                         $("#form-signup")[0].reset();
                     }
                 }

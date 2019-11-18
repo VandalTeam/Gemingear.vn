@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Request;
 
 function getUser(){
-    $data= Auth::user();
+    return Auth::user();
 }
 function Category(){
    return DB::table('category')->get();

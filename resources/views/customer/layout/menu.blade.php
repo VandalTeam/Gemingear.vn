@@ -190,16 +190,16 @@
                 </div>
             </div>
             <!--header middel end-->
-
+            <?php $uri = Request::segment(1);?>
             <!--header bottom satrt-->
             <div class="header_bottom">
                 <div class="row align-items-center">
                     <div class="column1 col-lg-3 col-md-6">
                         <div class="categories_menu">
-                            <div class="categories_title">
+                            <div class="categories_title ">
                                 <h2 class="categori_toggle">ALL CATEGORIES</h2>
                             </div>
-                            <div class="categories_menu_toggle">
+                            <div class="categories_menu_toggle" style="<?php if($uri=='products'){echo 'display: none;';}?>">
                                 <ul>
                                     @foreach (Category() as $ca)
                                     <li class="menu_item_children"><a href="#">{{$ca->name}} <i

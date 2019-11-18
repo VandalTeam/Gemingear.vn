@@ -39,7 +39,7 @@ class Products extends Controller
     }
     public function insert(Request $res){
         $data = $res->except('description', 'img', 'files', '_token','category_id');
-        $img_link = "";
+        $img_link = "http://gemingear.vn/storage/";
         if ($res->has('img')) {
             $file = $res->img;
             $img_link=$img_link.$file[0]->store('uploads');
@@ -51,7 +51,7 @@ class Products extends Controller
         }
         $data = $data + array(
             'image' => $img_link,
-            'url' => to_slug($res['name']),
+            'url' => '/products/'.to_slug($res['name']),
             'description' => $this->parse_base64($res->description)
         );
         status($res, $this->model->insertInfo($data));
@@ -78,7 +78,7 @@ class Products extends Controller
             $data = $data + array('image' => $img_link,);
         }
         $data = $data + array(
-            'url' => to_slug($res['name']),
+            'url' => '/products/'.to_slug($res['name']),
             'description' => $this->parse_base64($res->description)
         );
         status($res,$this->model->updateInfo($where,$data));
