@@ -19,14 +19,9 @@ class Home extends Controller
     public function index(Request $request){
         $banner = $this->banner_model->getInfo();
         $product = $this->product->getfullInfo();
-        $collection = collect($product)->paginate(5);
-        
-        echo "<pre>";
-        print_r ($collection);
-        echo "</pre>";
-        die;
-        if ($request->ajax()) {
-            return view('customer.layout.pagination',['product'=>$collection] );
+        $collection = collect($product)->paginate(6);
+        if($request->ajax()){
+            return view('customer.layout.pagination',['product'=>$collection]);
         }
         return view('customer.home',['banner'=>$banner,'product'=>$collection]);
     }
