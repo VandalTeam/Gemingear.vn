@@ -3,7 +3,6 @@
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\Request;
 
 function getUser(){
     return Auth::user();
@@ -13,6 +12,20 @@ function Category(){
 }
 function Brand(){
     return DB::table('brands')->get();
+ }
+ function Brand_sub($sub_id)
+ {
+    return DB::table('product')
+    ->where('subcategory_id',$sub_id)
+    ->join('series','series.id','=','product.series_id')
+    ->join('brands','brands.id','=','series.brand_id')
+    ->select('brands.name as brand_name','brands.id as brand_id','brands.url as brand_url')
+    ->distinct()
+    ->get();
+ }
+ function Series($id)
+ {
+    return DB::table('series')->where('brand_id',$id)->get();
  }
  function Promotion(){
     return DB::table('promotions')->get();

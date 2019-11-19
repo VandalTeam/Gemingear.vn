@@ -37,6 +37,7 @@
     $(document).ready(function () {
         $('#register').click(function (e) { 
             e.preventDefault();
+            var x = $("#signupModalCenter input[name=email]").val();
             $('.alert-danger').remove();
             $('.alert-success').remove();
             $.ajax({
