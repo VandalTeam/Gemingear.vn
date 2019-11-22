@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             @foreach ($product as $item)
-            <div class="col">
-                <article class="single_product" style="width:250px; margin-bottom:3px;">
+            <div class="col-lg-3 col-sm-12">
+                <article class="single_product" >
                     <figure>
                         <div class="product_thumb">
                             <a class="primary_img" href="{{$item->url}}"><img src="{{$item->image}}" alt=""></a>
@@ -15,8 +15,8 @@
                             
                         </div>
                         <div class="product_content">
-                            <div class="product_content_inner">
-                                <h4 class="product_name"><a href="{{$item->url}}">{{$item->name}}</a></h4>
+                            <div class="product_content_inner" ">
+                                <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                 <div class="price_box">
                                     <span class="old_price">{{$item->price}}</span>
                                     <span class="current_price">{{$item->price}}</span>

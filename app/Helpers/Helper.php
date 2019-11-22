@@ -78,4 +78,14 @@ function to_slug($str) {
     $str = preg_replace('/([\s]+)/', '-', $str);
     return $str;
 }
+ function load($category_url, $subcategory_url, $brand_url){
+    $product = DB::table('product')
+        ->join('series', 'series.id', '=', 'product.series_id')
+        ->join('brands', 'brands.id', '=', 'series.brand_id')->where('brands.url', $brand_url)
+        ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', $subcategory_url)
+        ->join('category','category.id','=','subcategory.category_id')->where('category.url',$category_url)
+        ->select('product.*')
+        ->get();
+    return $product;
+}
 ?>

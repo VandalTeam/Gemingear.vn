@@ -141,15 +141,22 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
     });
 });
 
-Route::get('eloquent', 'Eloquent@test');
 
 Route::post('customer/signup', 'Customer@signup');
 Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
+//menu
 
-Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
+Route::get('/{category_url}/{sub}','Home@loadData_lv2');
+Route::get('/{category_url}','Home@loaddata_lv1');
+Route::get('/{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
+Route::post('search','Home@search');
+
+
+
+
 Route::get('admin/index', function () {
     return view('admin.layout.wrapper');
 });

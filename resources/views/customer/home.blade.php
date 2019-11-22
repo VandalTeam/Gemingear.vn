@@ -186,7 +186,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="product_header" style="background-color:red;color:white;height: 100px;">
+                    <div class="product_header" >
                         <div class="section_title">
                             <h2>Laptop Gaming</h2>
                         </div>
@@ -224,6 +224,7 @@
             $(this).parent('li').addClass('active');
   
             var myurl = $(this).attr('href');
+            
             var page=myurl.split('page=')[1];
             getData(page);
         });

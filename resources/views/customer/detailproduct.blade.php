@@ -55,7 +55,7 @@
                                     <h3><b>Giá KM:</b><span class="current_price"> <?php if(isset($price_sale)){echo number_format($product->price_sale);}else{echo $product->price;}?></span></h3>
                                 </div>
                                 <div class="product_desc">
-                                    <h3><b>Nhà sản xuất:</b> {{$product->brand_name}}</h3>
+                                    <h3><b>Nhà sản xuất:</b> Asus</h3>
                                     <h3><b>Tình trạng:</b> <?php if($product->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></h3>
                                 </div>
                                 <div class="product_variant quantity">
@@ -147,7 +147,7 @@
                                         <h2>1 review for Donec eu furniture</h2>
                                         <div class="reviews_comment_box">
                                             <div class="comment_thmb">
-                                                <img src="assets/img/blog/comment2.jpg" alt="">
+                                                <img src="{{asset('assets/customer/img/blog/comment2.jpg')}}" alt="">
                                             </div>
                                             <div class="comment_text">
                                                 <div class="reviews_meta">
@@ -230,9 +230,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product14.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product14.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product13.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product13.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -268,9 +268,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product17.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product17.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product18.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product18.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -306,9 +306,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product19.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product19.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product20.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product20.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -344,9 +344,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product22.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product22.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product23.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product23.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -382,9 +382,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product24.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product24.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product25.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product25.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -420,9 +420,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product26.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product26.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product27.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product27.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -473,9 +473,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product28.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product28.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product29.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product29.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -511,9 +511,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product7.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product7.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product8.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product8.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -549,9 +549,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product9.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product9.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product10.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product10.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -587,9 +587,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product11.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product11.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product12.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product12.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -625,9 +625,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product13.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product13.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product4.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product4.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -663,9 +663,9 @@
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
-                                    src="assets/img/product/product15.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product15.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
-                                    src="assets/img/product/product16.jpg" alt=""></a>
+                                    src="{{asset('assets/customer/img/product/product16.jpg')}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
