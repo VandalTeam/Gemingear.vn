@@ -41,13 +41,13 @@ class Home extends Controller
 
     public function loadData_lv3($category_url, $subcategory_url, $brand_url, Request $request)
     {
-        $product = DB::table('product')
-            ->join('series', 'series.id', '=', 'product.series_id')
-            ->join('brands', 'brands.id', '=', 'series.brand_id')->where('brands.url', $brand_url)
-            ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', $subcategory_url)
-            ->select('product.*')
-            ->get();
-        $collection = collect($product)->paginate(12);
+        // $product = DB::table('product')
+        //     ->join('series', 'series.id', '=', 'product.series_id')
+        //     ->join('brands', 'brands.id', '=', 'series.brand_id')->where('brands.url', $brand_url)
+        //     ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', $subcategory_url)
+        //     ->select('product.*')
+        //     ->get();
+        $collection = collect($this->product->loadData_lv3($category_url, $subcategory_url, $brand_url))->paginate(12);
         if ($request->ajax()) {
             return view('customer.layout.pagination_search', ['product' => $collection]);
         }
@@ -56,39 +56,15 @@ class Home extends Controller
     public function loadData_lv2($category_url, $sub, Request $request)
     {
 
-        if (strpos($sub, 'price') == 0) {
-            $sub = explode("-", $sub);
-            if (count($sub) == 2) {
-                $product = DB::table('product')->where('price', '>', $sub[1] * 1000000)->get();
-            } else {
-                $product = DB::table('product')->where('price', '>', $sub[1] * 1000000)->where('price', '<', $sub[\count($sub) - 1] * 1000000)->get();
-            }
-            $collection = collect($product)->paginate(12);
-            if ($request->ajax()) {
-                return view('customer.layout.pagination_search', ['product' => $collection]);
-            }
-            return view('customer.product', ['product' => $collection]);
-        } else {
-            $product = DB::table('product')
-                ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', '=', $sub)
-                ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category_url)
-                ->select('product.*')->get();
-
-            $collection = collect($product)->paginate(12);
-            if ($request->ajax()) {
-                return view('customer.layout.pagination_search', ['product' => $collection]);
-            }
-            return view('customer.product', ['product' => $collection]);
+        $collection = collect($this->product->loadData_lv2($category_url, $sub))->paginate(12);
+        if ($request->ajax()) {
+            return view('customer.layout.pagination_search', ['product' => $collection]);
         }
+        return view('customer.product', ['product' => $collection]);
     }
     public function loaddata_lv1($category, Request $request)
     {
-        $product = DB::table('product')
-            ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
-            ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category)
-            ->select('product.*')->get();
-
-        $collection = collect($product)->paginate(12);
+        $collection = collect($this->product->loaddata_lv1($category))->paginate(12);
         if ($request->ajax()) {
             return view('customer.layout.pagination_search', ['product' => $collection]);
         }
@@ -97,7 +73,7 @@ class Home extends Controller
     public function search(Request $res, Product_model $model)
     {
         if ($res->name != null) {
-            $data = DB::table('product')->where('name', 'like', $res->name . "%")->limit(4)->get();
+            $data = $this->product->search($res);
             echo $data;
         }
     }
