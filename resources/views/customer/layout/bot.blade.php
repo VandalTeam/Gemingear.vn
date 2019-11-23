@@ -4,6 +4,7 @@
 <!-- Main JS -->
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -58,13 +59,41 @@
                   	    });
                     }else{
                         $('.notify').show();
-                  		$('.notify').append('<div class="alert alert-danger"><p>'+data.success+'</p></div>');
+                  		$('.notify').append('<div class="alert alert-success"><p>'+data.success+'</p></div>');
                         $("#form-signup")[0].reset();
                     }
                 }
             });
         });
     });
+    // $(document).ready(function () {
+    //     $('.add_to_cart').click(function (e) { 
+    //         e.preventDefault();
+    //         var id = $(this).attr('data-id');
+	// 		var name = $(this).attr('data-name');
+	// 		var image = $(this).attr('data-image');
+	// 		var price = $(this).attr('data-price');
+	// 		var qty = $('.singleqty').val();
+	// 		if(qty == null){
+	// 			qty = 1;
+	// 		}
+	// 		$.ajax({
+	// 			type: "post",
+	// 			url: "/addcart",
+	// 			data: {
+	// 				'id': id,
+	// 				'name':name,
+	// 				'image': image,
+	// 				'price': price,	
+	// 				'qty': qty
+	// 			},
+    //             dataType: "json",
+	// 			success: function(data) {
+	// 				console.log(data);
+	// 			}
+	// 		});
+    //     });
+    // });
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -100,4 +129,13 @@
         });
         @endif
     });
-</script> 
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.cart_remove').click(function (e) { 
+            e.preventDefault();
+            
+        });
+    });
+</script>

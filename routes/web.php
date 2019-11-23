@@ -77,7 +77,6 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
 
         //Profile
         Route::get('profile/{id}', function ($id) {
-
             switch ($id) {
                 case 1:
                     $user = array(
@@ -153,3 +152,7 @@ Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
 Route::get('admin/index', function () {
     return view('admin.layout.wrapper');
 });
+
+//Route shopping cart
+Route::post('addcart', 'Home@addcart');
+Route::post('removecart', 'Home@removecart');

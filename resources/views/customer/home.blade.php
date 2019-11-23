@@ -204,9 +204,8 @@
                 </div>
             </div>
             <div class="tab-content" id="tag_container">
-                @include('customer.layout.pagination');
+                @include('customer.layout.pagination')
             </div>
-
         </div>
     </div>
     <!--product area end-->

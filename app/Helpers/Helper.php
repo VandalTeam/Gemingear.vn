@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Product_model;
 
 function getUser(){
     return Auth::user();
@@ -63,6 +64,11 @@ function BenSort($data,$value,$arrkey){
     unset($data[$key]);
     $new=array_merge($arr,$data);
     return $new;
+}
+
+function product_random(){
+    $model = new Product_model;
+    return $product = $model->getfullInfo()->random(15);
 }
 
 function to_slug($str) {

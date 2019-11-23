@@ -23,7 +23,6 @@ class Customer extends Controller
     public function login(Request $request){
         $data = $request->except('_token');
         if(Auth::attempt($data) && Auth::user()->acitve){
-            // $check = $this->authorize('customer');
             $request->session()->flash('login', 'Đăng nhập thành công');
             return redirect('');
         }else{
