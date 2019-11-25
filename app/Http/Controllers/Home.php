@@ -82,22 +82,66 @@ class Home extends Controller
             'name' => $res->name, 
             'qty' => $res->qty,
             'price' => $res->price,
-            'weight' => 550,
+            'weight' => 0,
             'options' => ['size' => $res->image]
         );
         if(Cart::add($data)){
             $respone = array(
                 'total_item'=>Cart::count(),
-                'total' => Cart::total(),
+                'total' => Cart::subtotal(),
                 'product' => Cart::content(),
             );
             return $respone;
         }
     }
-    public function getcart(){
-        $data = Cart::content();
+    public function viewcart(){
+        return view('customer.viewcart');
     }
-    public function removecart(){
+
+    public function removecart(Request $res){
+        if(Cart::remove($res->rowId)){   
+        }
+        $respone = array(
+            'total_item'=>Cart::count(),
+            'total' => Cart::subtotal(),
+            'product' => Cart::content(),
+        );
+        return $respone;
+    }
+    public function updatecart(Request $res){
+        if(Cart::update($res->rowId, $res->qty)){
+            $respone = array(
+                'total_item'=>Cart::count(),
+                'total' => Cart::subtotal(),
+                'product' => Cart::content(),
+            );
+            return $respone;
+        }
         
+    }
+    public function checkout(){
+        return view('customer.checkout');
+    }
+    public function city_api(){
+        return $this->fetch_api('https://thongtindoanhnghiep.co/api/city');
+    }
+    public function country_api(Request $res){
+        return $this->fetch_api('https://thongtindoanhnghiep.co/api/city/'.$res->id.'/district');
+    }
+    public function fetch_api($url){
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+        return $response;
     }
 }
