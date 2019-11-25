@@ -4,16 +4,22 @@
     <title>Antomi - Electronics eCommerce HTML Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/customer/img/favicon.ico')}}">
+<<<<<<< HEAD
 
     <!-- CSS 
     ========================= -->
+=======
+>>>>>>> Ben_DevPHP
 
-    <!-- Plugins CSS -->
     <link rel="stylesheet" href="{{asset('assets/customer/css/plugins.css')}}">
+<<<<<<< HEAD
 
     <!-- Main Style CSS -->
+=======
+>>>>>>> Ben_DevPHP
     <link rel="stylesheet" href="{{asset('assets/customer/css/style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
@@ -25,7 +31,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         crossorigin="anonymous">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    {{-- slick --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <style>
         .myform {
             position: relative;
@@ -124,5 +132,26 @@
         color: red;
         margin-left: 24px;
 }
+    </style>
+    <style>
+        .zoom{
+            transition: transform .2s;
+        }
+        .zoom:hover{
+            
+            transform: scale(1.1);
+        }
+    </style>
+    <style>
+         .main {
+        font-family:Arial;
+        width:500px;
+        display:block;
+        margin:0 auto;
+        color: black;
+        }
+        .slick-prev::before, .slick-next:before{
+            color: #dc0707;
+        }
     </style>
 </head>

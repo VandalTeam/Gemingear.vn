@@ -21,7 +21,7 @@
                         @foreach ($banner as $item)
                         @if ($item->role == 2)
                         <div class="carousel-item <?php if($i==0){echo 'active';}?>">
-                            <a href=""><img src="http://doanweb1234.com/storage/<?=$item->url?>" class="d-block w-100"></a>
+                            <a href=""><img src="<?=$item->url?>" class="d-block w-100"></a>
                         </div>
                         <?php $i++;?>
                         @endif
@@ -56,7 +56,7 @@
                     @if ($item->role==1)
                     <figure class="single_banner mb-20">
                         <div class="banner_thumb" style="width:100%">
-                            <a href="shop.html"><img src="http://doanweb1234.com/storage/<?=$item->url?>" alt=""></a>
+                            <a href="shop.html"><img src="<?=$item->url?>" alt=""></a>
                         </div>
                     </figure>
                     @endif
@@ -204,9 +204,8 @@
                 </div>
             </div>
             <div class="tab-content" id="tag_container">
-                @include('customer.layout.pagination');
+                @include('customer.layout.pagination')
             </div>
-
         </div>
     </div>
     <!--product area end-->

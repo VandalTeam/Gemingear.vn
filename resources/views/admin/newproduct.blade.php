@@ -123,10 +123,8 @@
                             <div class="row clearfix">
                                 <div class="col-sm-9 m-auto ">
                                     <div class="form-group">
-                                        <div class="header">
-                                            <h2><label>Hình ảnh sản phẩm</label></h2>
-                                        </div>
                                         <div class="body">
+                                            <label>Hình ảnh sản phẩm</label>
                                             <input type="file" class="dropify" name="img[]" data-height="300px" multiple
                                                 data-default-file="<?php if(isset($products)){ if(strpos($products->image,'uploads')==false){ echo $products->image;} else{echo 'http://gemingear.vn/storage/'.explode('&', $products->image)[0];}}?>"
                                                 data-allowed-file-extensions="jpg png">

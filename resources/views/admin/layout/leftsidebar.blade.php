@@ -23,7 +23,7 @@
             $url = Request::segment(4);
         ?>
         <li class=""><a href="/admin/index"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-        <li class="<?php if($menu=='Users'){echo 'active open';}?>"><a href="{{url('admin/Users')}}"><i
+        <li class="<?php if($menu=='Users'){echo 'active open';}?>"><a href="{{url('admin/users')}}"><i
                     class="zmdi zmdi-account-circle"></i><span>Users</span></a></li>
         <li class="cl <?php if($menu=='category'){echo 'active open';}?>"><a href="{{url('admin/category')}}"><i
                     class="zmdi zmdi-hc-fw"></i><span>Category</span></a></li>
@@ -36,14 +36,12 @@
                 @endforeach
             </ul>
         </li>
-        <li class="cl <?php if($menu=='product'){echo 'active open';}?>"><a href="{{url('admin/product')}}"><i
-                    class="zmdi zmdi-shopping-cart"></i><span>Product</span></a></li>
+        <li class="<?php if($menu=='brands'){echo 'active open';}?> promotions"><a href="{{url('admin/brand')}}"><i
+            class="zmdi zmdi-flare"></i><span>Brands</span></a></li>
         <li class="<?php if($menu=='promotions'){echo 'active open';}?> promotions"><a
                 href="{{url('admin/promotion')}}"><i class="zmdi zmdi-star-half"></i><span>Promotion</span></a></li>
-        <li class="<?php if($menu=='brands'){echo 'active open';}?> promotions"><a href="{{url('admin/brand')}}"><i
-                    class="zmdi zmdi-flare"></i><span>Brands</span></a></li>
         <li class="cl <?php if($menu=='series'){echo 'active open';}?>"><a href="javascript:void(0);"
-                class="menu-toggle"><i class="zmdi zmdi-hc-fw"></i><span>Series</span></a>
+            class="menu-toggle"><i class="zmdi zmdi-hc-fw"></i><span>Series</span></a>
             <ul class="ml-menu">
                 @foreach (Brand() as $item)
                 <li class="<?php if($item->url==$uri){echo 'active open';}?>"><a
@@ -51,6 +49,8 @@
                 @endforeach
             </ul>
         </li>
+        <li class="cl <?php if($menu=='product'){echo 'active open';}?>"><a href="{{url('admin/product')}}"><i
+                    class="zmdi zmdi-shopping-cart"></i><span>Product</span></a></li>
         <li class="<?php if($menu=='banner'){echo 'active open';}?> banner"><a href="{{url('admin/banner')}}"><i
             class="zmdi zmdi-collection-item"></i><span>Banner</span></a></li>
 </div>

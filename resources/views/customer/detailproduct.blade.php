@@ -7,24 +7,20 @@
             <div class="product_details">
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
-                        <div class="product-details-tab">
-                            <div id="img-1" class="zoomWrapper single-zoom">
-                                <a href="#">
-                                    <img id="zoom1" src="{{$product->image}}"
-                                        data-zoom-image="{{$product->image}}" alt="big-1">
-                                </a>
+                        <div class="main">
+                            <?php $image = explode('&',$product->image);?>
+                            <div class="slider slider-for">
+                                @foreach ($image as $item)
+                                <div class="single-zoom zoom"><img src="{{$item}}"
+                                    data-zoom-image="{{$item}}">
+                                </div>
+                                @endforeach
                             </div>
-                            <div class="single-zoom-thumb">
-                                <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
-                                    <li>
-                                        <a href="#" class="elevatezoom-gallery active" data-update=""
-                                            data-image="{{$product->image}}"
-                                            data-zoom-image="{{$product->image}}">
-                                            <img src="{{$product->image}}" alt="zo-th-1" />
-                                        </a>
-
-                                    </li>
-                                </ul>
+                            <div class="slider slider-nav">
+                                @foreach ($image as $item)
+                                <div><img src="{{$item}}" data-zoom-image="{{$item}}" alt="big-1">
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -32,37 +28,28 @@
                         <div class="product_d_right">
                             <form action="#">
                                 <h3><b>{{$product->name}}</b></h3>
-                                <div class="product_nav">
-                                    <ul>
-                                        <li class="prev"><a href="product-details.html"><i
-                                                    class="fa fa-angle-left"></i></a></li>
-                                        <li class="next"><a href="variable-product.html"><i
-                                                    class="fa fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
-                                {{-- <div class="product_rating">
-                                    <ul>
-                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li class="review"><a href="#">(1 customer review )</a></li>
-                                    </ul>
-                                </div> --}}
                                 <div class="price_box">
-                                    <h3><b>Giá Cũ:</b><span class="old_price"> {{$product->price}}</span></h3>
-                                    <h3><b>Giá KM:</b><span class="current_price"> <?php if(isset($price_sale)){echo number_format($product->price_sale);}else{echo $product->price;}?></span></h3>
+                                    @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
+                                            {{$product->price}}</span></h3>@endif
+                                    @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
+                                            class="current_price">{{$product->price_sale}}</h3>@else
+                                    <h3><b>Giá: </b><span class="current_price">{{$product->price}}</h3>
+                                    @endif
                                 </div>
                                 <div class="product_desc">
+<<<<<<< HEAD
                                     <h3><b>Nhà sản xuất:</b> Asus</h3>
                                     <h3><b>Tình trạng:</b> <?php if($product->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></h3>
+=======
+                                    <h3><b>Nhà sản xuất:</b> {{$product->brand_name}}</h3>
+                                    <h3><b>Tình trạng:</b>
+                                        <?php if($product->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></h3>
+>>>>>>> Ben_DevPHP
                                 </div>
                                 <div class="product_variant quantity">
                                     <label>quantity</label>
                                     <input min="1" max="100" value="1" type="number">
                                     <button class="button" type="submit">Mua sản phẩm</button>
-
                                 </div>
                             </form>
                         </div>
@@ -80,15 +67,11 @@
                                 <ul class="nav" role="tablist">
                                     <li>
                                         <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info"
-                                            aria-selected="false">Description</a>
-                                    </li>
-                                    <li>
-                                        <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet"
-                                            aria-selected="false">Specification</a>
+                                            aria-selected="false">Mô tả sản phẩm</a>
                                     </li>
                                     <li>
                                         <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
-                                            aria-selected="false">Reviews (1)</a>
+                                            aria-selected="false">Đánh giá sản phẩm</a>
                                     </li>
                                 </ul>
                             </div>
@@ -109,39 +92,6 @@
                                             imperdiet ligula euismod eget.</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="sheet" role="tabpanel">
-                                    <div class="product_d_table">
-                                        <form action="#">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="first_child">Compositions</td>
-                                                        <td>Polyester</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="first_child">Styles</td>
-                                                        <td>Girly</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="first_child">Properties</td>
-                                                        <td>Short Dress</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </form>
-                                    </div>
-                                    <div class="product_info_content">
-                                        <p>Fashion has been creating well-designed collections since 2010. The brand
-                                            offers feminine designs delivering stylish separates and statement dresses
-                                            which have since evolved into a full ready-to-wear collection in which every
-                                            item is a vital part of a woman's wardrobe. The result? Cool, easy, chic
-                                            looks with youthful elegance and unmistakable signature style. All the
-                                            beautiful pieces are made in Italy and manufactured with the greatest
-                                            attention. Now Fashion extends to a range of accessories including shoes,
-                                            hats, belts and more!</p>
-                                    </div>
-                                </div>
-
                                 <div class="tab-pane fade" id="reviews" role="tabpanel">
                                     <div class="reviews_wrapper">
                                         <h2>1 review for Donec eu furniture</h2>
@@ -214,6 +164,7 @@
             </div>
             <!--product info end-->
         </div>
+<<<<<<< HEAD
 
         <!--product area start-->
         <section class="product_area related_products">
@@ -458,6 +409,8 @@
         </section>
         <!--product area end-->
 
+=======
+>>>>>>> Ben_DevPHP
         <!--product area start-->
         <section class="product_area upsell_products">
             <div class="row">
@@ -468,8 +421,10 @@
                 </div>
             </div>
             <div class="product_carousel product_style product_column5 owl-carousel">
+                @foreach (product_random() as $item)
                 <article class="single_product">
                     <figure>
+<<<<<<< HEAD
 
                         <div class="product_thumb">
                             <a class="primary_img" href="product-details.html"><img
@@ -666,6 +621,11 @@
                                     src="{{asset('assets/customer/img/product/product15.jpg')}}" alt=""></a>
                             <a class="secondary_img" href="product-details.html"><img
                                     src="{{asset('assets/customer/img/product/product16.jpg')}}" alt=""></a>
+=======
+                        <div class="product_thumb">
+                            <a class="primary_img" href="product-details.html"><img src="{{$item->image}}" alt=""></a>
+                            <a class="secondary_img" href="product-details.html"><img src="{{$item->image}}" alt=""></a>
+>>>>>>> Ben_DevPHP
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
                             </div>
@@ -682,11 +642,14 @@
                         </div>
                         <div class="product_content">
                             <div class="product_content_inner">
-                                <h4 class="product_name"><a href="product-details.html">Donec tempus pretium arcu et
-                                        faucibus commodo</a></h4>
+                                <h4 class="product_name"><a href="product-details.html">{{$item->name}}</a></h4>
                                 <div class="price_box">
-                                    <span class="old_price">$82.00</span>
-                                    <span class="current_price">$75.00</span>
+                                    @if (isset($item->price_sale))
+                                    <span class="old_price">{{$item->price}}</span>
+                                    <span class="current_price">{{$item->price_sale}}</span>
+                                    @else
+                                    <span class="current_price">{{$item->price}}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="add_to_cart">
@@ -696,9 +659,28 @@
                         </div>
                     </figure>
                 </article>
+                @endforeach
             </div>
         </section>
         <!--product area end-->
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+    $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+    });
+ $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        // dots: true,
+        focusOnSelect: true
+    });
+    });
+</script>
 @endsection
