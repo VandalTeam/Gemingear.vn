@@ -24,10 +24,6 @@ Route::get('insert', function () {
 Route::get('logout', 'Signin@logout');
 Route::get('login', 'Signin@signin');
 Route::post('signin', 'Signin@Login');
-
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
 Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::group(['prefix' => 'admin'], function () {
         //Category
@@ -44,11 +40,11 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('subcategory/update/{id}', 'Subcategory@update');
 
         //
-        Route::get('Users', 'Users@index');
-        Route::post('Users/insert', 'Users@insert');
-        Route::post('Users/edit', 'Users@edit');
-        Route::get('Users/delete/{id}', 'Users@delete');
-        Route::post('Users/update/{id}', 'Users@update');
+        Route::get('users', 'Users@index');
+        Route::post('users/insert', 'Users@insert');
+        Route::post('users/edit', 'Users@edit');
+        Route::get('users/delete/{id}', 'Users@delete');
+        Route::post('users/update/{id}', 'Users@update');
         //
         Route::get('product', 'Products@index');
         Route::post('product/new', 'Products@new');
@@ -81,7 +77,6 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
 
         //Profile
         Route::get('profile/{id}', function ($id) {
-
             switch ($id) {
                 case 1:
                     $user = array(
@@ -145,19 +140,19 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
     });
 });
 
+Route::get('eloquent', 'Eloquent@test');
 
 Route::post('customer/signup', 'Customer@signup');
 Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
-//menu
 
-Route::get('/{category_url}/{sub}','Home@loadData_lv2');
-Route::get('/{category_url}','Home@loaddata_lv1');
-Route::get('/{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
-Route::post('search','Home@search');
+Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
+Route::get('admin/index', function () {
+    return view('admin.layout.wrapper');
+});
 
-
-
-
+//Route shopping cart
+Route::post('addcart', 'Home@addcart');
+Route::post('removecart', 'Home@removecart');
