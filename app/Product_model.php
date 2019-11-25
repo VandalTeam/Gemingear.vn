@@ -11,29 +11,29 @@ class Product_model extends ModelSetting
     public $timestamps = false;
     public function getfullInfo(){
         return DB::table('product')
-        ->leftjoin('promotions','promotions.id','=','product.promotion_id')
-        ->join('brands','brands.id','=','product.brand_id')
+        ->leftJoin('promotions','promotions.id','=','product.promotion_id')
+        ->join('series','series.id','=','product.series_id')
         ->join('subcategory','subcategory.id','=','product.subcategory_id')
-        ->select('product.*','promotions.name as promotion_name','promotions.sale_present as promotion','subcategory.name as subcategory_name','brands.name as brand_name')
-        ->OrderBy('id','DESC')
+        ->select('product.*','promotions.name as promotion_name','subcategory.name as subcategory_name','series.name as series_name')
         ->get();
     }
     public function product_edit($where){
         return DB::table('product')
-        ->rightjoin('promotions','promotions.id','=','product.promotion_id')
-        ->join('brands','brands.id','=','product.brand_id')
+        ->leftJoin('promotions','promotions.id','=','product.promotion_id')
+        ->join('series','series.id','=','product.series_id')
         ->join('subcategory','subcategory.id','=','product.subcategory_id')
         ->where($where)
-        ->select('product.*','promotions.name as promotion_name','subcategory.name as subcategory_name','brands.name as brand_name','subcategory.category_id as category_id')
+        ->select('product.*','promotions.name as promotion_name','subcategory.name as subcategory_name','series.name as series_name','series.brand_id as brand_id','subcategory.category_id as category_id')
         ->get();
     }
     public function product_detail($where){
         return DB::table('product')
         ->leftjoin('promotions','promotions.id','=','product.promotion_id')
-        ->join('brands','brands.id','=','product.brand_id')
+        ->join('series','series.id','=','product.series_id')
+        ->join('brands','brands.id','=','series.brand_id')
         ->join('subcategory','subcategory.id','=','product.subcategory_id')
         ->where($where)
-        ->select('product.*','promotions.sale_present as promotion','subcategory.name as subcategory_name','brands.name as brand_name')
+        ->select('product.*','subcategory.name as subcategory_name','brands.name as brand_name')
         ->get();
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Product_model;
+use App\Serie_model;
 use Illuminate\Http\Request;
 use DateTime;
 use App\Subcategory_model;
@@ -21,6 +22,18 @@ class Products extends Controller
         return view('admin.newproduct',['method'=>'insert']);
     }
     public function loadsub(Request $res, Subcategory_model $model)
+    {
+        $where = $res->except('_token');
+        $data = $model->where($where)->get()->toArray();
+        $option="";
+        
+        for($i=0;$i<count($data);$i++)
+        {
+            $option=$option."<option  value='".$data[$i]['id']."'>".$data[$i]['name']."</option>";
+        }
+        echo $option;
+    }
+    public function loadser(Request $res, Serie_model $model)
     {
         $where = $res->except('_token');
         $data = $model->where($where)->get()->toArray();

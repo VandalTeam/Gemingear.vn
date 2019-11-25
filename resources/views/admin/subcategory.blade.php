@@ -86,7 +86,7 @@
                                             <td>{{$i}}</td>
                                             <td>{{$item->name}}</td>
                                             <td width="15%" class="footable-last-visible" style="display: table-cell;">
-                                                <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}>"
+                                                <a><button class="btn btn-primary btn-sm editcategory" data-id="{{$item->id}}"
                                                         data-toggle="modal" data-target="#exampleModal"><i
                                                             class="zmdi zmdi-edit"></i> Sửa</button></a>
                                                 <a href="/admin/subcategory/delete/{{$item->id}}" class="delete"><button
@@ -134,7 +134,6 @@
                     },
                     dataType: "json",
                     success: function(res) {
-                        // alert(res[0].id)
                         $(".modal-body :nth-child(1) input").val(res[0].name);
                         $("#exampleModal form").attr('action', '/admin/subcategory/update/'+res[0].id);
                     }
@@ -144,8 +143,8 @@
                 e.preventDefault();
                 for (var i = 1; i < 3; i++) {
                     $(".modal-body :nth-child(" + i + ")input").val('');
-                    $("#exampleModal form").attr('action', '/admin/subcategory/insert');
                 }
+                $("#exampleModal form").attr('action', '/admin/subcategory/insert');
             });
         });
     </script>

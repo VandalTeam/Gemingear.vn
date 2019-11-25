@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             @foreach ($product as $item)
-            <div class="col">
-                <article class="single_product" style="width:250px; margin-bottom:3px;">
+            <div class="col-lg-4 col-sm-12">
+                <article class="single_product" style="margin-bottom:3px;height:95%;">
                     <figure>
                         <div class="product_thumb">
                             <a class="primary_img" href="{{$item->url}}"><img src="{{$item->image}}" alt=""></a>
@@ -22,8 +22,9 @@
                                     <span class="current_price">{{$item->price}}</span>
                                 </div>
                             </div>
-                            <div class="add_to_cart">
-                                <a href="cart.html" title="Add to cart">Add to cart</a>
+                            <div class="add_to_cart" data-id="{{$item->id}}" data-price="<?php if($item->price==null){echo "0";}else{echo $item->price;}?>" 
+                                    data-name="{{$item->name}}" data-image="{{$item->image}}">
+                                <a style="font-family:arial;">Thêm sản phẩm</a>
                             </div>
                         </div>
                     </figure>
@@ -35,3 +36,47 @@
     </div>
 </div>
 <div class="shop_toolbar t_bottom">{{$product->render()}}</div>
+
+<script>
+    $(document).ready(function () {
+        $('.add_to_cart').click(function (e) { 
+            e.preventDefault();
+            var id = $(this).attr('data-id');
+			var name = $(this).attr('data-name');
+			var image = $(this).attr('data-image');
+			var price = $(this).attr('data-price');
+			var qty = 1;
+			$.ajax({
+				type: "post",
+				url: "/addcart",
+				data: {
+					'id': id,
+					'name':name,
+					'image': image,
+					'price': price,	
+					'qty': qty
+				},
+                dataType: "json",
+				success: function(data) {
+					$('.cart_count').text(data.total_item);
+					$('.cart_price').text(data.total);
+                    $.each(data.product, function(i, item) {
+                        $('.mini_cart_inner').prepend(`<div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="${item.options.size}"
+                                                        alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">${item.name}</a>
+                                                <p>Qty: ${item.qty} X <span>${item.price}</span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>`);
+                    });
+				}
+			});
+        });
+    });
+</script>

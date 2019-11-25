@@ -8,6 +8,8 @@ use App\Product_model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 class Home extends Controller
 {
     protected $banner_model,$product;
@@ -20,27 +22,37 @@ class Home extends Controller
         $banner = $this->banner_model->getInfo();
         $product = $this->product->getfullInfo();
         $collection = collect($product)->paginate(5);
-        
-        echo "<pre>";
-        print_r ($collection);
-        echo "</pre>";
-        die;
-        if ($request->ajax()) {
-            return view('customer.layout.pagination',['product'=>$collection] );
+        if($request->ajax()){
+            return view('customer.layout.pagination',['product'=>$collection]);
         }
         return view('customer.home',['banner'=>$banner,'product'=>$collection]);
     }
     public function detail(Request $request){
         $data = $this->product->product_detail(array('product.url'=> '/'.$request->path()))->toArray();
-
-        if(is_null($data[0]->promotion)==false){
-            $price_sale =  floatval(str_replace(',','',$data[0]->price))*(100-$data[0]->promotion)/100;
-            $data[0]->price_sale=$price_sale;
-        }
-        echo "<pre>";
-        print_r ($data[0]);
-        echo "</pre>";
-        die;
         return view('customer.detailproduct',['product'=>$data[0]]);
+    }
+    public function addcart(Request $res){
+        $data = array(
+            'id' => $res->id,
+            'name' => $res->name, 
+            'qty' => $res->qty,
+            'price' => $res->price,
+            'weight' => 550,
+            'options' => ['size' => $res->image]
+        );
+        if(Cart::add($data)){
+            $respone = array(
+                'total_item'=>Cart::count(),
+                'total' => Cart::total(),
+                'product' => Cart::content(),
+            );
+            return $respone;
+        }
+    }
+    public function getcart(){
+        $data = Cart::content();
+    }
+    public function removecart(){
+        
     }
 }

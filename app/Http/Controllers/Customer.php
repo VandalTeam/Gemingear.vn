@@ -9,6 +9,7 @@ use App\Users;
 use Mail;
 use App\Mail\SendMail;
 use Redirect;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CheckValidate;
 
 class Customer extends Controller
@@ -21,11 +22,11 @@ class Customer extends Controller
     }
     public function login(Request $request){
         $data = $request->except('_token');
-        if(Auth::attempt($data)){
-            $this->authorize('customer');
+        if(Auth::attempt($data) && Auth::user()->acitve){
             $request->session()->flash('login', 'Đăng nhập thành công');
             return redirect('');
         }else{
+            Auth::logout();
             $request->session()->flash('fail', 'Đăng nhập thất bại');
             return redirect()->back();
         }
@@ -70,5 +71,18 @@ class Customer extends Controller
         }else{
             return redirect()->back();
         }
+    }
+    public function loadData($category_url,$subcategory_url,$brand_url){
+        $data= DB::table('product')
+        ->join('series','series.id','=','product.series_id')
+        ->join('brands','brands.id','=','series.brand_id')->where('brands.url',$brand_url)
+        ->join('subcategory','subcategory.id','=','product.subcategory_id')->where('subcategory.url',$subcategory_url)
+        ->select('product.*')
+        ->get();
+        
+        echo "<pre>";
+        print_r ($data);
+        echo "</pre>";
+        die;
     }
 }

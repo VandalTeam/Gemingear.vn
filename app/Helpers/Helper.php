@@ -3,7 +3,7 @@
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\Request;
+use App\Product_model;
 
 function getUser(){
     return Auth::user();
@@ -13,6 +13,20 @@ function Category(){
 }
 function Brand(){
     return DB::table('brands')->get();
+ }
+ function Brand_sub($sub_id)
+ {
+    return DB::table('product')
+    ->where('subcategory_id',$sub_id)
+    ->join('series','series.id','=','product.series_id')
+    ->join('brands','brands.id','=','series.brand_id')
+    ->select('brands.name as brand_name','brands.id as brand_id','brands.url as brand_url')
+    ->distinct()
+    ->get();
+ }
+ function Series($id)
+ {
+    return DB::table('series')->where('brand_id',$id)->get();
  }
  function Promotion(){
     return DB::table('promotions')->get();
@@ -50,6 +64,11 @@ function BenSort($data,$value,$arrkey){
     unset($data[$key]);
     $new=array_merge($arr,$data);
     return $new;
+}
+
+function product_random(){
+    $model = new Product_model;
+    return $product = $model->getfullInfo()->random(15);
 }
 
 function to_slug($str) {
