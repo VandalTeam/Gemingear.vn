@@ -24,7 +24,6 @@ class Home extends Controller
 
         $banner = $this->banner_model->getInfo();
         $product = $this->product->getfullInfo();
-<<<<<<< HEAD
         $collection = collect($product)->paginate(4);
         if ($request->ajax()) {
 
@@ -47,15 +46,11 @@ class Home extends Controller
         $collection = collect($this->product->loadData_lv3($category_url, $subcategory_url, $brand_url))->paginate(12);
         if ($request->ajax()) {
             return view('customer.layout.pagination_search', ['product' => $collection]);
-=======
-        $collection = collect($product)->paginate(5);
-        if($request->ajax()){
-            return view('customer.layout.pagination',['product'=>$collection]);
->>>>>>> Ben_DevPHP
+
         }
         return view('customer.product', ['product' => $collection]);
     }
-<<<<<<< HEAD
+
     public function loadData_lv2($category_url, $sub, Request $request)
     {
 
@@ -79,11 +74,7 @@ class Home extends Controller
             $data = $this->product->search($res);
             echo $data;
         }
-=======
-    public function detail(Request $request){
-        $data = $this->product->product_detail(array('product.url'=> '/'.$request->path()))->toArray();
-        return view('customer.detailproduct',['product'=>$data[0]]);
->>>>>>> Ben_DevPHP
+
     }
     public function addcart(Request $res){
         $data = array(

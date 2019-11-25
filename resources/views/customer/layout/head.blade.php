@@ -7,19 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/customer/img/favicon.ico')}}">
-<<<<<<< HEAD
 
-    <!-- CSS 
-    ========================= -->
-=======
->>>>>>> Ben_DevPHP
 
     <link rel="stylesheet" href="{{asset('assets/customer/css/plugins.css')}}">
-<<<<<<< HEAD
 
-    <!-- Main Style CSS -->
-=======
->>>>>>> Ben_DevPHP
     <link rel="stylesheet" href="{{asset('assets/customer/css/style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 

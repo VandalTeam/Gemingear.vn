@@ -10,14 +10,7 @@
             <!--header top start-->
             <div class="header_top">
                 <div class="row align-items-center">
-<<<<<<< HEAD
-                    <div class="col-lg-4 col-md-5">
-
-                    </div>
-                    <div class="col-lg-8 col-md-7">
-=======
                     <div class="col-lg-12 col-md-7">
->>>>>>> Ben_DevPHP
                         <div class="header_top_settings text-right main_menu menu_position">
                             <ul>
                                 <li><a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a></li>
@@ -103,35 +96,6 @@
                                     <div class="mini_cart_inner">
                                         @foreach (Cart::content() as $item)
                                         <div class="cart_item">
-<<<<<<< HEAD
-                                            <div class="cart_img">
-                                                <a href="#"><img
-                                                        src="{{asset('assets/customer/img/s-product/product.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">Sit voluptatem rhoncus sem lectus</a>
-                                                <p>Qty: 1 X <span> $60.00 </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img
-                                                        src="{{asset('assets/customer/img/s-product/product2.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">Natus erro at congue massa commodo</a>
-                                                <p>Qty: 1 X <span> $60.00 </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-=======
                                                 <div class="cart_img">
                                                     <a href="#"><img src="{{$item->options->size}}" alt=""></a>
                                                 </div>
@@ -144,7 +108,6 @@
                                                 </div>
                                             </div>
                                         @endforeach
->>>>>>> Ben_DevPHP
                                         <div class="mini_cart_table">
                                             <div class="cart_total">
                                                 <span>Sub total:</span>
@@ -182,18 +145,10 @@
                             <div class="categories_title ">
                                 <h2 class="categori_toggle">Danh mục sản phẩm</h2>
                             </div>
-<<<<<<< HEAD
                             <div class="categories_menu_toggle" style="<?php if($uri!=null){echo 'display: none;';}?>">
                                 <ul>
                                     @foreach (Category() as $category)
                                     <li class="menu_item_children"><a href="/{{$category->url}}">{{$category->name}} <i
-=======
-                            <div class="categories_menu_toggle"
-                                style="<?php if($uri=='products'){echo 'display: none;';}?>">
-                                <ul>
-                                    @foreach (Category() as $category)
-                                    <li class="menu_item_children"><a href="#">{{$category->name}} <i
->>>>>>> Ben_DevPHP
                                                 class="fa fa-angle-right"></i></a>
                                         <ul class="categories_mega_menu">
                                             @foreach (Subcategory_id($category->id) as $subcategory)

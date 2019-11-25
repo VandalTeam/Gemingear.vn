@@ -51,14 +51,8 @@ class Products extends Controller
         return view('admin.newproduct',['products'=>$data[0]]);
     }
     public function insert(Request $res){
-<<<<<<< HEAD
         $data = $res->except('description', 'img', 'files', '_token','category_id','brand_id');
         $img_link = "http://doanweb1234.com/";
-
-=======
-        $data = $res->except('description', 'img', 'files', '_token','category_id');
-        $img_link = "http://gemingear.vn/storage/";
->>>>>>> Ben_DevPHP
         if ($res->has('img')) {
             $file = $res->img;
             $img_link=$img_link.$file[0]->store('uploads');

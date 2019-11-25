@@ -151,18 +151,11 @@ Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
 
-<<<<<<< HEAD
 Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
 Route::get('{category_url}/{sub}','Home@loadData_lv2');
 Route::get('{category_url}','Home@loadData_lv1');
 Route::post('/search','Home@search');
-=======
-Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
 
->>>>>>> Ben_DevPHP
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');
 Route::post('removecart', 'Home@removecart');

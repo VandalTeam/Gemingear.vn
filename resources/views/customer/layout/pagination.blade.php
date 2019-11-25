@@ -2,13 +2,9 @@
     <div class="container">
         <div class="row">
             @foreach ($product as $item)
-<<<<<<< HEAD
             <div class="col-lg-3 col-sm-12">
                 <article class="single_product" >
-=======
-            <div class="col-lg-4 col-sm-12">
-                <article class="single_product" style="margin-bottom:3px;height:95%;">
->>>>>>> Ben_DevPHP
+
                     <figure>
                         <div class="product_thumb">
                             <a class="primary_img" href="{{$item->url}}"><img src="{{$item->image}}" alt=""></a>
