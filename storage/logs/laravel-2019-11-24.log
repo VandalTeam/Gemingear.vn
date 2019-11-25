@@ -1,0 +1,16 @@
+[2019-11-24 16:06:43] local.ERROR: There are no commands defined in the "stogare" namespace.
+
+Did you mean this?
+    storage {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"stogare\" namespace.
+
+Did you mean this?
+    storage at D:\\Đồ án Web\\Gemingear.vn\\vendor\\symfony\\console\\Application.php:592)
+[stacktrace]
+#0 D:\\Đồ án Web\\Gemingear.vn\\vendor\\symfony\\console\\Application.php(641): Symfony\\Component\\Console\\Application->findNamespace('stogare')
+#1 D:\\Đồ án Web\\Gemingear.vn\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('stogare:link')
+#2 D:\\Đồ án Web\\Gemingear.vn\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\Đồ án Web\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\Đồ án Web\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 D:\\Đồ án Web\\Gemingear.vn\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 

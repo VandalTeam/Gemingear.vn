@@ -10,7 +10,7 @@ class Signin extends Controller
 {
     public function signin(){
         if(isset(Auth::user()->name)){
-            return \redirect('/admin/category');
+            return \redirect('/admin/index');
         }else{
             return view('admin.template.signin_template');
         }

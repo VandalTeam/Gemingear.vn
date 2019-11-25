@@ -24,6 +24,10 @@ Route::get('insert', function () {
 Route::get('logout', 'Signin@logout');
 Route::get('login', 'Signin@signin');
 Route::post('signin', 'Signin@Login');
+
+Route::get('admin/index', function () {
+    return view('admin.layout.wrapper');
+});
 Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::group(['prefix' => 'admin'], function () {
         //Category
@@ -157,6 +161,3 @@ Route::post('search','Home@search');
 
 
 
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
