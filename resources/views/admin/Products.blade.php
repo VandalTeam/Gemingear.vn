@@ -51,7 +51,7 @@
                                     <th>Tên sản phẩm</th>
                                     <th>Giá sản phẩm</th>
                                     <th>Loại sản phẩm</th>
-                                    <th>Hãng sản xuất</th>
+                                    <th>Phiên bản</th>
                                     <th>Khuyến mãi</th>
                                     <th>Tình trạng</th>
                                     <th>Chức năng</th>
@@ -65,7 +65,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->price}}</td>
                                     <td>{{$item->subcategory_name}}</td>
-                                    <td>{{$item->brand_name}}</td>
+                                    <td>{{$item->series_name}}</td>
                                     <td>{{$item->promotion_name}}</td>
                                     <td><?php if($item->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></td>
                                     <td width="16%" class="footable-last-visible" style="display: table-cell;">

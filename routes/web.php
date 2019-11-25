@@ -21,6 +21,9 @@ Route::get('insert', function () {
         ['name' => 'nhiben', 'email' => str_random(5) . '.com', 'password' => bcrypt('benbacker')],
     ]);
 });
+Route::get('admin/index', function () {
+    return view('admin.layout.wrapper');
+});
 Route::get('logout', 'Signin@logout');
 Route::get('login', 'Signin@signin');
 Route::post('signin', 'Signin@Login');
@@ -151,9 +154,6 @@ Route::get('products/{url}', 'Home@detail');
 Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
 Route::get('{category_url}/{sub}','Home@loadData_lv2');
 Route::get('{category_url}','Home@loadData_lv1');
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
 Route::post('/search','Home@search');
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');

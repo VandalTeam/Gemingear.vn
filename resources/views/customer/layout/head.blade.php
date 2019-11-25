@@ -102,7 +102,6 @@
             padding: 0;
             overflow: auto;
             height: 400px;
-
         }
 
         ul#results li a {
@@ -125,6 +124,5 @@
         color: red;
         margin-left: 24px;
 }
-
     </style>
 </head>
