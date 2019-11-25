@@ -155,4 +155,10 @@ Route::get('admin/index', function () {
 
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');
-Route::post('removecart', 'Home@removecart');
+Route::get('removecart', 'Home@removecart');
+Route::post('updatecart', 'Home@updatecart');
+Route::get('cart', 'Home@viewcart');
+Route::get('checkout', 'Home@checkout');
+
+Route::get('city', 'Home@city_api');
+Route::post('country', 'Home@country_api');
