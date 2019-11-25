@@ -5,7 +5,11 @@
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+@yield('bot')
 <script>
     $(document).ready(function () {
         $('#login').click(function (e) { 
@@ -16,8 +20,6 @@
             $("#signupModalCenter").addClass('fade');
         });
     });
-</script>
-<script>
     $(document).ready(function () {
         $('#signup').click(function (e) { 
             e.preventDefault();
@@ -66,34 +68,49 @@
             });
         });
     });
-    // $(document).ready(function () {
-    //     $('.add_to_cart').click(function (e) { 
-    //         e.preventDefault();
-    //         var id = $(this).attr('data-id');
-	// 		var name = $(this).attr('data-name');
-	// 		var image = $(this).attr('data-image');
-	// 		var price = $(this).attr('data-price');
-	// 		var qty = $('.singleqty').val();
-	// 		if(qty == null){
-	// 			qty = 1;
-	// 		}
-	// 		$.ajax({
-	// 			type: "post",
-	// 			url: "/addcart",
-	// 			data: {
-	// 				'id': id,
-	// 				'name':name,
-	// 				'image': image,
-	// 				'price': price,	
-	// 				'qty': qty
-	// 			},
-    //             dataType: "json",
-	// 			success: function(data) {
-	// 				console.log(data);
-	// 			}
-	// 		});
-    //     });
-    // });
+    $(document).ready(function () {
+        $('.mini_cart_inner').on('click', '.remove_cart', function() {
+            var id = $(this).attr('data-id');
+            $.ajax({
+                type: "get",
+                url: "/removecart",
+                data: {
+                    'rowId': id,
+                },
+                dataType: "json",
+                success: function (data) {
+                    // console.log(data.total);
+                    $('.cart_price').text(data.total);
+                    $('.cart_count').text(data.total_item);
+                    var str="";
+                    $.each(data.product, function(i, item) {
+                        str +=`<div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="${item.options.size}" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">${item.name}</a>
+                                                <p>Qty: ${item.qty} X <span>${item.price}</span></p>
+                                            </div>
+                                            <div class="cart_remove remove_cart" data-id="${item.rowId}">
+                                                <a><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>`
+                    });
+                    $('.mini_cart_inner').html(str+`<div class="mini_cart_table">
+                                            <div class="cart_total">
+                                                <span>Tổng tiền:</span>
+                                                <span class="price">${data.total}</span>
+                                            </div>
+                                            <div class="cart_total mt-10">
+                                                <span>Thành tiền:</span>
+                                                <span class="price">${data.total}</span>
+                                            </div>
+                                        </div>`);
+                }
+            });
+        });
+    });
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -131,11 +148,5 @@
     });
 </script>
 
-<script>
-    $(document).ready(function () {
-        $('.cart_remove').click(function (e) { 
-            e.preventDefault();
-            
-        });
-    });
-</script>
+
+

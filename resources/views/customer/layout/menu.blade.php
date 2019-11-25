@@ -85,46 +85,45 @@
                     <div class="col-lg-2">
                         <div class="header_configure_area">
                             <div class="mini_cart_wrapper">
-                                <a href="javascript:void(0)">
+                                <a href="/cart">
                                     <i class="fa fa-shopping-bag"></i>
-                                    <span class="cart_price">{{Cart::total()}}<i class="ion-ios-arrow-down"></i></span>
+                                    <span><span class="cart_price">{{Cart::subtotal()}}</span><i class="ion-ios-arrow-down"></i></span>
                                     <span class="cart_count">{{Cart::count()}}</span>
-
                                 </a>
                                 <!--mini cart-->
                                 <div class="mini_cart" style="overflow:auto;">
                                     <div class="mini_cart_inner">
                                         @foreach (Cart::content() as $item)
                                         <div class="cart_item">
-                                                <div class="cart_img">
-                                                    <a href="#"><img src="{{$item->options->size}}" alt=""></a>
-                                                </div>
-                                                <div class="cart_info">
-                                                    <a href="#">{{$item->name}}</a>
-                                                    <p>Qty: {{$item->qty}} X <span>{{$item->price}}</span></p>
-                                                </div>
-                                                <div class="cart_remove" data-id="{{$item->rowId}}">
-                                                    <a href="#"><i class="ion-android-close"></i></a>
-                                                </div>
+                                            <div class="cart_img">
+                                                <a href="#"><img src="{{$item->options->size}}" alt=""></a>
                                             </div>
+                                            <div class="cart_info">
+                                                <a href="#">{{$item->name}}</a>
+                                                <p>Qty: {{$item->qty}} X <span>{{$item->price}}</span></p>
+                                            </div>
+                                            <div class="cart_remove remove_cart" data-id="{{$item->rowId}}">
+                                                <a><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
                                         @endforeach
                                         <div class="mini_cart_table">
                                             <div class="cart_total">
-                                                <span>Sub total:</span>
+                                                <span>Tổng tiền:</span>
                                                 <span class="price">{{Cart::subtotal()}}</span>
                                             </div>
                                             <div class="cart_total mt-10">
-                                                <span>total:</span>
-                                                <span class="price">{{Cart::total()}}</span>
+                                                <span>thành tiền:</span>
+                                                <span class="price">{{Cart::subtotal()}}</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mini_cart_footer">
+                                    <div class="mini_cart_footer" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
                                         <div class="cart_button">
-                                            <a href="cart.html">View cart</a>
+                                            <a href="/cart">Xem giỏ hàng</a>
                                         </div>
                                         <div class="cart_button">
-                                            <a href="checkout.html">Checkout</a>
+                                            <a href="/checkout">Thanh toán</a>
                                         </div>
 
                                     </div>
@@ -146,7 +145,7 @@
                                 <h2 class="categori_toggle">Danh mục sản phẩm</h2>
                             </div>
                             <div class="categories_menu_toggle"
-                                style="<?php if($uri=='products'){echo 'display: none;';}?>">
+                                style="<?php if($uri!=null){echo 'display: none;';}?>">
                                 <ul>
                                     @foreach (Category() as $category)
                                     <li class="menu_item_children"><a href="#">{{$category->name}} <i
