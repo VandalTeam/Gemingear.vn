@@ -162,3 +162,7 @@ Route::get('checkout', 'Home@checkout');
 
 Route::get('city', 'Home@city_api');
 Route::post('country', 'Home@country_api');
+
+//order
+Route::post('order', 'Customer@order');
+Route::get('confim', 'Customer@confim');

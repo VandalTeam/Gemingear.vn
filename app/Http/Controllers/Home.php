@@ -7,7 +7,6 @@ use App\Banner_model;
 use App\Product_model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
-
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class Home extends Controller
