@@ -41,12 +41,6 @@ class Home extends Controller
 
     public function loadData_lv3($category_url, $subcategory_url, $brand_url, Request $request)
     {
-        // $product = DB::table('product')
-        //     ->join('series', 'series.id', '=', 'product.series_id')
-        //     ->join('brands', 'brands.id', '=', 'series.brand_id')->where('brands.url', $brand_url)
-        //     ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', $subcategory_url)
-        //     ->select('product.*')
-        //     ->get();
         $collection = collect($this->product->loadData_lv3($category_url, $subcategory_url, $brand_url))->paginate(12);
         if ($request->ajax()) {
             return view('customer.layout.pagination_search', ['product' => $collection]);

@@ -248,7 +248,7 @@
                     </div>
                     <div class="column2 col-lg-6 ">
                         <div class="search_container">
-                            <form action="#">
+                            <form action="#" >
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">All Categories</option>

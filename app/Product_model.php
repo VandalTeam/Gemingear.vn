@@ -75,6 +75,6 @@ class Product_model extends ModelSetting
     public function search($res)
     {
       
-        return DB::table('product')->where('name', 'like', "%" . $res->name . "%")->limit(4)->get();
+        return DB::table('product')->where('name', 'like', "%" . $res->name . "%")->limit(10)->get();
     }
 }

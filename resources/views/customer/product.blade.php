@@ -111,8 +111,6 @@
                 <div class="shop_toolbar t_bottom ">
                     <div class="shop_toolbar t_bottom">{{$product->render()}}</div>
                 </div>
-                <!--shop toolbar end-->
-                <!--shop wrapper end-->
             </div>
         </div>
     </div>
