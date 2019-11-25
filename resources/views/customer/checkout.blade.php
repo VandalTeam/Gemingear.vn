@@ -144,8 +144,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="order_button">
-                                    <button type="submit">Thanh toán</button>
+                                <div class="order_button" style="text-align: right;">
+                                    <button class="col-12" type="submit">Thanh toán</button>
                                 </div>
                         </div>
                         </form>

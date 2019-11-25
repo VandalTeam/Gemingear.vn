@@ -11,17 +11,18 @@
                             <?php $image = explode('&',$product->image);?>
                             <div class="slider slider-for">
                                 @foreach ($image as $item)
-                                <div class="single-zoom zoom"><img src="{{$item}}"
-                                    data-zoom-image="{{$item}}">
+                                <div class="single-zoom zoom"><img src="{{$item}}" data-zoom-image="{{$item}}">
                                 </div>
                                 @endforeach
                             </div>
+                            @if (count($image)>4)
                             <div class="slider slider-nav">
                                 @foreach ($image as $item)
                                 <div><img src="{{$item}}" data-zoom-image="{{$item}}" alt="big-1">
                                 </div>
                                 @endforeach
                             </div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6">
@@ -30,10 +31,10 @@
                                 <h3><b>{{$product->name}}</b></h3>
                                 <div class="price_box">
                                     @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
-                                            {{$product->price}}</span></h3>@endif
+                                            {{number_format($product->price)}}</span></h3>@endif
                                     @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
-                                            class="current_price">{{$product->price_sale}}</h3>@else
-                                    <h3><b>Giá: </b><span class="current_price">{{$product->price}}</h3>
+                                            class="current_price">{{number_format($product->price_sale)}}</h3>@else
+                                    <h3><b>Giá: </b><span class="current_price">{{number_format($product->price)}}đ</h3>
                                     @endif
                                 </div>
                                 <div class="product_desc">
@@ -44,9 +45,10 @@
                                 <div class="product_variant quantity">
                                     <label>quantity</label>
                                     <input min="1" max="100" value="1" type="number">
-                                    <button class="button" type="submit">Mua sản phẩm</button>
+                                    <button class="button add_cart" data-name="{{$product->name}}"
+                                        data-price="{{$product->price}}" data-id="{{$product->id}}">Mua sản
+                                        phẩm</button>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -131,23 +133,22 @@
                                             </ul>
                                         </div>
                                         <div class="product_review_form">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label for="review_comment">Your review </label>
-                                                        <textarea name="comment" id="review_comment"></textarea>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <label for="author">Name</label>
-                                                        <input id="author" type="text">
-
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <label for="email">Email </label>
-                                                        <input id="email" type="text">
-                                                    </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label for="review_comment">Your review </label>
+                                                    <textarea name="comment" id="review_comment"></textarea>
                                                 </div>
-                                                <button type="submit">Submit</button>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <label for="author">Name</label>
+                                                    <input id="author" type="text">
+
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <label for="email">Email </label>
+                                                    <input id="email" type="text">
+                                                </div>
+                                            </div>
+                                            <button type="submit">Submit</button>
                                             </form>
                                         </div>
                                     </div>
@@ -201,10 +202,6 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="add_to_cart">
-                                <a href="cart.html" title="Add to cart">Add to cart</a>
-                            </div>
-
                         </div>
                     </figure>
                 </article>
@@ -214,21 +211,47 @@
         <!--product area end-->
     </div>
 </div>
+@endsection
+@section('bot')
+<script src="{{asset('assets/customer/js/slick.min.js')}}"></script>
 <script>
     $(document).ready(function () {
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            focusOnSelect: true
-        });
+    $('.slider-for').not('.slick-initialized').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
     });
+    $('.slider-nav').not('.slick-initialized').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        focusOnSelect: true
+    });
+});
+$('.add_cart').click(function (e) { 
+    var id = $(this).attr('data-id');
+	var name = $(this).attr('data-name');
+	var image = $(this).attr('data-image');
+	var price = $(this).attr('data-price');
+	var qty = $(this).prev().val();
+    $.ajax({
+		type: "post",
+		url: "/addcart",
+		data: {
+			'id': id,
+		    'name':name,
+			'image': image,
+			'price': price,	
+			'qty': qty
+		},
+        dataType: "json",
+		success: function(data) {
+            location.reload(true);
+			}
+		});
+});        
 </script>
 @endsection

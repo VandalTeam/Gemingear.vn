@@ -63,29 +63,19 @@
                     var str="";
                     $.each(data.product, function(i, item) {
                         str +=`<div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="${item.options.size}" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">${item.name}</a>
-                                                <p>Qty: ${item.qty} X <span>${item.price}</span></p>
-                                            </div>
-                                            <div class="cart_remove remove_cart" data-id="${item.rowId}">
-                                                <a><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>`
+                        <div class="cart_img">
+                        <a href="#"><img src="${item.options.size}" alt=""></a>
+                        </div><div class="cart_info">
+                        <a href="#">${item.name}</a>
+                        <p>Qty: ${item.qty} X <span>${item.price}</span></p></div>
+                        <div class="cart_remove remove_cart" data-id="${item.rowId}">
+                        <a><i class="ion-android-close"></i></a></div></div>`
                     });
                     $('.mini_cart_inner').html(str+`<div class="mini_cart_table">
-                                            <div class="cart_total">
-                                                <span>Tổng tiền:</span>
-                                                <span class="price">${data.total}</span>
-                                            </div>
-                                            <div class="cart_total mt-10">
-                                                <span>Thành tiền:</span>
-                                                <span class="price">${data.total}</span>
-                                            </div>
-                                        </div>`);
-                    // location.reload(true);
+                    <div class="cart_total"><span>Tổng tiền:</span>
+                    <span class="price">${data.total}</span></div>
+                    <div class="cart_total mt-10"><span>Thành tiền:</span>
+                    <span class="price">${data.total}</span></div></div>`);
 				}
 			});
         });
