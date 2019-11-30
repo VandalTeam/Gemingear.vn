@@ -71,7 +71,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('brand/edit', 'Brand@edit');
         Route::get('brand/delete/{id}', 'Brand@delete');
         Route::post('brand/update/{id}', 'Brand@update');
-        //Bannar marketing
+        //Banner marketing
         Route::get('banner', 'Banner@index');
         Route::post('banner/insert', 'Banner@insert');
         Route::post('banner/edit', 'Banner@edit');
@@ -132,14 +132,28 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
             }
             return view('admin.profile', ['user' => $user]);
         });
-
+        //Dashboard
+        Route::get('Dashboard','Order@statistics');
+        Route::post('Dashboard/Year','Order@statisticsWithYear');
         //Series
-         //Subcategory
          Route::get('series/{url}', 'Serie@index');
          Route::post('series/insert', 'Serie@insert');
          Route::post('series/edit', 'Serie@edit');
          Route::get('series/delete/{id}', 'Serie@delete');
          Route::post('series/update/{id}', 'Serie@update');
+         // Order
+         Route::get('order', 'Order@index');
+         Route::post('order/insert', 'Order@insert');
+         Route::post('order/edit', 'Order@edit');
+         Route::get('order/delete/{id}', 'Order@delete');
+         Route::post('order/update/{id}', 'Order@update');
+
+         //order_detail
+         Route::get('order_detail/{order_id}', 'Order_detail@detail');
+         Route::post('order_detail/edit', 'Order_detail@edit');
+         Route::post('order_detail/update/{id}', 'Order_detail@update');
+         Route::get('order_detai/delete/{id}', 'Order_detail@delete');
+
     });
 });
 
@@ -151,9 +165,7 @@ Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
 
-Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
-Route::get('{category_url}/{sub}','Home@loadData_lv2');
-Route::get('{category_url}','Home@loadData_lv1');
+
 Route::post('/search','Home@search');
 
 //Route shopping cart
@@ -163,5 +175,9 @@ Route::post('updatecart', 'Home@updatecart');
 Route::get('cart', 'Home@viewcart');
 Route::get('checkout', 'Home@checkout');
 
+Route::get('user/account/profile','Users@acount');
 Route::get('city', 'Home@city_api');
 Route::post('country', 'Home@country_api');
+Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
+Route::get('{category_url}/{sub}','Home@loadData_lv2');
+Route::get('{category_url}','Home@loadData_lv1');

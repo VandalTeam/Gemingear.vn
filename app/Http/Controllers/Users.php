@@ -33,13 +33,29 @@ class Users extends Controller
         $user->name=$object->name;
         $user->email=$object->email;
         $user->password=bcrypt($object->password);
-        $model->role=$object->role;
-        $model->active=1;
+        if(isset($object->role)==true)
+        {
+            $user->role=$object->role;
+        }
+        else{
+            $user->role=1;
+        }
+        if(isset($object->phone)==true)
+        {
+            $user->phone=$object->phone;
+        }
+        else{
+            $user->phone=null;
+        }
+        $user->active=1;
         $user->save();
         return redirect($_SERVER['HTTP_REFERER']);
     }
     public function delete(Request $res,$id,User $model){
         status($res,$model->destroy($id));
         return redirect($_SERVER['HTTP_REFERER']);
+    }
+    public function acount(){
+        return view('customer.acount');
     }
 }

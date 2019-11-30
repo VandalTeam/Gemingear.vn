@@ -16,19 +16,23 @@
                                 <li><a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a></li>
                                 <li><a href="#"><i class="fas fa-bell"></i>Thông báo</a></li>
                                 @if (isset(getUser()->name))
-                                <li>
-                                    <img style="border-radius: 50%;"
-                                        src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQlQRcdKUJqI7daplq6AmTxkE5uQe3TZtHeaqtqc-IUpK4tkaYrg5taRdg0KrZoeyR0&_nc_ht=scontent.fsgn2-1.fna&oh=3d61076fd88d28c9c3ce6519350c7e84&oe=5E520E1B"
-                                        alt="Smiley face" width="30" height="30">
-                                    <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">{{getUser()->name}}<i class="fa fa-angle-down"></i></a>
-                                    <div class="dropdown" style="position: initial;">
-                                        <div class="dropdown-menu" style="margin-top: 16px;"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Đơn mua</a>
-                                            <a class="dropdown-item" href="/customer/logout">Đăng xuất</a>
-                                        </div>
-                                </li>
+                                <a href="/user/account/profile">
+                                    <li>
+                                        <img style="border-radius: 50%;"
+                                            src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQlQRcdKUJqI7daplq6AmTxkE5uQe3TZtHeaqtqc-IUpK4tkaYrg5taRdg0KrZoeyR0&_nc_ht=scontent.fsgn2-1.fna&oh=3d61076fd88d28c9c3ce6519350c7e84&oe=5E520E1B"
+                                            alt="Smiley face" width="30" height="30">
+                                        <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">{{getUser()->name}}<i
+                                                class="fa fa-angle-down"></i></a>
+                                        <div class="dropdown" style="position: initial;">
+                                            <div class="dropdown-menu" style="margin-top: 16px;"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="/user/account/profile">Thông tin</a>
+                                                <a class="dropdown-item" href="#">Đơn mua</a>
+                                                <a class="dropdown-item" href="/customer/logout">Đăng xuất</a>
+                                            </div>
+                                    </li>
+                                </a>
                                 @else
                                 <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Đăng nhập</a></li>
                                 <li><a href="#" data-toggle="modal" data-target="#signupModalCenter">Đăng ký</a></li>
@@ -46,7 +50,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-6">
                         <div class="logo">
-                            <a href="http://gemingear.vn/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
+                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
                                     alt=""></a>
                         </div>
                     </div>
@@ -54,12 +58,12 @@
                         <div class="main_menu menu_position text-center">
                             <nav>
                                 <ul>
-                                    <li>
+                                    {{-- <li>
                                         <button type="button" class="btn btn-outline-danger"><img
                                                 style="max-width: 18px;max-height: 18px;"
                                                 src="//theme.hstatic.net/1000026716/1000440777/14/xk1s.png?v=7930">Tổng
                                             hợp khuyến mãi</button>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <button type="button" class="btn btn-outline-danger"><img
                                                 style="max-width: 18px;max-height: 18px;"
@@ -87,7 +91,8 @@
                             <div class="mini_cart_wrapper">
                                 <a href="/cart">
                                     <i class="fa fa-shopping-bag"></i>
-                                    <span><span class="cart_price">{{Cart::subtotal()}}</span><i class="ion-ios-arrow-down"></i></span>
+                                    <span><span class="cart_price">{{Cart::subtotal()}}</span><i
+                                            class="ion-ios-arrow-down"></i></span>
                                     <span class="cart_count">{{Cart::count()}}</span>
                                 </a>
                                 <!--mini cart-->
@@ -118,7 +123,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mini_cart_footer" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                    <div class="mini_cart_footer"
+                                        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
                                         <div class="cart_button">
                                             <a href="/cart">Xem giỏ hàng</a>
                                         </div>
@@ -185,7 +191,7 @@
                     </div>
                     <div class="column2 col-lg-6 ">
                         <div class="search_container">
-                            <form action="#" >
+                            <form action="#">
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">All Categories</option>
@@ -208,7 +214,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row m-auto">
+                <div class="row m-auto search">
                     <div class=" column1 col-lg-3">
                     </div>
                     <div class="column2 col-lg-6 p-2">
@@ -216,7 +222,7 @@
                             <div class="row">
                                 <div class="col-lg-3 p-0">
                                 </div>
-                                <div class="col-lg-7 p-0">
+                                <div class="col-lg-8 p-0">
                                     <ul id="results">
                                     </ul>
                                 </div>
@@ -229,33 +235,38 @@
         </div>
     </div>
 </header>
+@section('bot')
 <script>
-    $(document).ready(function () {
-        $("#search").on('keyup change click', function () {
-                var product_name=$("#search").val();
-                if(product_name==="")
-                {
-                    $('#results').css("display","none");
+        $(document).ready(function () {
+            $("#search").on('keyup change click', function () {
+                    var product_name=$("#search").val();
+                    
+                    if(product_name==="")
+                    {
+                        $('#results').css("display","none");
+                        $('.col-lg-8 p-0').css("display","none");
+                    }
+                    $.ajax({
+                type: "post",
+                url: "/search",
+                data: {
+                            'name': product_name
+                        },
+                dataType: "json",
+                success: function (response) {
+                    $('#results').empty();
+                    $('#results').css("display","block");
+                    $('.col-lg-8 p-0').css("display","block");
+                    for(var i=0;i<response.length;i++)
+                    {
+                        $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
+                    }
                 }
-                $.ajax({
-            type: "post",
-            url: "/search",
-            data: {
-                        'name': product_name
-                    },
-            dataType: "json",
-            success: function (response) {
-                console.log(response);
-                $('#results').empty();
-                $('#results').css("display","block");
-                for(var i=0;i<response.length;i++)
-                {
-                    $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
-                }
-            }
-            });
-            });
-       
-    });
-</script>
+                });
+                });
+           
+        });
+    </script>
+@endsection
+
 <!--header area end-->

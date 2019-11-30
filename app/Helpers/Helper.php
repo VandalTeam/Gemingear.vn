@@ -11,6 +11,10 @@ function getUser(){
 function Category(){
    return DB::table('category')->get();
 }
+function order($id)
+{
+    return DB::table('orders')->where('user_id','=',$id)->get();
+}
 function Brand(){
     return DB::table('brands')->get();
  }

@@ -126,7 +126,6 @@
                 $('.editseries').click(function(e) {
                     e.preventDefault();
                     var idSeries = $(this).attr('data-id');
-                    alert(idSeries);
                     $.ajax({
                         type: "post",
                         url: "/admin/series/edit",

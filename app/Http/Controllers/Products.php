@@ -16,7 +16,7 @@ class Products extends Controller
     }
     public function index(){
         $data = $this->model->getfullInfo();
-        return view('admin.products',['product'=>$data]);
+        return view('admin.product',['product'=>$data]);
     }
     public function new(){
         return view('admin.newproduct',['method'=>'insert']);
@@ -118,5 +118,4 @@ class Products extends Controller
         }
         return $dom->saveHTML();
     }
-
 }

@@ -147,6 +147,38 @@
         @endif
     });
 </script>
-
+<script>
+        $(document).ready(function () {
+            $('#results').css("display","none");
+            $('.col-lg-8 p-0').css("display","none");
+            $("#search").on('keyup change click', function () {
+                    var product_name=$("#search").val();
+                    
+                    if(product_name==="")
+                    {
+                        $('#results').css("display","none");
+                        $('.col-lg-8 p-0').css("display","none");
+                    }
+                    $.ajax({
+                type: "post",
+                url: "/search",
+                data: {
+                            'name': product_name
+                        },
+                dataType: "json",
+                success: function (response) {
+                    $('#results').empty();
+                    $('#results').css("display","block");
+                    $('.col-lg-8 p-0').css("display","block");
+                    for(var i=0;i<response.length;i++)
+                    {
+                        $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
+                    }
+                }
+                });
+                });
+           
+        });
+    </script>
 
 

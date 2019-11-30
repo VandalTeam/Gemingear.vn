@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <style>
+        
         .myform {
             position: relative;
             display: -ms-flexbox;
@@ -114,14 +115,19 @@
             background: #edecec;
         }
 
-        .col-lg-7.p-0 {
+        .col-lg-8.p-0 {
             position: absolute;
             z-index: 2;
             margin-left: 150px;
+            
         }
         .detail span {
         color: red;
         margin-left: 24px;
+        .info
+        {
+            font-family: :Comfortaa,sans-serif;
+        }
 }
     </style>
     <style>

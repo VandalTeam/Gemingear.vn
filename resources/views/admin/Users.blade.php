@@ -122,7 +122,6 @@
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
-
 <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
 <script>
     $.ajaxSetup({
