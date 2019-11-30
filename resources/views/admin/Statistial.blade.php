@@ -17,10 +17,11 @@
                                 <h2><strong><i class="zmdi zmdi-chart"></i> Thống kê doanh thu theo tháng</strong></h2>
                             </div>
                             <div class="col-lg-2 text-center m-auto">
-                                <label for="Year">Chọn năm:</label>
+                                
                             </div>
                             <div class="col-lg-3 text-center m-auto">
                                 <select name="Year" class="form-control show-tick ms" id="year">
+                                    
                                 </select>
                             </div>
                         </div>
@@ -33,7 +34,7 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-8 col-md-6 col-sm-6">
-               
+
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="card mcard_4">
@@ -148,15 +149,15 @@
                 },
             });
         });
-        
-        $(document).ready(function(){
+        var DS=['data1',0,0,0,0,0,0,0,0,0,0,0,0];
+    $(document).ready(function(){
             var year= new Date().getFullYear();
             $('#year').append(`
+                            <option selected disabled value="">-->   Chọn năm   <--</option>
                             <option>`+ (parseInt(year)-1)+`</option>
-                            <option >`+parseInt(year)+`</option>
+                            <option  >`+parseInt(year)+`</option>
                             <option >`+(parseInt(year)+1)+`</option>
                             `);
-            var DS=['data1',0,0,0,0,0,0,0,0,0,0,0,0];
             $('#year').change(function (e) { 
                 e.preventDefault();
                 var Y= $(this).children("option:selected").val();
@@ -168,13 +169,51 @@
                                             },
                                     dataType: "json",
                                     success: function (response) {
-                                        for(var i=0;i<response.length;i++)
+                                        for(var i=1;i<DS.length;i++)
                                         {
-                                            DS[response[i].month]=response[i].DoanhThu;
+                                            if(response[i-1]!=undefined)
+                                            {
+                                                DS[response[i-1].month]=response[i-1].DoanhThu;
+                                            }
                                         }
+                                        var chart = c3.generate({
+                                            bindto: '#chart-area-spline-sracked', // id of chart wrapper
+                                            data: {
+                                                columns: [
+                                                    // each columns data
+                                                    DS,
+                                                ],
+                                                type: 'area-spline', // default type of chart
+                                                groups: [
+                                                    [ 'data1']
+                                                ],
+                                                colors: {
+                                                    'data1': Aero.colors["blue"],
+                                                },
+                                                names: {
+                                                    // name of each serie
+                                                    'data1': 'Doanh thu theo năm '+Y+' ',
+                                                }
+                                            },
+                                            axis: {
+                                                x: {
+                                                    type: 'category',
+                                                    // name of each category
+                                                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct','Nov','Dec']
+                                                },
+                                            },
+                                            legend: {
+                                                show: true, //hide legend
+                                            },
+                                            padding: {
+                                                bottom: 0,
+                                                top: 0
+                                            },
+                                        });  
                                     }
                         });
-                        console.log(DS[11]);
+
+                 
             });
             
             var chart = c3.generate({
@@ -182,18 +221,18 @@
                 data: {
                     columns: [
                         // each columns data
-                        ['data1', 10,88, 77, 44, 55, 44, 34, 77,55, 44,22,20],
+                        DS,
                     ],
                     type: 'area-spline', // default type of chart
                     groups: [
                         [ 'data1']
                     ],
                     colors: {
-                        'data1': Aero.colors["gray"],
+                        'data1': Aero.colors["blue"],
                     },
                     names: {
                         // name of each serie
-                        'data1': 'Doanh thu',
+                        'data1': 'Doanh thu theo năm ',
                     }
                 },
                 axis: {
@@ -211,6 +250,7 @@
                     top: 0
                 },
             });
+            
         });    
 </script>
 <script>
