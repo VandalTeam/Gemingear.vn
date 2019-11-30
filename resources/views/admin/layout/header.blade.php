@@ -11,4 +11,5 @@
     <!-- Custom Css -->
     <link rel="stylesheet" href="{{asset('assets/admin/css/style.min.css')}}">
     <script src="https://kit.fontawesome.com/772d975d92.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.css">
 </head>

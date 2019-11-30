@@ -8,6 +8,7 @@ class Order_detail_model extends ModelSetting
 {
     //
     protected $table = 'order_detail';
+    public $timestamps = true;
     public function detail($id){
         return DB::table('order_detail')->where('order_id','=',$id)
         ->join('product', 'product.id', '=', 'order_detail.product_id')

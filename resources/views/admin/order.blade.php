@@ -55,10 +55,10 @@
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="notify-order">
                                         <?php $i=1?> @foreach ($order as $item)
                                         <tr>
-                                            <td>{{$i}}</td>
+                                            <td>#BMHH19{{$i}}</td>
                                             <td>{{$item->name_customer}}</td>
                                             <td>{{$item->phone}}</td>
                                             <td>{{$item->address}}</td>

@@ -52,75 +52,31 @@
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu slideUp2">
-                <li class="header">Notifications</li>
+                <li class="header">Thông báo</li>
                 <li class="body">
-                    <ul class="menu list-unstyled">
+                    <ul class="menu list-unstyled alert_notify">
+                        @foreach (Notify() as $item)
+                        <?php $checktme = strtotime(date("Y-m-d H:i:s"))-strtotime($item->created_at);
+                        if($checktme/60>60){
+                            $time = $checktme/(60*60*24);
+                            $texttime = "ngày trước";
+                        }else{
+                            $time = $checktme/60;
+                            $texttime = "phút trước";
+                        }?>
                         <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-blue"><i class="zmdi zmdi-account"></i></div>
-                                <div class="menu-info">
-                                    <h4>8 New Members joined</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 14 mins ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
+                            <a href="/admin/order_detail/{{$item->id}}">
                                 <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
                                 <div class="menu-info">
-                                    <h4>4 Sales made</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 22 mins ago </p>
+                                    <h4>#BMHH19{{$item->id}}</h4>
+                                    <p><i class="zmdi zmdi-time"></i>&emsp;<?= (int)$time?> <?= $texttime?></p>
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-red"><i class="zmdi zmdi-delete"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy Doe</b> Deleted account</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-green"><i class="zmdi zmdi-edit"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy</b> Changed name</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 2 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-grey"><i class="zmdi zmdi-comment-text"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> Commented your post</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 4 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-purple"><i class="zmdi zmdi-refresh"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> Updated status</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
-                                <div class="menu-info">
-                                    <h4>Settings Updated</h4>
-                                    <p><i class="zmdi zmdi-time"></i> Yesterday </p>
-                                </div>
-                            </a>
-                        </li>
+                        @endforeach
                     </ul>
                 </li>
-                <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
+                <li class="footer"> <a href="/admin/order/0">Xem tất cả</a> </li>
             </ul>
         </li>
         <li class="dropdown">

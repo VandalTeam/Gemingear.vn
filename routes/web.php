@@ -21,9 +21,7 @@ Route::get('insert', function () {
         ['name' => 'nhiben', 'email' => str_random(5) . '.com', 'password' => bcrypt('benbacker')],
     ]);
 });
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
+
 
 Route::get('logout', 'Signin@logout');
 Route::get('login', 'Signin@signin');
@@ -31,6 +29,9 @@ Route::post('signin', 'Signin@Login');
 Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::group(['prefix' => 'admin'], function () {
         //Category
+        Route::get('index', function () {
+            return view('admin.layout.wrapper');
+        });
         Route::get('category', 'Category@index');
         Route::get('category/delete/{id}', 'Category@delete');
         Route::post('category/insert', 'Category@insert');
@@ -171,10 +172,17 @@ Route::get('removecart', 'Home@removecart');
 Route::post('updatecart', 'Home@updatecart');
 Route::get('cart', 'Home@viewcart');
 Route::get('checkout', 'Home@checkout');
+Route::post('order', 'Customer@order');
+Route::get('confim', 'Customer@confim');
+
 
 Route::get('user/account/profile','Users@acount');
 Route::get('city', 'Home@city_api');
 Route::post('country', 'Home@country_api');
+
 // Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
 // Route::get('{category_url}/{sub}','Home@loadData_lv2');
 // Route::get('{category_url}','Home@loadData_lv1');
+
+
+Route::get('pusher', 'Customer@notify');

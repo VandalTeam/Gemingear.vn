@@ -5,10 +5,8 @@
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
 @yield('bot')
 <script>
     $(document).ready(function () {
@@ -30,7 +28,6 @@
         });
     });
 </script>
-
 <script>
     $.ajaxSetup({
         headers: {
@@ -40,7 +37,6 @@
     $(document).ready(function () {
         $('#register').click(function (e) { 
             e.preventDefault();
-            var x = $("#signupModalCenter input[name=email]").val();
             $('.alert-danger').remove();
             $('.alert-success').remove();
             $.ajax({
@@ -148,24 +144,23 @@
     });
 </script>
 <script>
-        $(document).ready(function () {
-            $('#results').css("display","none");
-            $('.col-lg-8 p-0').css("display","none");
-            $("#search").on('keyup change click', function () {
-                    var product_name=$("#search").val();
-                    
-                    if(product_name==="")
-                    {
-                        $('#results').css("display","none");
-                        $('.col-lg-8 p-0').css("display","none");
-                    }
-                    $.ajax({
-                type: "post",
-                url: "/search",
-                data: {
-                            'name': product_name
-                        },
-                dataType: "json",
+    $(document).ready(function () {
+        $('#results').css("display","none");
+        $('.col-lg-8 p-0').css("display","none");
+        $("#search").on('keyup change click', function () {
+            var product_name=$("#search").val();
+            if(product_name==="")
+            {
+                $('#results').css("display","none");
+                $('.col-lg-8 p-0').css("display","none");
+            }
+            $.ajax({
+            type: "post",
+            url: "/search",
+            data: {
+                'name': product_name
+            },
+            dataType: "json",
                 success: function (response) {
                     $('#results').empty();
                     $('#results').css("display","block");
@@ -175,10 +170,7 @@
                         $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
                     }
                 }
-                });
-                });
-           
+            });
         });
-    </script>
-
-
+    });
+</script>
