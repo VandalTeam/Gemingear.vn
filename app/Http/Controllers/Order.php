@@ -24,7 +24,17 @@ class Order extends Controller
             $data = $this->model->getInfo();
         }
         $number =  array_count_values(array_column($this->model->getInfo()->toArray(),'status'));
-        $count = array('status_1'=>$number[1],'status_2'=>$number[0]); 
+        if(isset($number[0])){
+            $status_2 = $number[0];
+        }else{
+            $status_2 = 0;
+        }
+        if(isset($number[1])){
+            $status_1 = $number[1];
+        }else{
+            $status_1 = 0;
+        }
+        $count = array('status_1'=>$status_1,'status_2'=>$status_2);
         return view('admin.order',['order'=>$data,'count'=>$count]);
     }
     public function delete(Request $res,$id){
