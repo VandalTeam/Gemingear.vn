@@ -35,7 +35,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ url('admin/Users/insert')}}" method="post">
+                <form action="{{ url('admin/users/insert')}}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
@@ -98,7 +98,7 @@
                                             <a><button class="btn btn-primary btn-sm edituser" data-id="{{$item->id}}"
                                                     data-toggle="modal" data-target="#exampleModal"><i
                                                         class="zmdi zmdi-edit"></i> Sửa</button></a>
-                                            <a class="delete" href="/admin/Users/delete/{{$item->id}}">
+                                            <a class="delete" href="/admin/users/delete/{{$item->id}}">
                                                 <button class="btn btn-danger btn-sm"><i class="zmdi zmdi-delete"></i>
                                                     Xóa</button></a>
                                         </td>
@@ -122,7 +122,6 @@
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
 <script src="{{asset('assets/admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
-
 <script src="{{asset('assets/admin/js/pages/tables/jquery-datatable.js')}}"></script>
 <script>
     $.ajaxSetup({
@@ -136,7 +135,7 @@
                 var iduser = $(this).attr('data-id');
                 $.ajax({
                     type: "post",
-                    url: "/admin/Users/edit",
+                    url: "/admin/users/edit",
                     data: {
                         'id': iduser
                     },
@@ -160,32 +159,4 @@
             });
         });
 </script>
-{{-- <script>
-    $(document).ready(function()
-        {
-            $('.delete').click(function (e) { 
-                e.preventDefault();
-                var iduser = $(this).attr('data-id');
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: '<a href="/admin/Users/delete/'+iduser+' "style="color:white;">Yes, delete it!</a>'
-                    }).then((result) => {
-                    if (result.value) {
-                        Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                        )
-                        
-                    }
-                    })
-            });
-        });
-</script> --}}
-
 @endsection

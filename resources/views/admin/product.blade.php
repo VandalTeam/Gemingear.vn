@@ -65,7 +65,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->price}}</td>
                                     <td>{{$item->subcategory_name}}</td>
-                                    <td>{{$item->brand_name}}</td>
+                                    <td>{{$item->series_name}}</td>
                                     <td>{{$item->promotion_name}}</td>
                                     <td><?php if($item->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></td>
                                     <td width="16%" class="footable-last-visible" style="display: table-cell;">

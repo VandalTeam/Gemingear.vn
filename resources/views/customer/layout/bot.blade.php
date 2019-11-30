@@ -3,7 +3,13 @@
 
 <!-- Main JS -->
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+@yield('bot')
 <script>
     $(document).ready(function () {
         $('#login').click(function (e) { 
@@ -14,8 +20,6 @@
             $("#signupModalCenter").addClass('fade');
         });
     });
-</script>
-<script>
     $(document).ready(function () {
         $('#signup').click(function (e) { 
             e.preventDefault();
@@ -57,11 +61,124 @@
                   	    });
                     }else{
                         $('.notify').show();
-                  		$('.notify').append('<div class="alert alert-danger"><p>'+data.success+'</p></div>');
+                  		$('.notify').append('<div class="alert alert-success"><p>'+data.success+'</p></div>');
                         $("#form-signup")[0].reset();
                     }
                 }
             });
         });
     });
+    $(document).ready(function () {
+        $('.mini_cart_inner').on('click', '.remove_cart', function() {
+            var id = $(this).attr('data-id');
+            $.ajax({
+                type: "get",
+                url: "/removecart",
+                data: {
+                    'rowId': id,
+                },
+                dataType: "json",
+                success: function (data) {
+                    // console.log(data.total);
+                    $('.cart_price').text(data.total);
+                    $('.cart_count').text(data.total_item);
+                    var str="";
+                    $.each(data.product, function(i, item) {
+                        str +=`<div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="${item.options.size}" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">${item.name}</a>
+                                                <p>Qty: ${item.qty} X <span>${item.price}</span></p>
+                                            </div>
+                                            <div class="cart_remove remove_cart" data-id="${item.rowId}">
+                                                <a><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>`
+                    });
+                    $('.mini_cart_inner').html(str+`<div class="mini_cart_table">
+                                            <div class="cart_total">
+                                                <span>Tổng tiền:</span>
+                                                <span class="price">${data.total}</span>
+                                            </div>
+                                            <div class="cart_total mt-10">
+                                                <span>Thành tiền:</span>
+                                                <span class="price">${data.total}</span>
+                                            </div>
+                                        </div>`);
+                }
+            });
+        });
+    });
 </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+       @if(Session:: has('fail'))
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+        Toast.fire({
+        type: 'error',
+        title: '{{ Session:: get('fail') }}'
+        });
+       @endif
+       @if(Session:: has('success'))
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+        Toast.fire({
+        type: 'success',
+        title: '{{ Session:: get('success') }}'
+        });
+       @endif
+       @if(Session:: has('login'))
+        Swal.fire({
+            type: 'success',
+            title: '{{ Session:: get('login') }}',
+            showConfirmButton: false,
+        });
+        @endif
+    });
+</script>
+<script>
+        $(document).ready(function () {
+            $('#results').css("display","none");
+            $('.col-lg-8 p-0').css("display","none");
+            $("#search").on('keyup change click', function () {
+                    var product_name=$("#search").val();
+                    
+                    if(product_name==="")
+                    {
+                        $('#results').css("display","none");
+                        $('.col-lg-8 p-0').css("display","none");
+                    }
+                    $.ajax({
+                type: "post",
+                url: "/search",
+                data: {
+                            'name': product_name
+                        },
+                dataType: "json",
+                success: function (response) {
+                    $('#results').empty();
+                    $('#results').css("display","block");
+                    $('.col-lg-8 p-0').css("display","block");
+                    for(var i=0;i<response.length;i++)
+                    {
+                        $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
+                    }
+                }
+                });
+                });
+           
+        });
+    </script>
+
+

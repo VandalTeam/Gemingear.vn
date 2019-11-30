@@ -85,7 +85,6 @@
                                         <th>STT</th>
                                         <th>Tên chiến dịch</th>
                                         <th>Loại chiến dịch</th>
-                                        <th>URL</th>
                                         <th>Chức năng</th>
                                     </tr>
                                 </thead>
@@ -95,7 +94,6 @@
                                         <td>{{$i}}</td>
                                         <td>{{$item->name}}</td>
                                         <td><?php if($item->role==1){echo 'Khuyến mãi';}else{echo 'Chiến dịch';}?></td>
-                                        <td>{{$item->url}}</td>
                                         <td width="15%" class="footable-last-visible" style="display: table-cell;">
                                             <a><button class="btn btn-primary btn-sm editcategory" 
                                                     data-id="{{$item->id}}>" data-toggle="modal"
@@ -142,7 +140,7 @@
                 success: function(res) {
                     $(".modal-body .form-group input").val(res[0].name);
                     $("#exampleModal .form-group-image .dropify-wrapper").remove();
-                    $("#exampleModal .form-group-image").append('<input type="file" accept=".webp,.png,.jpg" class="dropify" name="img"  data-default-file="http://doanweb1234.com/storage/'+res[0].url+'" />');
+                    $("#exampleModal .form-group-image").append('<input type="file" accept=".webp,.png,.jpg" class="dropify" name="img"  data-default-file="'+res[0].url+'" />');
                     $(`#select-banner option[value=${res[0].role}]`).attr('selected', 'selected');
                     $('.dropify').dropify();
                     $("#exampleModal form").attr('action', '/admin/banner/update/'+res[0].id);

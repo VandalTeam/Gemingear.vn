@@ -38,7 +38,7 @@
         });
         @endif
     });
- </script>     
+</script>     
 <script>
     $(document).ready(function () {
         $('.delete').click(async function (e) { 

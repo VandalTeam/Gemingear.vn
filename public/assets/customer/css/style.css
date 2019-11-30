@@ -35,6 +35,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  @import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");
 
 /* transition */
 /* flex */
@@ -867,13 +868,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   .main_menu nav > ul > li {
     display: inline-block;
     position: relative;
-    margin-right: 35px;
+    margin-right: 10px;
     padding: 13px 0; }
     .main_menu nav > ul > li:last-child {
       margin-right: 0; }
     @media only screen and (min-width: 1200px) and (max-width: 1600px) {
       .main_menu nav > ul > li {
-        margin-right: 32px; } }
+        margin-right: 10px; } }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .main_menu nav > ul > li {
         margin-right: 26px; } }
@@ -1010,8 +1011,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .header_configure_area {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
+  -webkit-box-pack: center;
   -ms-flex-pack: end;
   justify-content: flex-end; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3647,7 +3647,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       max-width: 100%; } }
-
+ 
 .home_style4_inner .col-lg-4 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 29.7%;
@@ -5302,9 +5302,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       .product_info_button ul li:last-child {
         margin-bottom: 0; } }
   .product_info_button ul li a {
+    font-family: Arial, Helvetica, sans-serif;
     display: block;
     float: left;
-    text-transform: capitalize;
     font-size: 20px;
     color: #555;
     font-weight: 500;
@@ -5729,7 +5729,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /* 13. cart page css here */
 .cart_page_bg {
   background: #F5F5F9;
-  padding: 55px 0 133px; }
+  padding: 45px 0 70px; }
   @media only screen and (max-width: 767px) {
     .cart_page_bg {
       padding: 55px 0 111px; } }
@@ -5807,12 +5807,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   border-right: 0; }
 
 .cart_submit {
-  text-align: right;
+  text-align: center;
   padding: 12px; }
   @media only screen and (max-width: 767px) {
     .cart_submit {
       text-align: center; } }
-  .cart_submit button {
+  .cart_submit a {
     background: #222222;
     border: 0;
     color: #ffffff;
@@ -5828,7 +5828,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     -o-transition: 0.3s;
     transition: 0.3s;
     border-radius: 3px; }
-    .cart_submit button:hover {
+    .cart_submit a:hover {
       background: #c40316; }
 
 .coupon_inner {
@@ -6179,7 +6179,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .order-notes textarea {
   border: 1px solid #e5e5e5;
   border-radius: 0;
-  height: 45px;
+  height: 170px;
   max-width: 100%;
   padding: 0 30px 0 20px;
   background: none;

@@ -21,6 +21,10 @@ Route::get('insert', function () {
         ['name' => 'nhiben', 'email' => str_random(5) . '.com', 'password' => bcrypt('benbacker')],
     ]);
 });
+Route::get('admin/index', function () {
+    return view('admin.layout.wrapper');
+});
+
 Route::get('logout', 'Signin@logout');
 Route::get('login', 'Signin@signin');
 Route::post('signin', 'Signin@Login');
@@ -40,11 +44,11 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('subcategory/update/{id}', 'Subcategory@update');
 
         //
-        Route::get('Users', 'Users@index');
-        Route::post('Users/insert', 'Users@insert');
-        Route::post('Users/edit', 'Users@edit');
-        Route::get('Users/delete/{id}', 'Users@delete');
-        Route::post('Users/update/{id}', 'Users@update');
+        Route::get('users', 'Users@index');
+        Route::post('users/insert', 'Users@insert');
+        Route::post('users/edit', 'Users@edit');
+        Route::get('users/delete/{id}', 'Users@delete');
+        Route::post('users/update/{id}', 'Users@update');
         //
         Route::get('product', 'Products@index');
         Route::post('product/new', 'Products@new');
@@ -68,7 +72,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         Route::post('brand/edit', 'Brand@edit');
         Route::get('brand/delete/{id}', 'Brand@delete');
         Route::post('brand/update/{id}', 'Brand@update');
-        //Bannar marketing
+        //Banner marketing
         Route::get('banner', 'Banner@index');
         Route::post('banner/insert', 'Banner@insert');
         Route::post('banner/edit', 'Banner@edit');
@@ -77,7 +81,6 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
 
         //Profile
         Route::get('profile/{id}', function ($id) {
-
             switch ($id) {
                 case 1:
                     $user = array(
@@ -130,14 +133,24 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
             }
             return view('admin.profile', ['user' => $user]);
         });
-
+        //Dashboard
+        Route::get('Dashboard','Order@statistics');
+        Route::post('Dashboard/Year','Order@statisticsWithYear');
         //Series
-         //Subcategory
          Route::get('series/{url}', 'Serie@index');
          Route::post('series/insert', 'Serie@insert');
          Route::post('series/edit', 'Serie@edit');
          Route::get('series/delete/{id}', 'Serie@delete');
          Route::post('series/update/{id}', 'Serie@update');
+         // Order
+         Route::get('order', 'Order@index');
+         Route::get('order/{status}', 'Order@index');
+         Route::get('order/delete/{id}', 'Order@delete');
+         Route::get('order/update/{id}', 'Order@update');
+
+         //order_detail
+         Route::get('order_detail/{order_id}', 'Order_detail@detail');
+
     });
 });
 
@@ -147,8 +160,21 @@ Route::post('customer/signup', 'Customer@signup');
 Route::get('customer/update/{email}', 'Customer@update');
 Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
+Route::get('products/{url}', 'Home@detail');
 
-Route::get('{category_url}/{subcategory_url}/{brand_url}','Customer@loadData');
-Route::get('admin/index', function () {
-    return view('admin.layout.wrapper');
-});
+
+Route::post('/search','Home@search');
+
+//Route shopping cart
+Route::post('addcart', 'Home@addcart');
+Route::get('removecart', 'Home@removecart');
+Route::post('updatecart', 'Home@updatecart');
+Route::get('cart', 'Home@viewcart');
+Route::get('checkout', 'Home@checkout');
+
+Route::get('user/account/profile','Users@acount');
+Route::get('city', 'Home@city_api');
+Route::post('country', 'Home@country_api');
+// Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
+// Route::get('{category_url}/{sub}','Home@loadData_lv2');
+// Route::get('{category_url}','Home@loadData_lv1');

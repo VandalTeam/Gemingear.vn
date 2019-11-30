@@ -3,13 +3,17 @@
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Product_model;
 
 function getUser(){
-    return  Auth::user();
-
+    return Auth::user();
 }
 function Category(){
    return DB::table('category')->get();
+}
+function order($id)
+{
+    return DB::table('orders')->where('user_id','=',$id)->get();
 }
 function Brand(){
     return DB::table('brands')->get();
@@ -66,6 +70,11 @@ function BenSort($data,$value,$arrkey){
     return $new;
 }
 
+function product_random(){
+    $model = new Product_model;
+    return $product = $model->getfullInfo()->random(15);
+}
+
 function to_slug($str) {
     $str = trim(mb_strtolower($str));
     $str = preg_replace('/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/', 'a', $str);
@@ -78,5 +87,15 @@ function to_slug($str) {
     $str = preg_replace('/[^a-z0-9-\s]/', '', $str);
     $str = preg_replace('/([\s]+)/', '-', $str);
     return $str;
+}
+ function load($category_url, $subcategory_url, $brand_url){
+    $product = DB::table('product')
+        ->join('series', 'series.id', '=', 'product.series_id')
+        ->join('brands', 'brands.id', '=', 'series.brand_id')->where('brands.url', $brand_url)
+        ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')->where('subcategory.url', $subcategory_url)
+        ->join('category','category.id','=','subcategory.category_id')->where('category.url',$category_url)
+        ->select('product.*')
+        ->get();
+    return $product;
 }
 ?>
