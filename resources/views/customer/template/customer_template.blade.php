@@ -8,5 +8,6 @@
     @yield('content')
     @include('customer.layout.footer')
     @include('customer.layout.bot')
+    @yield('bot')
 </body>
 </html>

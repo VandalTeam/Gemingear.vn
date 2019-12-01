@@ -147,14 +147,19 @@ class Customer extends Controller
         $data = array('name'=>'acb');
         return event(new Notify($data));
     }
-    public function update_profile(Request $res,User $model){
-        $data = $res->except('_token'); 
+    public function update_profile(Request $res,User $model){ 
         $update = $model->find($res->id);
         $update->name=$res->name;
         $update->email=$res->email;
         // $model->password=bcrypt($object->password);
         $update->tel=$res->tel;
         $update->address=$res->address;
+        if ($res->has('img')) {
+            $file = $res->img;
+            if ($file->store('uploads')) {
+                $update->image="http://gemingear.vn/storage/".$file->store('uploads');
+            }
+        }
         $update->save();
         return redirect($_SERVER['HTTP_REFERER']);
     }

@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <style>
-        
         .myform {
             position: relative;
             display: -ms-flexbox;
@@ -119,35 +118,39 @@
             position: absolute;
             z-index: 2;
             margin-left: 150px;
-            
+
         }
+
         .detail span {
-        color: red;
-        margin-left: 24px;
-        .info
-        {
-            font-family: :Comfortaa,sans-serif;
+            color: red;
+            margin-left: 24px;
+
+            .info {
+                font-family: :Comfortaa, sans-serif;
+            }
         }
-}
     </style>
     <style>
-        .zoom{
+        .zoom {
             transition: transform .2s;
         }
-        .zoom:hover{
-            
+
+        .zoom:hover {
+
             transform: scale(1.1);
         }
     </style>
     <style>
-         .main {
-        font-family:Arial;
-        width:500px;
-        display:block;
-        margin:0 auto;
-        color: black;
+        .main {
+            font-family: Arial;
+            width: 500px;
+            display: block;
+            margin: 0 auto;
+            color: black;
         }
-        .slick-prev::before, .slick-next:before{
+
+        .slick-prev::before,
+        .slick-next:before {
             color: #dc0707;
         }
     </style>

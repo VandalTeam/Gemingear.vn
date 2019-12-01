@@ -18,9 +18,8 @@
                                 @if (isset(getUser()->name))
                                 <a href="/user/account/profile">
                                     <li>
-                                        <img style="border-radius: 50%;"
-                                            src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQlQRcdKUJqI7daplq6AmTxkE5uQe3TZtHeaqtqc-IUpK4tkaYrg5taRdg0KrZoeyR0&_nc_ht=scontent.fsgn2-1.fna&oh=3d61076fd88d28c9c3ce6519350c7e84&oe=5E520E1B"
-                                            alt="Smiley face" width="30" height="30">
+                                        <img class="rounded-circle shadow"
+                                            src="{{getUser()->image}}" alt="Smiley face" width="30" height="30">
                                         <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">{{getUser()->name}}<i
                                                 class="fa fa-angle-down"></i></a>
@@ -50,7 +49,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-6">
                         <div class="logo">
-                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
+                            <a href="http://gemingear.vn/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
                                     alt=""></a>
                         </div>
                     </div>
