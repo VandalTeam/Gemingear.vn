@@ -65,28 +65,20 @@
                                                     </div>
                                                 </div>
                                     <div class="tab-pane fade show active" id="account-details">
-                                        <h3 class="text-center">Account details </h3>
+                                        <h3 class="text-center">Hồ sơ của tôi</h3>
                                         <div class="login">
                                             <div class="login_form_container">
                                                 <div class="account_login_form">
-                                                    <form action="/admin/users/update/{{getUser()->id}}" method="POST">
+                                                    <form action="/update/profile/{{getUser()->id}}" method="POST">
                                                         @csrf
-                                                        <p class="text-center">Already have an account? <a href="#">Log
-                                                                in
-                                                                instead!</a></p>
-                                                        <div class="input-radio text-center">
-                                                            <span class="custom-radio"><input type="radio" value="1"
-                                                                    name="id_gender"> Mr.</span>
-                                                            <span class="custom-radio"><input type="radio" value="1"
-                                                                    name="id_gender"> Mrs.</span>
-                                                        </div>
-                                                        <br>
-                                                        <label>Name</label>
+                                                        <label>Họ và tên:</label>
                                                         <input type="text" name="name" value="{{getUser()->name}}">
-                                                        <label>Phone</label>
-                                                        <input type="text" name="phone" value="{{getUser()->phone}}">
+                                                        <label>Điện Thoại:</label>
+                                                        <input type="text" name="tel" value="{{getUser()->tel}}">
                                                         <label>Email</label>
                                                         <input type="text" name="email" value="{{getUser()->email}}">
+                                                        <label>Địa chỉ</label>
+                                                        <input type="text" name="address" value="{{getUser()->address}}">
                                                         <label>Password</label>
                                                         <input type="password" name="password">
                                                         <div class="save_button primary_btn default_button text-center">

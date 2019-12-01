@@ -179,6 +179,7 @@ Route::get('confim', 'Customer@confim');
 Route::get('user/account/profile','Users@acount');
 Route::get('city', 'Home@city_api');
 Route::post('country', 'Home@country_api');
+Route::post('update/profile/{id}', 'Customer@update_profile');
 
 // Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
 // Route::get('{category_url}/{sub}','Home@loadData_lv2');

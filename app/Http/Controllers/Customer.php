@@ -16,6 +16,7 @@ use App\Order_model;
 use App\Order_detail_model;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Events\Notify;
+use App\User;
 
 class Customer extends Controller
 {
@@ -145,5 +146,16 @@ class Customer extends Controller
     public function notify(){
         $data = array('name'=>'acb');
         return event(new Notify($data));
+    }
+    public function update_profile(Request $res,User $model){
+        $data = $res->except('_token'); 
+        $update = $model->find($res->id);
+        $update->name=$res->name;
+        $update->email=$res->email;
+        // $model->password=bcrypt($object->password);
+        $update->tel=$res->tel;
+        $update->address=$res->address;
+        $update->save();
+        return redirect($_SERVER['HTTP_REFERER']);
     }
 }
