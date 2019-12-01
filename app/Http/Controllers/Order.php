@@ -46,5 +46,5 @@ class Order extends Controller
         $data=DB::table('orders')->where(DB::raw("YEAR(created_at)"),'=',$res->year) ->groupBy(DB::raw("Month(created_at)"))->select(DB::raw('SUM(total) as DoanhThu,Month(created_at) as month'))->get();
         echo $data;
     }
-  
+
 }

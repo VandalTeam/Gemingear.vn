@@ -135,6 +135,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
         //Dashboard
         Route::get('Dashboard','Order@statistics');
         Route::post('Dashboard/Year','Order@statisticsWithYear');
+        Route::post('Dashboard/category','Order_detail@statisticsWithCategory');
         //Series
          Route::get('series/{url}', 'Serie@index');
          Route::post('series/insert', 'Serie@insert');

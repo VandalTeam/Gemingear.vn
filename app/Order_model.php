@@ -9,5 +9,5 @@ class Order_model extends ModelSetting
     //
     protected $table = 'orders';
     public $timestamps = false;
- 
+
 }

@@ -15,6 +15,19 @@ function order($id)
 {
     return DB::table('orders')->where('user_id','=',$id)->get();
 }
+function top10()
+{
+    return DB::table('order_detail')
+    ->join('product','order_detail.product_id','=','product.id')
+    ->groupBy(DB::raw("product.name,product.image"))
+    ->select(DB::raw('SUM(order_detail.price*order_detail.qty) as DoanhThu,product.name,product.image'))->orderByRaw('DoanhThu DESC')->limit(5)->get()->toArray();
+}
+function price($name)
+{
+    return DB::table('order_detail')
+    ->join('product','product.id','=','order_detail.product_id')->where('product.name','=',$name)
+    ->select(DB::raw('SUM(order_detail.qty) as SL'))->get();
+}
 function Brand(){
     return DB::table('brands')->get();
  }

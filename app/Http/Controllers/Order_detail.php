@@ -32,4 +32,9 @@ class Order_detail extends Controller
         status($res,$this->model->updateInfo($where,$data));
         return redirect($_SERVER['HTTP_REFERER']);
     }
+    public function statisticsWithCategory(Request $res){
+        $data=$this->model->statisticsWithCategory();
+        echo $data;
+    }
+  
 }
