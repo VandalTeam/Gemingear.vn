@@ -34,16 +34,16 @@ class Customer extends Controller
             $data = Auth::user();
             if($data->active==1){
                 $request->session()->flash('login', 'Đăng nhập thành công');
-                return redirect('');
+                return redirect($_SERVER['HTTP_REFERER']);
             }else{
                 Auth::logout();
                 $request->session()->flash('fail', 'Đăng nhập thất bại');
-                return redirect()->back();
+                return redirect($_SERVER['HTTP_REFERER']);
             }
         }else{
             Auth::logout();
             $request->session()->flash('fail', 'Đăng nhập thất bại');
-            return redirect()->back();
+            return redirect($_SERVER['HTTP_REFERER']);
         }
     }
     public function logout(){
@@ -141,6 +141,15 @@ class Customer extends Controller
     }
     public function confim(){
         return view('customer.confim');
+    }
+
+    public function bill($id){
+        if(isset(Auth::user()->name)){
+            $product = $this->order_detail->detail($id);
+            return view('customer.bill',['product'=>$product]);
+        }else{
+            return view('customer.404');
+        }
     }
 
     public function notify(){

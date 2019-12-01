@@ -61,7 +61,7 @@
                                                             class="success"><?php if($item->status==1) {echo "Hoàn thành";} else{ echo "Đang duyệt";}?></span>
                                                     </td>
                                                     <td>{{$item->total}}</td>
-                                                    <td><a href="/cart" class="view">Xem</a></td>
+                                                    <td><a href="/bill/{{$item->id}}" class="view">Xem</a></td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

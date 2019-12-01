@@ -174,9 +174,7 @@ Route::get('cart', 'Home@viewcart');
 Route::get('checkout', 'Home@checkout');
 Route::post('order', 'Customer@order');
 Route::get('confim', 'Customer@confim');
-Route::get('bill', function () {
-    return view('customer.bill');
-});
+Route::get('bill/{id}', 'Customer@bill');
 
 
 Route::get('user/account/profile','Users@acount');

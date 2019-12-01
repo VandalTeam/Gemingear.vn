@@ -111,16 +111,18 @@
                                             </div>
                                         </div>
                                         @endforeach
-                                        <div class="mini_cart_table">
-                                            <div class="cart_total">
-                                                <span>Tổng tiền:</span>
-                                                <span class="price">{{Cart::subtotal()}}</span>
+                                        @if (Cart::count()>0)
+                                            <div class="mini_cart_table">
+                                                <div class="cart_total">
+                                                    <span>Tổng tiền:</span>
+                                                    <span class="price">{{Cart::subtotal()}}</span>
+                                                </div>
+                                                <div class="cart_total mt-10">
+                                                    <span>thành tiền:</span>
+                                                    <span class="price">{{Cart::subtotal()}}</span>
+                                                </div>
                                             </div>
-                                            <div class="cart_total mt-10">
-                                                <span>thành tiền:</span>
-                                                <span class="price">{{Cart::subtotal()}}</span>
-                                            </div>
-                                        </div>
+                                        @endif
                                     </div>
                                     <div class="mini_cart_footer"
                                         style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
@@ -130,7 +132,6 @@
                                         <div class="cart_button">
                                             <a href="/checkout">Thanh toán</a>
                                         </div>
-
                                     </div>
                                 </div>
                                 <!--mini cart end-->

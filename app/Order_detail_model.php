@@ -13,6 +13,6 @@ class Order_detail_model extends ModelSetting
         return DB::table('order_detail')->where('order_id','=',$id)
         ->join('product', 'product.id', '=', 'order_detail.product_id')
         ->join('orders', 'orders.id', '=', 'order_detail.order_id')
-        ->select('order_detail.*','product.name as product_name','orders.status as status')->get();
+        ->select('order_detail.*','product.name as product_name','orders.status as status','orders.total as total')->get();
     }
 }

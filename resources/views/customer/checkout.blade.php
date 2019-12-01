@@ -25,6 +25,7 @@
             <form action="/order" method="POST">
                 @csrf
                 <div class="checkout_form" style="font-family:Arial, Helvetica, sans-serif">
+                    @if (Cart::count()>0)
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="checkout_form_left" style="font-family:Arial, Helvetica, sans-serif">
@@ -154,6 +155,12 @@
                             </div>
                         </div>
                     </div>
+                    @else
+                    <div class="cart_submit" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
+                        <h3>Giỏ hàng của bạn trống</h3>
+                        <a href="http://gemingear.vn/">>> Mua ngay <<</a>
+                    </div>
+                    @endif
                 </div>
             </form>
         </div>

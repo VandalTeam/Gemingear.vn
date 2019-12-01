@@ -49,7 +49,7 @@ class Handler extends ExceptionHandler
     {
         // if ($this->isHttpException($exception)) {
         //     if ($exception->getStatusCode() == 404) {
-        //         return response()->view('admin.template.signin_template', [], 404);
+        //         return response()->view('customer.404', [], 404);
         //     }
         // }
         return parent::render($request, $exception);

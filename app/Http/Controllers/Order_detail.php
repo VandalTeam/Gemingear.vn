@@ -14,7 +14,7 @@ class Order_detail extends Controller
         $this->model = new Order_detail_model();
     }
     public function detail(Request $res,$id){
-        $data = $this->model->detail($id);;
+        $data = $this->model->detail($id);
         return view('admin.order_detail',['order'=>$data]);
     }
 }
