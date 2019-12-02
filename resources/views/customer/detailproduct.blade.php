@@ -93,7 +93,7 @@
                                         @foreach ($comment as $item)
                                         <div class="reviews_comment_box">
                                             <div class="comment_thmb">
-                                                <img src="assets/img/blog/comment2.jpg" alt="">
+                                                <img src="{{$item->image}}" height="50px" width="50px" alt="">
                                             </div>
                                             <div class="comment_text">
                                                 <div class="reviews_meta">

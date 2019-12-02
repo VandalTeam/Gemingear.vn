@@ -18,8 +18,8 @@
                             <div class="product_content_inner" ">
                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                 <div class="price_box">
-                                    <span class="old_price">{{$item->price}}</span>
-                                    <span class="current_price">{{$item->price}}</span>
+                                    <span class="old_price">{{number_format($item->price)}} đ</span>
+                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                 </div>
                             </div>
                             <div class="add_to_cart" data-id="{{$item->id}}"

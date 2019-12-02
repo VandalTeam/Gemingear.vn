@@ -19,7 +19,11 @@
                                 <a href="/user/account/profile">
                                     <li>
                                         <img class="rounded-circle shadow"
-                                            src="{{getUser()->image}}" alt="Smiley face" width="30" height="30">
+                                            src="@if (isset(getUser()->image))
+                                                {{getUser()->image}}
+                                                @else
+                                                    {{asset('assets/customer/img/blog/comment3.png.jpg')}}
+                                            @endif" alt="Smiley face" width="40" height="40">
                                         <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">{{getUser()->name}}<i
                                                 class="fa fa-angle-down"></i></a>
@@ -210,7 +214,7 @@
                     </div>
                     <div class="column3 col-lg-3 col-md-6">
                         <div class="header_bigsale">
-                            <a href="#">BIG SALE BLACK FRIDAY</a>
+                            <a href="#">Khuyến mãi của tháng</a>
                         </div>
                     </div>
                 </div>

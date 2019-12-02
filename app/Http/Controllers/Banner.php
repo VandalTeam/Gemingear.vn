@@ -21,7 +21,7 @@ class Banner extends Controller
         $data = $res->except('_token','img');
         $file = $res->file('img');
         if($file->store('uploads')){
-            $data += array('url'=>'http://doanweb1234.com/storage/'.$file->store('uploads'));
+            $data += array('url'=>'http://gemingear.vn/storage/'.$file->store('uploads'));
         }
         status($res,$this->model->insertInfo($data));
         return redirect($_SERVER['HTTP_REFERER']);

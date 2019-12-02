@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="avatar-preview">
                                             <div id="imagePreview"
-                                                style="background-image: url({{getUser()->image}});">
+                                                style="background-image: url(@if(isset(getUser()->image)){{getUser()->image}}@else{{asset('assets/customer/img/blog/comment3.png.jpg')}} @endif);">
                                             </div>
                                         </div>
                                         <div class="card-body">

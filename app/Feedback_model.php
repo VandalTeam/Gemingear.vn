@@ -15,7 +15,7 @@ class Feedback_model extends ModelSetting
         return $feedback = DB::table('feedback')
         ->join('users', 'users.id', '=', 'feedback.user_id')
         ->where($where)
-        ->select('feedback.*','users.name as name')
+        ->select('feedback.*','users.name as name','users.image as image')
         ->get();
     }
 }

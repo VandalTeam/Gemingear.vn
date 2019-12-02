@@ -78,8 +78,8 @@ class Products extends Controller
     }
     public function update(Request $res,$id){
         $where = array('id'=>$id);
-        $data = $res->except('description', 'img', 'files', '_token','category_id');
-        $img_link = "";
+        $data = $res->except('description', 'img', 'files', '_token','category_id','brand_id');
+        $img_link = "http://gemingear.vn/storage/";
         if ($res->has('img')) {
             $file = $res->img;
             $img_link=$img_link.$file[0]->store('uploads');
