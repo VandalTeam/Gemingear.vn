@@ -8,6 +8,7 @@ use App\Product_model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use App\Feedback_model;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -31,14 +32,15 @@ class Home extends Controller
         }
         return view('customer.home', ['banner' => $banner, 'product' => $collection]);
     }
-    public function detail(Request $request)
+    public function detail(Request $request,Feedback_model $feedback)
     {
         $data = $this->product->product_detail(array('product.url' => '/' . $request->path()))->toArray();
         if (is_null($data[0]->promotion) == false) {
             $price_sale =  floatval(str_replace(',', '', $data[0]->price)) * (100 - $data[0]->promotion) / 100;
             $data[0]->price_sale = $price_sale;
         }
-        return view('customer.detailproduct', ['product' => $data[0]]);
+        $comment = $feedback->comment(array('product_id'=>$data[0]->id));
+        return view('customer.detailproduct', ['product' => $data[0],'comment'=>$comment]);
     }
 
     public function loadData_lv3($category_url, $subcategory_url, $brand_url, Request $request)

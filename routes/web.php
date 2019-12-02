@@ -175,6 +175,7 @@ Route::get('checkout', 'Home@checkout');
 Route::post('order', 'Customer@order');
 Route::get('confim', 'Customer@confim');
 Route::get('bill/{id}', 'Customer@bill');
+Route::post('feedback', 'Customer@feedback');
 
 
 Route::get('user/account/profile','Users@acount');

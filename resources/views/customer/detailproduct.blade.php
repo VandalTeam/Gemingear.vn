@@ -27,28 +27,27 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="product_d_right">
-                            <form action="#">
-                                <h3><b>{{$product->name}}</b></h3>
-                                <div class="price_box">
-                                    @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
-                                            {{number_format($product->price)}}</span></h3>@endif
-                                    @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
-                                            class="current_price">{{number_format($product->price_sale)}}</h3>@else
-                                    <h3><b>Giá: </b><span class="current_price">{{number_format($product->price)}}đ</h3>
-                                    @endif
-                                </div>
-                                <div class="product_desc">
-                                    <h3><b>Nhà sản xuất:</b> {{$product->brand_name}}</h3>
-                                    <h3><b>Tình trạng:</b>
-                                        <?php if($product->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></h3>
-                                </div>
-                                <div class="product_variant quantity">
-                                    <label>quantity</label>
-                                    <input min="1" max="100" value="1" type="number">
-                                    <button class="button add_cart_detail" data-name="{{$product->name}}"
-                                        data-price="{{$product->price}}" data-id="{{$product->id}}">Mua sản
-                                        phẩm</button>
-                                </div>
+                            <h3><b>{{$product->name}}</b></h3>
+                            <div class="price_box">
+                                @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
+                                        {{number_format($product->price)}}</span></h3>@endif
+                                @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
+                                        class="current_price">{{number_format($product->price_sale)}}</h3>@else
+                                <h3><b>Giá: </b><span class="current_price">{{number_format($product->price)}}đ</h3>
+                                @endif
+                            </div>
+                            <div class="product_desc">
+                                <h3><b>Nhà sản xuất:</b> {{$product->brand_name}}</h3>
+                                <h3><b>Tình trạng:</b>
+                                    <?php if($product->instock==0){echo 'Còn hàng';}else{echo 'Hết hàng';}?></h3>
+                            </div>
+                            <div class="product_variant quantity">
+                                <label>quantity</label>
+                                <input min="1" max="100" value="1" type="number">
+                                <button class="button add_cart_detail" data-name="{{$product->name}}"
+                                    data-price="{{$product->price}}" data-id="{{$product->id}}">Mua sản
+                                    phẩm</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,66 +90,36 @@
                                 </div>
                                 <div class="tab-pane fade" id="reviews" role="tabpanel">
                                     <div class="reviews_wrapper">
-                                        <h2>1 review for Donec eu furniture</h2>
+                                        @foreach ($comment as $item)
                                         <div class="reviews_comment_box">
                                             <div class="comment_thmb">
                                                 <img src="assets/img/blog/comment2.jpg" alt="">
                                             </div>
                                             <div class="comment_text">
                                                 <div class="reviews_meta">
-                                                    <div class="product_rating">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-android-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-android-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-android-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-android-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-android-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
+                                                    <p><strong>{{$item->name}} </strong>- {{$item->created_at}}</p>
+                                                    <span>{{$item->content}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        @if (isset(Auth::user()->name))
+                                        <form action="/feedback" method="POST">
+                                            @csrf
+                                            <div class="product_review_form">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="review_comment">Bình luận</label>
+                                                        <input type="text" name="product_id" value="{{$product->id}}" hidden>
+                                                        <textarea name="comment" id="review_comment"></textarea>
                                                     </div>
-                                                    <p><strong>admin </strong>- September 12, 2018</p>
-                                                    <span>roadthemes</span>
                                                 </div>
                                             </div>
-
-                                        </div>
-                                        <div class="comment_title">
-                                            <h2>Add a review </h2>
-                                            <p>Your email address will not be published. Required fields are marked </p>
-                                        </div>
-                                        <div class="product_rating mb-10">
-                                            <h3>Your rating</h3>
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="product_review_form">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <label for="review_comment">Your review </label>
-                                                    <textarea name="comment" id="review_comment"></textarea>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <label for="author">Name</label>
-                                                    <input id="author" type="text">
-
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <label for="email">Email </label>
-                                                    <input id="email" type="text">
-                                                </div>
+                                            <div style="text-align: right;">
+                                                <button class="btn btn-primary" type="submit">Bình luận</button>
                                             </div>
-                                            <button type="submit">Submit</button>
-                                            </form>
-                                        </div>
+                                        </form>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +184,7 @@
 @section('bot')
 <script src="{{asset('assets/customer/js/slick.min.js')}}"></script>
 <script>
-$(document).ready(function () {
+    $(document).ready(function () {
     $('.slider-for').not('.slick-initialized').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -233,7 +202,7 @@ $(document).ready(function () {
 });       
 </script>
 <script>
-$(document).ready(function () {
+    $(document).ready(function () {
     $('.add_cart_detail').click(function (e) { 
         e.preventDefault();
         var id = $(this).attr('data-id');

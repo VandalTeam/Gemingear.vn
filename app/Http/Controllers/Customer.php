@@ -17,6 +17,7 @@ use App\Order_detail_model;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Events\Notify;
 use App\User;
+use App\Feedback_model;
 
 class Customer extends Controller
 {
@@ -149,6 +150,17 @@ class Customer extends Controller
             return view('customer.bill',['product'=>$product]);
         }else{
             return view('customer.404');
+        }
+    }
+
+    public function feedback(Request $res,Feedback_model $model){
+        $model->content = $res->comment;
+        $model->product_id = $res->product_id;
+        $model->user_id = Auth::user()->id;
+        if($model->save()){
+            return \redirect($_SERVER['HTTP_REFERER']);
+        }else{
+            return \redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
