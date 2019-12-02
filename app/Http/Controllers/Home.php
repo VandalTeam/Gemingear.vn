@@ -35,15 +35,6 @@ class Home extends Controller
     public function detail(Request $request,Feedback_model $feedback)
     {
         $data = $this->product->product_detail(array('product.url' => '/' . $request->path()))->toArray();
-        if (is_null($data[0]->promotion) == false) {
-            $price_sale =  floatval(str_replace(',', '', $data[0]->price)) * (100 - $data[0]->promotion) / 100;
-            $data[0]->price_sale = $price_sale;
-        }
-        
-        // echo "<pre>";
-        // print_r ($data);
-        // echo "</pre>";
-        // die;
         $comment = $feedback->comment(array('product_id'=>$data[0]->id));
         return view('customer.detailproduct', ['product' => $data[0],'comment'=>$comment]);
     }

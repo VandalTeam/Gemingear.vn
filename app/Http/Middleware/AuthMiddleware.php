@@ -16,9 +16,10 @@ class AuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()==true && Auth::user()->role == "admin"){
+        if(Auth::check()==true && Auth::user()->role == "admin" or Auth::user()->role == "nhanvien"){
             return $next($request);
         }else{
+            $request->session()->flash('fail', 'Thất Bại');
             return redirect('/logout');
         }
     }

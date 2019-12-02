@@ -29,11 +29,11 @@
                         <div class="product_d_right">
                             <h3><b>{{$product->name}}</b></h3>
                             <div class="price_box">
-                                @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
-                                        {{number_format($product->price)}}đ</span></h3>@endif
-                                @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
-                                        class="current_price">{{number_format($product->price_sale)}}đ</h3>@else
-                                <h3><b>Giá: </b><span class="current_price">{{number_format($product->price)}}đ</h3>
+                                @if ($product->price_sale == $product->price)
+                                <h3><b>Giá:</b><span class="current_price">{{number_format($product->price_sale)}}đ</h3>
+                                @else    
+                                    <h3><b>Giá Cũ:</b><span class="old_price"> {{number_format($product->price)}}đ</span></h3>
+                                    <h3><b>Giá KM:</b><span class="current_price"> {{number_format($product->price_sale)}}đ</h3>
                                 @endif
                             </div>
                             <div class="product_desc">

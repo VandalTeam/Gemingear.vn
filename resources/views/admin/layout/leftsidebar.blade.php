@@ -7,8 +7,8 @@
     <ul class="list">
         <li>
             <div class="user-info">
-                <a style="pointer-events: none;cursor: default;" class="image" href="#"><img
-                        src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQmwosZEtqIrVaaOQolaOSW7GxKGUQ8hwaAyFDPm9dCxkq0ugwdvRzyt3D1EqaKJVwg&_nc_ht=scontent.fsgn2-1.fna&oh=fd233487b706c6d8722c2d05ba578781&oe=5E520E1B"
+                <a style="pointer-events: none;cursor: default;" class="image" href="#"><img width="40px" height="40px"
+                        src="@if(getUser()->image != null) {{getUser()->image}}@else {{asset('assets/customer/img/blog/comment3.png.jpg')}} @endif"
                         alt="User"></a>
                 <div class="detail">
                     <h4>{{getUser()->name}}</h4>
@@ -23,8 +23,10 @@
             $url = Request::segment(4);
         ?>
         <li class=""><a href="/admin/Dashboard"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+        @if (getUser()->role=='admin')
         <li class="<?php if($menu=='Users'){echo 'active open';}?>"><a href="{{url('admin/users')}}"><i
                     class="zmdi zmdi-account-circle"></i><span>Users</span></a></li>
+        @endif
         <li class="cl <?php if($menu=='category'){echo 'active open';}?>"><a href="{{url('admin/category')}}"><i
                     class="zmdi zmdi-hc-fw"></i><span>Category</span></a></li>
         <li class="cl <?php if($menu=='subcategory'){echo 'active open';}?>"><a href="javascript:void(0);"

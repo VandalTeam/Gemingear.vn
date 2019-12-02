@@ -31,7 +31,6 @@
                                             <div class="dropdown-menu" style="margin-top: 16px;"
                                                 aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="/user/account/profile">Thông tin</a>
-                                                <a class="dropdown-item" href="#">Đơn mua</a>
                                                 <a class="dropdown-item" href="/customer/logout">Đăng xuất</a>
                                             </div>
                                     </li>

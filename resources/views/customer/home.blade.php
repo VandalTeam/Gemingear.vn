@@ -78,8 +78,7 @@
             <div class="categories_product_inner">
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Cells & Tablets</a></h4>
-                        <p>12 Products</p>
+                        <h4><a href="shop.html"> Máy Bộ PC</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img class="category-img" style="height: 104px;"
@@ -88,8 +87,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Cells & Tablets</a></h4>
-                        <p>12 Products</p>
+                        <h4><a href="shop.html"> Màn Hình</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img class="category-img" style="height: 104px;"
@@ -98,8 +96,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Cells & Tablets</a></h4>
-                        <p>12 Products</p>
+                        <h4><a href="shop.html"> Laptop</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img class="category-img" style="height: 104px;"
@@ -108,8 +105,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Cells & Tablets</a></h4>
-                        <p>12 Products</p>
+                        <h4><a href="shop.html"> Ghế Gaming</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img class="category-img" style="height: 104px;"
@@ -118,8 +114,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Cells & Tablets</a></h4>
-                        <p>12 Products</p>
+                        <h4><a href="shop.html">Tai Nghe</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img class="category-img" style="height: 104px;"
@@ -128,8 +123,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Computer</a></h4>
-                        <p>24 Products</p>
+                        <h4><a href="shop.html"> Lót Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
@@ -138,8 +132,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Computer</a></h4>
-                        <p>24 Products</p>
+                        <h4><a href="shop.html"> Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
@@ -148,8 +141,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Computer</a></h4>
-                        <p>24 Products</p>
+                        <h4><a href="shop.html"> Loa Bluetooth</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
@@ -158,8 +150,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Computer</a></h4>
-                        <p>24 Products</p>
+                        <h4><a href="shop.html"> Linh Kiện</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
@@ -168,8 +159,7 @@
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Computer</a></h4>
-                        <p>24 Products</p>
+                        <h4><a href="shop.html"> Bàn Phím</a></h4>
                     </div>
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
