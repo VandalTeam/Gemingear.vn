@@ -30,9 +30,9 @@
                             <h3><b>{{$product->name}}</b></h3>
                             <div class="price_box">
                                 @if(isset($product->price_sale))<h3><b>Giá Cũ:</b><span class="old_price">
-                                        {{number_format($product->price)}}</span></h3>@endif
+                                        {{number_format($product->price)}}đ</span></h3>@endif
                                 @if(isset($product->price_sale))<h3><b>Giá KM:</b><span
-                                        class="current_price">{{number_format($product->price_sale)}}</h3>@else
+                                        class="current_price">{{number_format($product->price_sale)}}đ</h3>@else
                                 <h3><b>Giá: </b><span class="current_price">{{number_format($product->price)}}đ</h3>
                                 @endif
                             </div>
@@ -45,7 +45,7 @@
                                 <label>quantity</label>
                                 <input min="1" max="100" value="1" type="number">
                                 <button class="button add_cart_detail" data-name="{{$product->name}}"
-                                    data-price="{{$product->price}}" data-id="{{$product->id}}">Mua sản
+                                    data-price="{{$product->price_sale}}" data-id="{{$product->id}}">Mua sản
                                     phẩm</button>
                             </div>
                         </div>
@@ -74,18 +74,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="info" role="tabpanel">
                                     <div class="product_info_content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
-                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
-                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
-                                            adipiscing cursus eu, suscipit id nulla.</p>
-                                        <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem,
-                                            quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies
-                                            massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero
-                                            hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus
-                                            nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus,
-                                            consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in
-                                            imperdiet ligula euismod eget.</p>
+                                        {!! $product->description !!} 
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="reviews" role="tabpanel">

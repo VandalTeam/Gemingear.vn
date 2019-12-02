@@ -69,7 +69,7 @@ class Customer extends Controller
         $this->users->role = 'user';
         $message = array(
             'name' => $res->input('last_name').' '.$res->input('first_name'),
-            'link' => 'http://gemingear.vn/customer/update/'.$res->input('email'),
+            'link' => $res->root().'/customer/update/'.$res->input('email'),
             'email' => $res->input('email'),
         );
         if($this->users->save()){
@@ -178,7 +178,7 @@ class Customer extends Controller
         if ($res->has('img')) {
             $file = $res->img;
             if ($file->store('uploads')) {
-                $update->image="http://gemingear.vn/storage/".$file->store('uploads');
+                $update->image=$res->root()."/storage/".$file->store('uploads');
             }
         }
         $update->save();

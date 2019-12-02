@@ -52,7 +52,7 @@ class Products extends Controller
     }
     public function insert(Request $res){
         $data = $res->except('description', 'img', 'files', '_token','category_id','brand_id');
-        $img_link = "http://gemingear.vn/storage/";
+        $img_link = $res->root()."/storage/";
         if ($res->has('img')) {
             $file = $res->img;
             $img_link=$img_link.$file[0]->store('uploads');
@@ -79,7 +79,7 @@ class Products extends Controller
     public function update(Request $res,$id){
         $where = array('id'=>$id);
         $data = $res->except('description', 'img', 'files', '_token','category_id','brand_id');
-        $img_link = "http://gemingear.vn/storage/";
+        $img_link = $res->root()."/storage/";
         if ($res->has('img')) {
             $file = $res->img;
             $img_link=$img_link.$file[0]->store('uploads');
@@ -92,13 +92,13 @@ class Products extends Controller
         }
         $data = $data + array(
             'url' => '/products/'.to_slug($res['name']),
-            'description' => $this->parse_base64($res->description)
+            'description' => $this->parse_base64($res->description,$res)
         );
         status($res,$this->model->updateInfo($where,$data));
         return redirect('admin/product');
     }
 
-    function parse_base64($txt)
+    function parse_base64($txt,$res)
     {
         $dom = new \DomDocument();
         $dom->loadHtml('<?xml encoding="utf-8" ?>' . $txt, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
@@ -109,11 +109,11 @@ class Products extends Controller
                 list($type, $data) = explode(';', $data);
                 list(, $data)      = explode(',', $data);
                 $data = base64_decode($data);
-                $image_name = "/uploads/" . time() . $k . '.png';
+                $image_name = "/storage/uploads/" . time() . $k . '.png';
                 $path = public_path() . $image_name;
                 file_put_contents($path, $data);
                 $img->removeAttribute('src');
-                $img->setAttribute('src', $image_name);
+                $img->setAttribute('src', $res->root().'/'.$image_name);
             }
         }
         return $dom->saveHTML();

@@ -39,6 +39,11 @@ class Home extends Controller
             $price_sale =  floatval(str_replace(',', '', $data[0]->price)) * (100 - $data[0]->promotion) / 100;
             $data[0]->price_sale = $price_sale;
         }
+        
+        // echo "<pre>";
+        // print_r ($data);
+        // echo "</pre>";
+        // die;
         $comment = $feedback->comment(array('product_id'=>$data[0]->id));
         return view('customer.detailproduct', ['product' => $data[0],'comment'=>$comment]);
     }
