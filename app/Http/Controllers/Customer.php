@@ -97,7 +97,9 @@ class Customer extends Controller
         $this->order->total = Cart::subtotal();
         $this->order->status = 0;
         $this->order->note = $res->note;
-        $this->order->user_id = Auth::user()->id;
+        if(isset(Auth::user()->id)){
+            $this->order->user_id = Auth::user()->id;
+        }
         if($this->order->save()){
             $data = array();
             $confim = array();

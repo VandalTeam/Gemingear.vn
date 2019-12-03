@@ -13,7 +13,6 @@
                                     <span class="label_sale">Sale</span>
                                 @endif
                             </div>
-
                         </div>
                         <div class="product_content">
                             <div class="product_content_inner" ">

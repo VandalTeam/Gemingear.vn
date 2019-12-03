@@ -17,11 +17,11 @@
                                 <h2><strong><i class="zmdi zmdi-chart"></i> Thống kê doanh thu theo tháng</strong></h2>
                             </div>
                             <div class="col-lg-2 text-center m-auto">
-                                
+
                             </div>
                             <div class="col-lg-3 text-center m-auto">
                                 <select name="Year" class="form-control show-tick ms" id="year">
-                                    
+
                                 </select>
                             </div>
                         </div>
@@ -34,74 +34,235 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-8 col-md-6 col-sm-6">
+                <div class="col-lg-12 text-center">
+                    <h5 style="color:#e47297;">Top sản phẩm bán chạy tháng <?php echo date("m"); ?></h5>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="products carousel-item active">
+                            <div class="row clearfix ">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card mcard_4">
+                                        <div class="body">
+                                            <img src="{{top10()[0]->image}}" alt="profile-image">
+                                            <div class="user">
+                                                <h5 class="mt-3 mb-1 text-center">{{top10()[0]->name}}</h5>
 
-                <div class="row clearfix">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="card mcard_4">
-                            <div class="header">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <h2><strong><i class="zmdi zmdi-chart"></i>Top các sản phẩm bán chạy</strong>
-                                        </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
+                                            <h4 class="mt-3 mb-0">{{top10()[0]->DoanhThu}} VNĐ</h4>
+                                            <span class="text-muted">Doanh thu</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>TOP 1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                                            <h4 class="mt-3 mb-1">{{price(top10()[0]->name)[0]->SL}}</h4>
+                                            <span class="text-muted">Số lượng</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>95.5%</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="body">
-                                <div class="img">
-                                    <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_ohc=gASbpV3SdEwAQn3d5Yag5wae77JzIhn6MK-kTs-hfD90YHiwdcDSz589g&_nc_ht=scontent.fsgn2-4.fna&oh=59ad32d1bb1a5ef7f507a2c39ca6e87d&oe=5E799B1B"
-                                        class="rounded-circle" alt="profile-image">
+                        </div>
+                        <div class="products carousel-item ">
+                            <div class="row clearfix ">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card mcard_4">
+                                        <div class="body">
+
+                                            <img src="{{top10()[1]->image}}" alt="profile-image">
+
+                                            <div class="user">
+                                                <h5 class="mt-3 mb-1 text-center">{{top10()[1]->name}}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="user">
-                                    <h5 class="mt-3 mb-1">Eliana Smith</h5>
-                                    <small class="text-muted">UI/UX Desiger</small>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
+                                            <h4 class="mt-3 mb-0">{{top10()[1]->DoanhThu}} VNĐ</h4>
+                                            <span class="text-muted">Doanh thu</span>
+                                            <div class="w_description text-danger">
+                                                <i class="zmdi zmdi-trending-down"></i>
+                                                <span>TOP 2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                                            <h4 class="mt-3 mb-1">{{price(top10()[1]->name)[0]->SL}}</h4>
+                                            <span class="text-muted">Số lượng</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>95.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <ul class="list-unstyled social-links">
-                                    <li><a href="javascript:void(0);"><i class="zmdi zmdi-dribbble"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="zmdi zmdi-behance"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="zmdi zmdi-pinterest"></i></a></li>
-                                </ul>
+                            </div>
+                        </div>
+                        <div class="products carousel-item ">
+                            <div class="row clearfix ">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card mcard_4">
+                                        <div class="body">
+
+                                            <img src="{{top10()[2]->image}}" alt="profile-image">
+
+                                            <div class="user">
+                                                <h5 class="mt-3 mb-1 text-center">{{top10()[2]->name}}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
+                                            <h4 class="mt-3 mb-0">{{top10()[2]->DoanhThu}} VNĐ</h4>
+                                            <span class="text-muted">Doanh thu</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>TOP 3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                                            <h4 class="mt-3 mb-1">{{price(top10()[2]->name)[0]->SL}}</h4>
+                                            <span class="text-muted">Số lượng</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>95.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products carousel-item ">
+                            <div class="row clearfix ">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card mcard_4">
+                                        <div class="body">
+
+                                            <img src="{{top10()[3]->image}}" alt="profile-image">
+
+                                            <div class="user">
+                                                <h5 class="mt-3 mb-1">{{top10()[3]->name}}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
+                                            <h4 class="mt-3 mb-0">{{top10()[3]->DoanhThu}} VNĐ</h4>
+                                            <span class="text-muted">Doanh thu</span>
+                                            <div class="w_description text-danger">
+                                                <i class="zmdi zmdi-trending-down"></i>
+                                                <span>TOP 4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                                            <h4 class="mt-3 mb-1">{{price(top10()[3]->name)[0]->SL}}</h4>
+                                            <span class="text-muted">Số lượng</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>95.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products carousel-item ">
+                            <div class="row clearfix ">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card mcard_4">
+                                        <div class="body">
+
+                                            <img src="{{top10()[4]->image}}" alt="profile-image">
+
+                                            <div class="user">
+                                                <h5 class="mt-3 mb-1 text-center">{{top10()[4]->name}}</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
+                                            <h4 class="mt-3 mb-0">{{top10()[4]->DoanhThu}} VNĐ</h4>
+                                            <span class="text-muted">Doanh thu</span>
+                                            <div class="w_description text-danger">
+                                                <i class="zmdi zmdi-trending-down"></i>
+                                                <span>TOP 5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w_data_1">
+                                        <div class="body">
+                                            <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
+                                            <h4 class="mt-3 mb-1">{{price(top10()[4]->name)[0]->SL}}</h4>
+                                            <span class="text-muted">Số lượng</span>
+                                            <div class="w_description text-success">
+                                                <i class="zmdi zmdi-trending-up"></i>
+                                                <span>95.5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="card w_data_1">
-                            <div class="body">
-                                <div class="w_icon pink"><i class="zmdi zmdi-bug"></i></div>
-                                <h4 class="mt-3 mb-0">12.1k</h4>
-                                <span class="text-muted">Bugs Fixed</span>
-                                <div class="w_description text-success">
-                                    <i class="zmdi zmdi-trending-up"></i>
-                                    <span>15.5%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card w_data_1">
-                            <div class="body">
-                                <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                <h4 class="mt-3 mb-1">01.8k</h4>
-                                <span class="text-muted">Submitted Tickers</span>
-                                <div class="w_description text-success">
-                                    <i class="zmdi zmdi-trending-up"></i>
-                                    <span>95.5%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>Phân bổ</strong></h2>
-                    </div>
-                    <div class="body text-center">
-                        <div id="chart-pie" class="c3_chart d_distribution"></div>
-                        <button class="btn btn-primary mt-4 mb-4">View More</button>
-                    </div>
+            <div class="col-lg-4 col-md-12"">
+                <div class=" card">
+                <div class="header">
+                    <h2><strong>Thống kê theo danh mục</strong></h2>
+                </div>
+                <div class="body text-center">
+                    <div id="chart-pie" class="c3_chart d_distribution"></div>
+                    <button class="btn btn-primary mt-4 mb-4">View More</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
 @section('bot')
@@ -115,43 +276,55 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+                 
     $(document).ready(function(){
-            var chart = c3.generate({
+        var name =[];
+            $.ajax({
+                type: "post",
+                url: "Dashboard/category",
+                dataType: "json",
+                success: function (response) {                    
+                    // $.each(response, function(i, item) {
+                    //     for (let index = 0; index < 2; index++) {
+                    //         demo +=`[${item.name},${item.DoanhThu}],`;
+                    //     }
+                    // });
+                    for (let index = 0; index < 5; index++) {
+                        var char ={};
+                        if(response[index]!= null && response[index] != 'undefined')
+                        {
+                            char.name = response[index].name;
+                            char.price = response[index].DoanhThu;
+                            name.push(char)
+                        }else{
+                            char.name = "";
+                            char.price = "";
+                            name.push(char)
+                        }
+                    }
+                    // console.log(name);
+                    // console.log(color);
+                var chart = c3.generate({
                 bindto: '#chart-pie', // id of chart wrapper
                 data: {
                     columns: [
-                        // each columns data
-                        ['data1', 55],
-                        ['data2', 25],
-                        ['data3', 20],
-                    ],
+                            [name[0].name, name[0].price],
+                            [name[1].name, name[1].price],
+                            [name[2].name, name[2].price],
+                            [name[3].name, name[3].price],
+                            [name[4].name, name[4].price],
+                    ],  
                     type: 'pie', // default type of chart
-                    colors: {
-                        'data1': Aero.colors["lime"],
-                        'data2': Aero.colors["teal"],
-                        'data3': Aero.colors["gray"],
-                    },
-                    names: {
-                        // name of each serie
-                        'data1': 'Arizona',
-                        'data2': 'Florida',
-                        'data3': 'Texas',
-                    }
-                },
-                axis: {
-                },
-                legend: {
-                    show: true, //hide legend
-                },
-                padding: {
-                    bottom: 0,
-                    top: 0
                 },
             });
+            }
         });
-        var DS=['data1',0,0,0,0,0,0,0,0,0,0,0,0];
+           
+    });
+        
     $(document).ready(function(){
             var year= new Date().getFullYear();
+            var DS=['data1',0,0,0,0,0,0,0,0,0,0,0,0];
             $('#year').append(`
                             <option selected disabled value="">-->   Chọn năm   <--</option>
                             <option>`+ (parseInt(year)-1)+`</option>
@@ -169,12 +342,14 @@
                                             },
                                     dataType: "json",
                                     success: function (response) {
+                                         DS=['data1',0,0,0,0,0,0,0,0,0,0,0,0];
                                         for(var i=1;i<DS.length;i++)
                                         {
                                             if(response[i-1]!=undefined)
                                             {
                                                 DS[response[i-1].month]=response[i-1].DoanhThu;
                                             }
+                                            
                                         }
                                         var chart = c3.generate({
                                             bindto: '#chart-area-spline-sracked', // id of chart wrapper
@@ -212,8 +387,6 @@
                                         });  
                                     }
                         });
-
-                 
             });
             
             var chart = c3.generate({
@@ -250,9 +423,6 @@
                     top: 0
                 },
             });
-            
         });    
-</script>
-<script>
 </script>
 @endsection

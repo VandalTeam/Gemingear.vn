@@ -17,6 +17,7 @@ class Product_model extends ModelSetting
             ->join('series', 'series.id', '=', 'product.series_id')
             ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
             ->select('product.*', 'promotions.name as promotion_name', 'subcategory.name as subcategory_name', 'series.name as series_name')
+            ->orderBy('id','desc')
             ->get();
     }
     public function product_edit($where)

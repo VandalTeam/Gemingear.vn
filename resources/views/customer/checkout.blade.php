@@ -45,9 +45,10 @@
                                     </div>
                                     <div class="col-lg-5 mb-20">
                                         <label>Số điện thoại <span>*</span></label>
-                                        <input type="tel" name="tel" required>
+                                        <input type="tel" name="tel" value="<?php if(isset(getUser()->tel)){echo getUser()->tel;}?>" required>
 
                                     </div>
+                                    @if(empty(getUser()->address))
                                     <div class="col-6 mb-20">
                                         <label for="city">Tỉnh/Thành phố<span>*</span></label>
                                         <select class="form-control city" name="city" required>
@@ -60,9 +61,10 @@
                                             <option value="0" class="option"> >> Chọn Quận/Huyện << </option>
                                         </select>
                                     </div>
+                                    @endif
                                     <div class="col-12 mb-20">
                                         <label>Địa chỉ <span>*</span></label>
-                                        <input placeholder="" type="text" name="address" required>
+                                        <input placeholder="" type="text" name="address" value="<?php if(isset(getUser()->address)){echo getUser()->address;}?>" required>
                                     </div>
                                     <div class="col-12 mb-20">
                                         <div class="order-notes">

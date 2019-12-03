@@ -12,9 +12,9 @@ class ModelSetting extends Model
 
     public function getInfo($where = null){
         if(empty($where)){
-            return DB::table($this->table)->orderBy('id','DESC')->get();
+            return DB::table($this->table)->orderBy('id','DESC')->orderBy('id','desc')->get();
         }else{
-            return DB::table($this->table)->where($where)->get();
+            return DB::table($this->table)->where($where)->orderBy('id','desc')->get();
         }
     }
     public function insertInfo($data){

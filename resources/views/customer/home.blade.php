@@ -38,12 +38,12 @@
                 </div>
                 <div class="categories_product_inner">
                     <div class="single_categories_product banner_thumb" style="width:50%">
-                        <a href="shop.html"><img
+                        <a href="#"><img
                                 src="https://theme.hstatic.net/1000026716/1000440777/14/solid2.jpg?v=7887"
                                 alt=""></a>
                     </div>
                     <div class="single_categories_product banner_thumb" style="width:50%">
-                        <a href="shop.html"><img
+                        <a href="#"><img
                                 src="https://theme.hstatic.net/1000026716/1000440777/14/solid3.jpg?v=7887"
                                 alt=""></a>
                     </div>
@@ -56,7 +56,7 @@
                     @if ($item->role==1)
                     <figure class="single_banner mb-20">
                         <div class="banner_thumb" style="width:100%">
-                            <a href="shop.html"><img src="<?=$item->url?>" alt=""></a>
+                            <a href="#"><img src="<?=$item->url?>" alt=""></a>
                         </div>
                     </figure>
                     @endif
@@ -78,91 +78,91 @@
             <div class="categories_product_inner">
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Máy Bộ PC</a></h4>
+                        <h4><a href="/may-bo-pc"> Máy Bộ PC</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img class="category-img" style="height: 104px;"
+                        <a href="/may-bo-pc"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category11.gif')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Màn Hình</a></h4>
+                        <h4><a href="/man-hinh"> Màn Hình</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img class="category-img" style="height: 104px;"
+                        <a href="/man-hinh"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category2.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Laptop</a></h4>
+                        <h4><a href="/laptop"> Laptop</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img class="category-img" style="height: 104px;"
+                        <a href="/laptop"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category3.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Ghế Gaming</a></h4>
+                        <h4><a href="/ghe-gaming"> Ghế Gaming</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img class="category-img" style="height: 104px;"
+                        <a href="/ghe-gaming"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category4.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html">Tai Nghe</a></h4>
+                        <h4><a href="/tai-nghe">Tai Nghe</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img class="category-img" style="height: 104px;"
+                        <a href="/tai-nghe"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category5.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Lót Chuột</a></h4>
+                        <h4><a href="/lot-chuot"> Lót Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
+                        <a href="/lot-chuot"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Chuột</a></h4>
+                        <h4><a href="/chuot"> Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
+                        <a href="/chuot"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Loa Bluetooth</a></h4>
+                        <h4><a href="/loa-bluetooth"> Loa Bluetooth</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
+                        <a href="/loa-bluetooth"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Linh Kiện</a></h4>
+                        <h4><a href="/linh-kien"> Linh Kiện</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
+                        <a href="/linh-kien"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="shop.html"> Bàn Phím</a></h4>
+                        <h4><a href="/ban-phim"> Bàn Phím</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
+                        <a href="/ban-phim"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
@@ -199,25 +199,48 @@
         </div>
     </div>
     <!--product area end-->
+    <!--product area start-->
+    <div class="product_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="product_header" >
+                        <div class="section_title">
+                            <h2>Laptop Gaming</h2>
+                        </div>
+                        <div class="product_tab_btn">
+                            <ul class="nav" role="tablist">
+                                <li>
+                                    <a data-toggle="tab" href="#Audio" role="tab" aria-controls="Audio"
+                                        aria-selected="false">
+                                        Xem tất cả
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tag_container">
+                @include('customer.layout.pagination')
+            </div>
+        </div>
+    </div>
+    <!--product area end-->
 </div>
 <!--home section bg area end-->
 <script type="text/javascript">
-    
     $(document).ready(function()
     {
         $(document).on('click', '.pagination a',function(event)
         {
             event.preventDefault();
-  
             $('li').removeClass('active');
             $(this).parent('li').addClass('active');
-  
             var myurl = $(this).attr('href');
-            
             var page=myurl.split('page=')[1];
             getData(page);
         });
-  
     });
   
     function getData(page){

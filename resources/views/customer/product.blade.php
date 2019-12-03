@@ -24,21 +24,9 @@
                         <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip"
                             title="List"></button>
                     </div>
-                    <div class=" niceselect_option">
-                        <form class="select_option" action="#">
-                            <select name="orderby" id="short">
 
-                                <option selected value="1">Sort by average rating</option>
-                                <option value="2">Sort by popularity</option>
-                                <option value="3">Sort by newness</option>
-                                <option value="4">Sort by price: low to high</option>
-                                <option value="5">Sort by price: high to low</option>
-                                <option value="6">Product Name: Z</option>
-                            </select>
-                        </form>
-                    </div>
                     <div class="page_amount">
-                        <p>Showing 1–9 of 21 results</p>
+                        <p>@if(isset($product))Đang hiển thị {{count($product)}} kết quả@endif</p>
                     </div>
                 </div>
                 <!--shop toolbar end-->
@@ -61,45 +49,36 @@
                                     <div class="product_content_inner">
                                     <h4 class="product_name"><a href="product-details.html">{{$item->name}}</a></h4>
                                         <div class="price_box">
-                                            <span class="old_price">{{$item->price}}</span>
-                                            <span class="current_price">{{$item->price_sale}}</span>
+                                            @if ($item->price_sale == $item->price)
+                                            <span class="current_price">Giá: {{number_format($item->price_sale)}} đ</span>
+                                            @else
+                                            <span class="old_price">{{number_format($item->price)}} đ</span>
+                                            <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="add_to_cart">
-                                        <a href="cart.html" title="Add to cart">Add to cart</a>
+                                        <a href="cart.html" title="Add to cart">Thêm sản phẩm</a>
                                     </div>
                                 </div>
                                 <div class="product_content list_content">
                                     <h4 class="product_name"><a href="product-details.html">{{$item->name}}</a></h4>
-                                    <div class="product_rating">
-                                        <ul>
-                                            <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        </ul>
-                                    </div>
                                     <div class="price_box">
-                                            <span class="old_price">{{$item->price}}</span>
-                                            <span class="current_price">{{$item->price_sale}}</span>
-                                    </div>
-                                    <div class="product_desc">
-                                    <p>{{$item->description}}</p>
+                                        @if ($item->price_sale == $item->price)
+                                        <span class="current_price">Giá: {{number_format($item->price_sale)}} đ</span>
+                                        @else
+                                        <span class="old_price">{{number_format($item->price)}} đ</span>
+                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                        @endif
                                     </div>
                                     <div class="add_to_cart">
-                                        <a href="cart.html" title="Add to cart">Add to cart</a>
+                                        <a href="cart.html" title="Add to cart">Thêm sản phẩm</a>
                                     </div>
                                     <div class="action_links">
                                         <ul>
-                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i
-                                                        class="ion-android-favorite-outline"></i> Add to Wishlist</a>
-                                            </li>
-                                            <li class="compare"><a href="#" title="Add to Compare"><i
-                                                        class="ion-ios-settings-strong"></i> Compare</a></li>
                                             <li class="quick_button"><a href="#" data-toggle="modal"
                                                     data-target="#modal_box" title="quick view"><i
-                                                        class="ion-ios-search-strong"></i> quick view</a></li>
+                                                        class="ion-ios-search-strong"></i>Xem</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -1,4 +1,5 @@
-[2019-11-30 14:04:04] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\products.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\products.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67)
+[2019-11-30 14:04:04] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\products.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\products.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -60,7 +61,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 14:04:51] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\products.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\products.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67)
+[2019-11-30 14:04:51] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\products.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\products.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\51e47ddeec55fa95797a752c6be0148e34228f0e.php:67)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -122,7 +124,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 14:16:17] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\product.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\product.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\4f9fedb201538c6b30b0cf9e60ddbacf131d8603.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\4f9fedb201538c6b30b0cf9e60ddbacf131d8603.php:67)
+[2019-11-30 14:16:17] local.ERROR: Undefined property: stdClass::$brand_name (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\product.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined property: stdClass::$brand_name (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\product.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\4f9fedb201538c6b30b0cf9e60ddbacf131d8603.php:67, ErrorException(code: 0): Undefined property: stdClass::$brand_name at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\4f9fedb201538c6b30b0cf9e60ddbacf131d8603.php:67)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -184,7 +187,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 14:26:40] local.ERROR: Undefined variable: status (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: status (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:33, ErrorException(code: 0): Undefined variable: status at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:33)
+[2019-11-30 14:26:40] local.ERROR: Undefined variable: status (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: status (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:33, ErrorException(code: 0): Undefined variable: status at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:33)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -343,7 +347,8 @@
 #53 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #54 {main}
 "} 
-[2019-11-30 16:47:41] local.ERROR: Undefined variable: total (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: total (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\76255c6940ee6e61dccf8401e627480842fae7bd.php:83, ErrorException(code: 0): Undefined variable: total at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\76255c6940ee6e61dccf8401e627480842fae7bd.php:83)
+[2019-11-30 16:47:41] local.ERROR: Undefined variable: total (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: total (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\76255c6940ee6e61dccf8401e627480842fae7bd.php:83, ErrorException(code: 0): Undefined variable: total at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\76255c6940ee6e61dccf8401e627480842fae7bd.php:83)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -405,7 +410,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:11:00] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:11:00] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -467,7 +473,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:11:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:11:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -529,7 +536,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:11:12] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:11:12] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -591,7 +599,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:11:46] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:11:46] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -719,7 +728,8 @@
 #61 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #62 {main}
 "} 
-[2019-11-30 17:22:41] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:22:41] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -781,7 +791,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:22:48] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:22:48] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -843,7 +854,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:25:44] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:25:44] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -905,7 +917,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:26:29] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:26:29] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -967,7 +980,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:26:38] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:26:38] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1029,7 +1043,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:27:00] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:27:00] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1091,7 +1106,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:28:51] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 17:28:51] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1273,7 +1289,8 @@
 #55 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #56 {main}
 "} 
-[2019-11-30 17:39:16] local.ERROR: Undefined variable: data (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: data (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: data at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:39:16] local.ERROR: Undefined variable: data (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: data (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: data at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1335,7 +1352,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:40:01] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:40:01] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1397,7 +1415,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:40:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:40:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1459,7 +1478,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:40:14] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:40:14] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1521,7 +1541,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:40:24] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:40:24] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1583,7 +1604,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:41:35] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:41:35] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1645,7 +1667,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:41:41] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:41:41] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1707,7 +1730,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:42:25] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:42:25] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1769,7 +1793,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:42:59] local.ERROR: array_column() expects parameter 1 to be array, object given (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): array_column() expects parameter 1 to be array, object given (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): array_column() expects parameter 1 to be array, object given at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:42:59] local.ERROR: array_column() expects parameter 1 to be array, object given (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): array_column() expects parameter 1 to be array, object given (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): array_column() expects parameter 1 to be array, object given at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1831,7 +1856,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:44:23] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:44:23] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -1893,7 +1919,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:45:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:45:06] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2131,7 +2158,8 @@
 #54 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
-[2019-11-30 17:46:46] local.ERROR: Undefined variable: number (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: number (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: number at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:46:46] local.ERROR: Undefined variable: number (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: number (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: number at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2193,7 +2221,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:47:08] local.ERROR: Undefined variable: number (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: number (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: number at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:47:08] local.ERROR: Undefined variable: number (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: number (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: number at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2255,7 +2284,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:47:14] local.ERROR: Undefined variable: data (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: data (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: data at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:47:14] local.ERROR: Undefined variable: data (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: data (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: data at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2436,7 +2466,8 @@
 #55 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #56 {main}
 "} 
-[2019-11-30 17:53:09] local.ERROR: Undefined index: status_0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined index: status_0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined index: status_0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 17:53:09] local.ERROR: Undefined index: status_0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined index: status_0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined index: status_0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2498,7 +2529,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 17:57:38] local.ERROR: syntax error, unexpected '}', expecting ',' or ';' (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '}', expecting ',' or ';' (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:65, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ',' or ';' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:65)
+[2019-11-30 17:57:38] local.ERROR: syntax error, unexpected '}', expecting ',' or ';' (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '}', expecting ',' or ';' (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:65, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ',' or ';' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:65)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2560,7 +2592,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:18:38] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:18:38] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2622,7 +2655,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:19:08] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:19:08] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2684,7 +2718,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:20:53] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:20:53] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2746,7 +2781,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:21:04] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:21:04] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2808,7 +2844,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:21:40] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:21:40] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2870,7 +2907,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:21:51] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:21:51] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2932,7 +2970,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:21:59] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:21:59] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -2994,7 +3033,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:22:12] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:22:12] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -3056,7 +3096,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:22:35] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:22:35] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -3118,7 +3159,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:23:15] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
+[2019-11-30 18:23:15] local.ERROR: Undefined offset: 0 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order_detail.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined offset: 0 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order_detail.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073, ErrorException(code: 0): Undefined offset: 0 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php:2073)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -3534,7 +3576,8 @@
 #54 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
-[2019-11-30 18:29:54] local.ERROR: syntax error, unexpected '{' (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '{' (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '{' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 18:29:54] local.ERROR: syntax error, unexpected '{' (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '{' (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '{' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -3596,7 +3639,8 @@
 #57 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
-[2019-11-30 18:33:23] local.ERROR: Undefined variable: status_2 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: status_2 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: status_2 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
+[2019-11-30 18:33:23] local.ERROR: Undefined variable: status_2 (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\admin\order.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined variable: status_2 (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\admin\\order.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32, ErrorException(code: 0): Undefined variable: status_2 at D:\\Project\\Webiste\\Website\\Gemingear.vn\\storage\\framework\\views\\93f4b6726c8019c558bbd88a96641c9a03c77bc5.php:32)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -3755,7 +3799,8 @@
 #54 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
-[2019-11-30 19:00:02] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\customer\acount.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\esources\\views\\customer\\acount.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
+[2019-11-30 19:00:02] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) (View: D:\Project\Webiste\Website\Gemingear.vn\resources\views\customer\acount.blade.php) {"userId":1,"exception":"[object] (ErrorException(code: 0): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) (View: D:\\Project\\Webiste\\Website\\Gemingear.vn\
+esources\\views\\customer\\acount.blade.php) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `orders` where `user_id` = 1) at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' at D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:326)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Illuminate\\Database\\QueryException), 1)
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\Project\\\\Webi...', Array)
@@ -4204,7 +4249,8 @@
 #60 D:\\Project\\Webiste\\Website\\Gemingear.vn\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #61 {main}
 "} 
-[2019-11-30 20:45:51] local.ERROR: Class 'Message' not found {"userId":1,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Message' not found at D:\\Project\\Webiste\\Website\\Gemingear.vn\outes\\web.php:190)
+[2019-11-30 20:45:51] local.ERROR: Class 'Message' not found {"userId":1,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Message' not found at D:\\Project\\Webiste\\Website\\Gemingear.vn\
+outes\\web.php:190)
 [stacktrace]
 #0 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
 #1 D:\\Project\\Webiste\\Website\\Gemingear.vn\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(179): Illuminate\\Routing\\Route->runCallable()

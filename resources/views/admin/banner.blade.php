@@ -9,11 +9,10 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Jquery DataTables</h2>
+                <h2>Banner quảng cáo</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                    <li class="breadcrumb-item active">Normal Tables</li>
+                    <li class="breadcrumb-item"><a href="/admin/index"><i class="zmdi zmdi-home"></i> Trang chủ</a></li>
+                    <li class="breadcrumb-item">banner</li>
                 </ul>
                 <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                         class="zmdi zmdi-sort-amount-desc"></i></button>

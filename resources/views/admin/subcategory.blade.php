@@ -10,9 +10,9 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Jquery DataTables</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Normal Tables</li>
+                        <li class="breadcrumb-item"><a href="/admin/index"><i class="zmdi zmdi-home"></i> Trang chủ</a></li>
+                        <li class="breadcrumb-item">Loại danh mục</li>
+                        <li class="breadcrumb-item active">{{$subcategory[0]->name_category}}</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Basic</strong> Examples </h2>
+                            <h2><strong>Tổng hợp</strong> loại danh mục </h2>
                             <div class="float-right"><button type="button" style="margin-top: -50px;" class="btn btn-primary waves-effect waves-light add-form-subcategory"
                                 data-toggle="modal" data-target="#exampleModal"><i class="fa fa-cog mr-1"></i>
                                 Thêm</button></div>
