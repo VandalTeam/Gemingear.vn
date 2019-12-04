@@ -128,7 +128,7 @@
             }
             $.ajax({
             type: "post",
-            url: "/search",
+            url: "/searchAjax",
             data: {
                 'name': product_name
             },

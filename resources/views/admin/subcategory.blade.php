@@ -12,7 +12,7 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/admin/index"><i class="zmdi zmdi-home"></i> Trang chủ</a></li>
                         <li class="breadcrumb-item">Loại danh mục</li>
-                        <li class="breadcrumb-item active">{{$subcategory[0]->name_category}}</li>
+                        {{-- <li class="breadcrumb-item active">{{$subcategory[0]->name_category}}</li> --}}
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>

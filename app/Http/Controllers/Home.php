@@ -66,14 +66,26 @@ class Home extends Controller
         }
         return view('customer.product', ['product' => $collection]);
     }
-    public function search(Request $res, Product_model $model)
+    public function searchAjax(Request $res)
     {
+       
         if ($res->name != null) {
             $data = $this->product->search($res);
             echo $data;
         }
 
     }
+    public function search(Request $res)
+    {
+       
+        $collection = collect( $this->product->search($res))->paginate(12);
+        if ($res->ajax()) {
+            return view('customer.layout.pagination_search', ['product' => $collection]);
+        }
+        return view('customer.product', ['product' => $collection]);
+
+    }
+
     public function addcart(Request $res){
         $data = array(
             'id' => $res->id,

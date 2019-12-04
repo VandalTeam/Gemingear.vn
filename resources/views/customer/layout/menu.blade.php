@@ -18,8 +18,7 @@
                                 @if (isset(getUser()->name))
                                 <a href="/user/account/profile">
                                     <li>
-                                        <img class="rounded-circle shadow"
-                                            src="@if (isset(getUser()->image))
+                                        <img class="rounded-circle shadow" src="@if (isset(getUser()->image))
                                                 {{getUser()->image}}
                                                 @else
                                                     {{asset('assets/customer/img/blog/comment3.png.jpg')}}
@@ -52,7 +51,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-6">
                         <div class="logo">
-                            <a href="http://gemingear.vn/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
+                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
                                     alt=""></a>
                         </div>
                     </div>
@@ -115,16 +114,16 @@
                                         </div>
                                         @endforeach
                                         @if (Cart::count()>0)
-                                            <div class="mini_cart_table">
-                                                <div class="cart_total">
-                                                    <span>Tổng tiền:</span>
-                                                    <span class="price">{{Cart::subtotal()}}</span>
-                                                </div>
-                                                <div class="cart_total mt-10">
-                                                    <span>thành tiền:</span>
-                                                    <span class="price">{{Cart::subtotal()}}</span>
-                                                </div>
+                                        <div class="mini_cart_table">
+                                            <div class="cart_total">
+                                                <span>Tổng tiền:</span>
+                                                <span class="price">{{Cart::subtotal()}}</span>
                                             </div>
+                                            <div class="cart_total mt-10">
+                                                <span>thành tiền:</span>
+                                                <span class="price">{{Cart::subtotal()}}</span>
+                                            </div>
+                                        </div>
                                         @endif
                                     </div>
                                     <div class="mini_cart_footer"
@@ -156,16 +155,16 @@
                             <div class="categories_menu_toggle" style="<?php if($uri!=null){echo 'display: none;';}?>">
                                 <ul>
                                     @foreach (Category() as $category)
-                                    <li class="menu_item_children"><a href="/{{$category->url}}">{{$category->name}} <i
+                                    <li class="menu_item_children"><a href="/collections/{{$category->url}}">{{$category->name}} <i
                                                 class="fa fa-angle-right"></i></a>
                                         <ul class="categories_mega_menu">
                                             @foreach (Subcategory_id($category->id) as $subcategory)
                                             <li class="menu_item_children"><a
-                                                    href="/{{$category->url}}/{{$subcategory->url}}">{{$subcategory->name}}</a>
+                                                    href="/collections/{{$category->url}}/{{$subcategory->url}}">{{$subcategory->name}}</a>
                                                 <ul class="categorie_sub_menu">
                                                     @foreach (Brand_sub($subcategory->id) as $brand)
                                                     <li value="{{$subcategory->id."-".$brand->brand_id}}"><a
-                                                            href="/{{$category->url."/".$subcategory->url."/".$brand->brand_url}}">{{$brand->brand_name}}</a>
+                                                            href="/collections/{{$category->url."/".$subcategory->url."/".$brand->brand_url}}">{{$brand->brand_name}}</a>
                                                     </li>
                                                     @endforeach
                                                 </ul>
@@ -173,15 +172,15 @@
                                             @endforeach
                                             <li class="menu_item_children"><a href="#">Giá tiền</a>
                                                 <ul class="categorie_sub_menu">
-                                                    <li value="8-11"><a href="/{{$category->url}}/price-8-11">Từ 8 đến
+                                                    <li value="8-11"><a href="/collections/{{$category->url}}/price-8-11">Từ 8 đến
                                                             11 triệu</a></li>
-                                                    <li value="12-16"><a href="/{{$category->url}}/price-12-16">Từ 12
+                                                    <li value="12-16"><a href="/collections/{{$category->url}}/price-12-16">Từ 12
                                                             đến 16 triệu</a></li>
-                                                    <li value="17-25"><a href="/{{$category->url}}/price-17-25">Từ 17
+                                                    <li value="17-25"><a href="/collections/{{$category->url}}/price-17-25">Từ 17
                                                             đến 25 triệu</a></li>
-                                                    <li value="26-30"><a href="/{{$category->url}}/price-26-30">Từ 26
+                                                    <li value="26-30"><a href="/collections/{{$category->url}}/price-26-30">Từ 26
                                                             đến 30 triệu</a></li>
-                                                    <li value="31"><a href="/{{$category->url}}/price-31">Trên 30
+                                                    <li value="31"><a href="/collections/{{$category->url}}/price-31">Trên 30
                                                             triệu</a></li>
                                                 </ul>
                                             </li>
@@ -194,7 +193,8 @@
                     </div>
                     <div class="column2 col-lg-6 ">
                         <div class="search_container">
-                            <form action="#">
+                            <form action="/search" method="POST" id="searchForm">
+                                @csrf
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">All Categories</option>
@@ -204,8 +204,8 @@
                                     </select>
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="Search product..." type="text" id="search">
-                                    <button type="submit">Search</button>
+                                    <input placeholder="Search product..." type="text" name="name" id="search">
+                                    <button  id='searchbtn'>Search</button>
                                 </div>
                             </form>
                         </div>
@@ -239,37 +239,6 @@
     </div>
 </header>
 @section('bot')
-<script>
-        $(document).ready(function () {
-            $("#search").on('keyup change click', function () {
-                    var product_name=$("#search").val();
-                    
-                    if(product_name==="")
-                    {
-                        $('#results').css("display","none");
-                        $('.col-lg-8 p-0').css("display","none");
-                    }
-                    $.ajax({
-                type: "post",
-                url: "/search",
-                data: {
-                            'name': product_name
-                        },
-                dataType: "json",
-                success: function (response) {
-                    $('#results').empty();
-                    $('#results').css("display","block");
-                    $('.col-lg-8 p-0').css("display","block");
-                    for(var i=0;i<response.length;i++)
-                    {
-                        $('#results').append('<li ><a class="detail" href="'+response[i].url+'"><img height="100px" width="100px" src="'+response[i].image+'" alt="">'+response[i].name+' <span>'+response[i].price+'đ</span></a></li>');
-                    }
-                }
-                });
-                });
-           
-        });
-    </script>
 @endsection
 
 <!--header area end-->

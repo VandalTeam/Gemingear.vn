@@ -198,35 +198,7 @@
             </div>
         </div>
     </div>
-    <!--product area end-->
-    <!--product area start-->
-    <div class="product_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="product_header" >
-                        <div class="section_title">
-                            <h2>Laptop Gaming</h2>
-                        </div>
-                        <div class="product_tab_btn">
-                            <ul class="nav" role="tablist">
-                                <li>
-                                    <a data-toggle="tab" href="#Audio" role="tab" aria-controls="Audio"
-                                        aria-selected="false">
-                                        Xem tất cả
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content" id="tag_container">
-                @include('customer.layout.pagination')
-            </div>
-        </div>
-    </div>
-    <!--product area end-->
+    <!--product area end--
 </div>
 <!--home section bg area end-->
 <script type="text/javascript">

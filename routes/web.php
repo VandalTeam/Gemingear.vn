@@ -164,9 +164,8 @@ Route::post('customer/login', 'Customer@login');
 Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
 
-
+Route::post('/searchAjax','Home@searchAjax');
 Route::post('/search','Home@search');
-
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');
 Route::get('removecart', 'Home@removecart');
@@ -184,9 +183,9 @@ Route::get('city', 'Home@city_api');
 Route::post('country', 'Home@country_api');
 Route::post('update/profile/{id}', 'Customer@update_profile');
 
-// Route::get('{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
-// Route::get('{category_url}/{sub}','Home@loadData_lv2');
-// Route::get('{category_url}','Home@loadData_lv1');
+Route::get('/collections/{category_url}/{subcategory_url}/{brand_url}','Home@loadData_lv3');
+Route::get('/collections/{category_url}/{sub}','Home@loadData_lv2');
+Route::get('/collections/{category_url}','Home@loadData_lv1');
 
 
 Route::get('pusher', 'Customer@notify');

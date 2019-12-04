@@ -4,19 +4,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-
-                <!--shop banner area start-->
-                <div class="shop_banner_area mb-30">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="shop_banner_thumb">
-                                <img src="{{asset('assets/customer/img/bg/banner16.jpg')}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--shop banner area end-->
-                <!--shop toolbar start-->
                 <div class="shop_toolbar_wrapper">
                     <div class="shop_toolbar_btn">
                         <button data-role="grid_4" type="button" class=" btn-grid-4 active" data-toggle="tooltip"

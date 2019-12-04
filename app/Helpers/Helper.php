@@ -19,7 +19,7 @@ function order($id)
 }
 function top10()
 {
-    return DB::table('order_detail')->whereMonth('.order_detail.created_at','=',Carbon::now()->month)
+    return DB::table('order_detail')
     ->join('product','order_detail.product_id','=','product.id')
     ->groupBy(DB::raw("product.name,product.image"))
     ->select(DB::raw('SUM(order_detail.price*order_detail.qty) as DoanhThu,product.name,product.image'))->orderByRaw('DoanhThu DESC')->limit(5)->get()->toArray();
