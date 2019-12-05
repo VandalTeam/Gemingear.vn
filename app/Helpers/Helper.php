@@ -118,4 +118,10 @@ function to_slug($str) {
         ->get();
     return $product;
 }
+function Product($id)
+{
+    $product= DB::table('product')->where('id','=',$id)->get();
+    $collection = collect($product)->paginate(4);
+    return $collection;
+}
 ?>

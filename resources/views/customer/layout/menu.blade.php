@@ -193,7 +193,7 @@
                     </div>
                     <div class="column2 col-lg-6 ">
                         <div class="search_container">
-                            <form action="/search" method="POST" id="searchForm">
+                            <form action="/search" method="post" id="searchForm">
                                 @csrf
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">

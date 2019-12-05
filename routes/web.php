@@ -13,6 +13,8 @@
 
 Route::get('/', 'Home@index');
 
+Route::get('/home/{idcategory}/', 'Home@index1');
+
 Route::get('customer', function () {
     return view('customer.home');
 });
@@ -166,6 +168,7 @@ Route::get('products/{url}', 'Home@detail');
 
 Route::post('/searchAjax','Home@searchAjax');
 Route::post('/search','Home@search');
+Route::get('/search','Home@search');
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');
 Route::get('removecart', 'Home@removecart');

@@ -22,21 +22,111 @@ class Home extends Controller
     }
     public function index(Request $request)
     {
-
+        $Laptop = [];
+        $ManHinh = [];
+        $TaiNghe = [];
+        $GVN = [];
+        $BanPhim = [];
         $banner = $this->banner_model->getInfo();
         $product = $this->product->getfullInfo();
-        $collection = collect($product)->paginate(4);
-        if ($request->ajax()) {
 
-            return view('customer.layout.pagination', ['product' => $collection]);
+        for ($i = 0; $i < count($product); $i++) {
+            # code...
+            switch ($product[$i]->category_id) {
+                case 3:
+                    array_push($Laptop, $product[$i]);
+                    break;
+                case 2:
+                    array_push($GVN, $product[$i]);
+                    break;
+                case 13:
+                    array_push($ManHinh, $product[$i]);
+                    break;
+                case 14:
+                    array_push($BanPhim, $product[$i]);
+                    break;
+                case 17:
+                    array_push($TaiNghe, $product[$i]);
+                    break;
+            }
         }
-        return view('customer.home', ['banner' => $banner, 'product' => $collection]);
+
+        $collection = collect($product)->paginate(4);
+        $collectionLT = collect($Laptop)->paginate(4);
+        $collectionBP = collect($BanPhim)->paginate(4);
+        $collectionMH = collect($ManHinh)->paginate(4);
+        $collectionGVN = collect($GVN)->paginate(4);
+        $collectionTN = collect($TaiNghe)->paginate(4);
+
+        // if ($request->ajax()) {
+        //     return view('customer.layout.pagination', ['product' => $collection]);
+        // }
+        return view('customer.home', ['banner' => $banner, 'product' => $collection,'LapTop'=>$collectionLT,'ManHinh'=>$collectionMH,'BanPhim'=>$collectionBP,'TaiNghe'=>$collectionTN,'GVN'=>$collectionGVN]);
     }
-    public function detail(Request $request,Feedback_model $feedback)
+    public function index1(Request $request,$idcategory)
+    {
+        $Laptop = [];
+        $ManHinh = [];
+        $TaiNghe = [];
+        $GVN = [];
+        $BanPhim = [];
+        $banner = $this->banner_model->getInfo();
+        $product = $this->product->getfullInfo();
+
+        for ($i = 0; $i < count($product); $i++) {
+            # code...
+            switch ($product[$i]->category_id) {
+                case 3:
+                    array_push($Laptop, $product[$i]);
+                    break;
+                case 2:
+                    array_push($GVN, $product[$i]);
+                    break;
+                case 13:
+                    array_push($ManHinh, $product[$i]);
+                    break;
+                case 14:
+                    array_push($BanPhim, $product[$i]);
+                    break;
+                case 17:
+                    array_push($TaiNghe, $product[$i]);
+                    break;
+            }
+        }
+
+        $collection = collect($product)->paginate(4);
+        $collectionLT = collect($Laptop)->paginate(4);
+        $collectionBP = collect($BanPhim)->paginate(4);
+        $collectionMH = collect($ManHinh)->paginate(4);
+        $collectionGVN = collect($GVN)->paginate(4);
+        $collectionTN = collect($TaiNghe)->paginate(4);
+
+        if ($request->ajax()) {
+            switch ($idcategory) {
+                case 3:
+                    return view('customer.layout.pagination', ['product' => $collectionLT]);
+                    break;
+                case 2:
+                    return view('customer.layout.pagination', ['product' => $collectionGVN]);
+                    break;
+                case 13:
+                    return view('customer.layout.pagination', ['product' => $collectionMH]);
+                    break;
+                case 14:
+                    return view('customer.layout.pagination', ['product' => $collectionBP]);
+                    break;
+                case 17:
+                    return view('customer.layout.pagination', ['product' => $collectionTN]);
+                    break;
+            }
+        }
+        return view('customer.home', ['banner' => $banner, 'product' => $collection,'LapTop'=>$collectionLT,'ManHinh'=>$collectionMH,'BanPhim'=>$collectionBP,'TaiNghe'=>$collectionTN,'GVN'=>$collectionGVN]);
+    }
+    public function detail(Request $request, Feedback_model $feedback)
     {
         $data = $this->product->product_detail(array('product.url' => '/' . $request->path()))->toArray();
-        $comment = $feedback->comment(array('product_id'=>$data[0]->id));
-        return view('customer.detailproduct', ['product' => $data[0],'comment'=>$comment]);
+        $comment = $feedback->comment(array('product_id' => $data[0]->id));
+        return view('customer.detailproduct', ['product' => $data[0], 'comment' => $comment]);
     }
 
     public function loadData_lv3($category_url, $subcategory_url, $brand_url, Request $request)
@@ -44,7 +134,6 @@ class Home extends Controller
         $collection = collect($this->product->loadData_lv3($category_url, $subcategory_url, $brand_url))->paginate(12);
         if ($request->ajax()) {
             return view('customer.layout.pagination_search', ['product' => $collection]);
-
         }
         return view('customer.product', ['product' => $collection]);
     }
@@ -68,86 +157,98 @@ class Home extends Controller
     }
     public function searchAjax(Request $res)
     {
-       
+
         if ($res->name != null) {
             $data = $this->product->search($res);
             echo $data;
         }
-
     }
     public function search(Request $res)
     {
-       
-        $collection = collect( $this->product->search($res))->paginate(12);
+        $data=$this->product->search($res);
+        $collection = collect($data)->paginate(12);
         if ($res->ajax()) {
+            
+            echo "<pre>";
+            print_r ($collection);
+            echo "</pre>";
+            die;
             return view('customer.layout.pagination_search', ['product' => $collection]);
         }
-        return view('customer.product', ['product' => $collection]);
-
+        else{
+            return view('customer.product', ['product' => $collection]);
+        }
+     
     }
 
-    public function addcart(Request $res){
+    public function addcart(Request $res)
+    {
         $data = array(
             'id' => $res->id,
-            'name' => $res->name, 
+            'name' => $res->name,
             'qty' => $res->qty,
             'price' => $res->price,
             'weight' => 0,
             'options' => ['size' => $res->image]
         );
-        if(Cart::add($data)){
+        if (Cart::add($data)) {
             $respone = array(
-                'total_item'=>Cart::count(),
+                'total_item' => Cart::count(),
                 'total' => Cart::subtotal(),
                 'product' => Cart::content(),
             );
             return $respone;
         }
     }
-    public function viewcart(){
+    public function viewcart()
+    {
         return view('customer.viewcart');
     }
 
-    public function removecart(Request $res){
-        if(Cart::remove($res->rowId)){   
-        }
+    public function removecart(Request $res)
+    {
+        if (Cart::remove($res->rowId)) { }
         $respone = array(
-            'total_item'=>Cart::count(),
+            'total_item' => Cart::count(),
             'total' => Cart::subtotal(),
             'product' => Cart::content(),
         );
         return $respone;
     }
-    public function updatecart(Request $res){
-        if(Cart::update($res->rowId, $res->qty)){
+    public function updatecart(Request $res)
+    {
+        if (Cart::update($res->rowId, $res->qty)) {
             $respone = array(
-                'total_item'=>Cart::count(),
+                'total_item' => Cart::count(),
                 'total' => Cart::subtotal(),
                 'product' => Cart::content(),
             );
             return $respone;
         }
-        
     }
-    public function checkout(){
+    public function checkout()
+    {
         return view('customer.checkout');
     }
-    public function city_api(){
+    public function city_api()
+    {
         return $this->fetch_api('https://thongtindoanhnghiep.co/api/city');
     }
-    public function country_api(Request $res){
-        return $this->fetch_api('https://thongtindoanhnghiep.co/api/city/'.$res->id.'/district');
+    public function country_api(Request $res)
+    {
+        return $this->fetch_api('https://thongtindoanhnghiep.co/api/city/' . $res->id . '/district');
     }
-    public function fetch_api($url){
+    public function fetch_api($url)
+    {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-        CURLOPT_URL => $url,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
         ));
         $response = curl_exec($curl);
         $err = curl_error($curl);

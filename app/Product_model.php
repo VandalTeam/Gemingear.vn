@@ -16,7 +16,8 @@ class Product_model extends ModelSetting
             ->leftJoin('promotions', 'promotions.id', '=', 'product.promotion_id')
             ->join('series', 'series.id', '=', 'product.series_id')
             ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
-            ->select('product.*', 'promotions.name as promotion_name', 'subcategory.name as subcategory_name', 'series.name as series_name')
+            ->join('category','category.id','=','subcategory.category_id')
+            ->select('product.*', 'promotions.name as promotion_name', 'subcategory.name as subcategory_name', 'series.name as series_name','subcategory.category_id as category_id')
             ->orderBy('id','desc')
             ->get();
     }

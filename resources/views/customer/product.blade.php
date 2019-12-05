@@ -74,9 +74,7 @@
                     </div>
                     @endforeach
                 </div>   
-                <div class="shop_toolbar t_bottom ">
                     <div class="shop_toolbar t_bottom">{{$product->render()}}</div>
-                </div>
             </div>
         </div>
     </div>
@@ -99,7 +97,6 @@
             
             var myurl = $(this).attr('href');
             var page=myurl.split('page=')[1];
-
             getData(page);
         });
   
@@ -108,9 +105,9 @@
     function getData(page){
         $.ajax(
         {
-            url: '?page=' + page,
+            url: '/search?page=' + page,
             type: "get",
-            datatype: "html"
+            datatype: "html"   
         }).done(function(data){
             $("#tag_container").empty().html(data);
         }).fail(function(jqXHR, ajaxOptions, thrownError){
