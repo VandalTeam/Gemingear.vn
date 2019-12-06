@@ -14,7 +14,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class Home extends Controller
 {
-    protected $banner_model, $product;
+    protected $banner_model, $product,$dataSearch;
     public function __construct()
     {
         $this->banner_model = new Banner_model();
@@ -163,22 +163,18 @@ class Home extends Controller
             echo $data;
         }
     }
-    public function search(Request $res)
+    public function searchFirst(Request $res)
     {
         $data=$this->product->search($res);
         $collection = collect($data)->paginate(12);
-        if ($res->ajax()) {
-            
-            echo "<pre>";
-            print_r ($collection);
-            echo "</pre>";
-            die;
-            return view('customer.layout.pagination_search', ['product' => $collection]);
-        }
-        else{
-            return view('customer.product', ['product' => $collection]);
-        }
-     
+            return view('customer.product', ['name'=>$res->name,'product' => $collection]);
+    }
+    public function search(Request $res)
+    {
+        
+        $data=$this->product->search($res);
+        $collection = collect($data)->paginate(12);
+            return view('customer.layout.pagination', ['product' => $collection]);
     }
 
     public function addcart(Request $res)

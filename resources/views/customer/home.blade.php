@@ -185,8 +185,8 @@
             </div>
             <div class="tab-content LapTop" data-id="3" >
                 <div class="product">
-                    <div class="container">
-                        <div class="row">
+                    <div class="container LapTop_add">
+                        <div class="row ">
                             @foreach ($LapTop as $item)
                             <div class="col-lg-3 col-sm-12">
                                 <article class="single_product" >
@@ -241,7 +241,7 @@
             </div>
             <div class="tab-content ManHinh" data-id="13" id="tag_container">
                 <div class="product">
-                    <div class="container">
+                    <div class="container ManHinh_add">
                         <div class="row">
                             @foreach ($ManHinh as $item)
                             <div class="col-lg-3 col-sm-12">
@@ -297,7 +297,7 @@
             </div>
             <div class="tab-content TaiNghe" data-id="17" >
                 <div class="product">
-                    <div class="container">
+                    <div class="container TaiNghe_add">
                         <div class="row">
                             @foreach ($TaiNghe as $item)
                             <div class="col-lg-3 col-sm-12">
@@ -353,7 +353,7 @@
             </div>
             <div class="tab-content GVN" data-id="2" >
                 <div class="product">
-                    <div class="container">
+                    <div class="container GVN_add">
                         <div class="row">
                             @foreach ($GVN as $item)
                             <div class="col-lg-3 col-sm-12">
@@ -409,7 +409,7 @@
             </div>
             <div class="tab-content BanPhim" data-id="14" >
                 <div class="product">
-                    <div class="container">
+                    <div class="container BanPhim_add">
                         <div class="row">
                             @foreach ($BanPhim as $item)
                             <div class="col-lg-3 col-sm-12">
@@ -523,7 +523,7 @@
                     type: "get",
                     datatype: "html"
                     }).done(function(data){
-                        $(namecategory).empty().html(data);
+                        $(namecategory+'_add').empty().html(data);
                     }).fail(function(jqXHR, ajaxOptions, thrownError){
                         alert('No response from server');
             });

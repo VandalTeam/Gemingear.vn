@@ -167,8 +167,9 @@ Route::get('customer/logout', 'Customer@logout');
 Route::get('products/{url}', 'Home@detail');
 
 Route::post('/searchAjax','Home@searchAjax');
+Route::get('/search','Home@searchFirst');
+
 Route::post('/search','Home@search');
-Route::get('/search','Home@search');
 //Route shopping cart
 Route::post('addcart', 'Home@addcart');
 Route::get('removecart', 'Home@removecart');

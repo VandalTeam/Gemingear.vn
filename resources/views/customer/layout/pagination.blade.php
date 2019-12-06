@@ -1,6 +1,4 @@
-<div class="product">
-    <div class="container">
-        <div class="row">
+<div class="row">
             @foreach ($product as $item)
             <div class="col-lg-3 col-sm-12">
                 <article class="single_product" >
@@ -36,6 +34,4 @@
             </div>
             @endforeach
         </div>
-    </div>
-</div>
-<div class="shop_toolbar t_bottom">{{$product->render()}}</div>
+{{-- <div class="shop_toolbar t_bottom">{{$product->render()}}</div> --}}
