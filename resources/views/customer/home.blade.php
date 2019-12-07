@@ -78,91 +78,91 @@
             <div class="categories_product_inner">
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/may-bo-pc"> Máy Bộ PC</a></h4>
+                        <h4><a href="/collections/may-bo-pc"> Máy Bộ PC</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/may-bo-pc"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/may-bo-pc"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category11.gif')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/man-hinh"> Màn Hình</a></h4>
+                        <h4><a href="/collections/man-hinh"> Màn Hình</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/man-hinh"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/man-hinh"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category2.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/laptop"> Laptop</a></h4>
+                        <h4><a href="/collections/laptop"> Laptop</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/laptop"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/laptop"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category3.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/ghe-gaming"> Ghế Gaming</a></h4>
+                        <h4><a href="/collections/ghe-gaming"> Ghế Gaming</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/ghe-gaming"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/ghe-gaming"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category4.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/tai-nghe">Tai Nghe</a></h4>
+                        <h4><a href="/collections/tai-nghe">Tai Nghe</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/tai-nghe"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/tai-nghe"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category5.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/lot-chuot"> Lót Chuột</a></h4>
+                        <h4><a href="/collections/lot-chuot"> Lót Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/lot-chuot"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
+                        <a href="/collections/lot-chuot"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/chuot"> Chuột</a></h4>
+                        <h4><a href="/collections/chuot"> Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/chuot"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
+                        <a href="/collections/chuot"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/loa-bluetooth"> Loa Bluetooth</a></h4>
+                        <h4><a href="/collections/loa-bluetooth"> Loa Bluetooth</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/loa-bluetooth"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
+                        <a href="/collections/loa-bluetooth"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/linh-kien"> Linh Kiện</a></h4>
+                        <h4><a href="/collections/linh-kien"> Linh Kiện</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/linh-kien"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
+                        <a href="/collections/linh-kien"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/ban-phim"> Bàn Phím</a></h4>
+                        <h4><a href="/collections/ban-phim"> Bàn Phím</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/ban-phim"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
+                        <a href="/collections/ban-phim"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
                                 alt=""></a>
                     </div>
                 </div>

@@ -90,7 +90,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
                         'name' => 'Võ Trung Hiếu',
                         'email' => '17520487@gm.uit.edu.vn',
                         'phone' => '+84 968540305',
-                        'img_link' => 'https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_eui2=AeGObWaUlFEbhwnRbscEBPdhXizkRP6Vr6Q8abc_n2NyXXTk9cpSd_wJvfbXbxLtKEy8dT9xlnaKPxhMhHKRhjaXqyJmFHIl2esL_kSJV6-Z9Q&_nc_oc=AQmwosZEtqIrVaaOQolaOSW7GxKGUQ8hwaAyFDPm9dCxkq0ugwdvRzyt3D1EqaKJVwg&_nc_ht=scontent.fsgn2-1.fna&oh=fd233487b706c6d8722c2d05ba578781&oe=5E520E1B',
+                        'img_link' => 'http://doanweb1234.com/storage/uploads/ZP2GSHXVgUVo2rHgrnm0Bsx4Qog68CGRtCIctb4s.jpeg',
                         'face_link' => 'https://www.facebook.com/tin.ho.52',
                         'ins_link' => 'https://www.instagram.com/hieuvo044/',
                         'tw_link' => 'https://twitter.com/VTrungH76654611',
@@ -193,3 +193,13 @@ Route::get('/collections/{category_url}','Home@loadData_lv1');
 
 
 Route::get('pusher', 'Customer@notify');
+
+Route::get('/pages/chinh-sach-bao-hanh/', function () {
+    return view('customer.chinhsachbaohanh');
+});
+Route::get('/pages/huong-dan-thanh-toan/', function () {
+    return view('customer.huongdanthanhtoan');
+});
+Route::get('/pages/chinh-sach-van-chuyen/', function () {
+    return view('customer.chinhsachvanchuyen');
+});

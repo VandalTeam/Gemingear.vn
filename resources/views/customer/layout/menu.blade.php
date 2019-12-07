@@ -51,7 +51,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-6">
                         <div class="logo">
-                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/logo.png')}}"
+                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/lg.png')}}"
                                     alt=""></a>
                         </div>
                     </div>
@@ -59,29 +59,27 @@
                         <div class="main_menu menu_position text-center">
                             <nav>
                                 <ul>
-                                    {{-- <li>
-                                        <button type="button" class="btn btn-outline-danger"><img
-                                                style="max-width: 18px;max-height: 18px;"
-                                                src="//theme.hstatic.net/1000026716/1000440777/14/xk1s.png?v=7930">Tổng
-                                            hợp khuyến mãi</button>
-                                    </li> --}}
+                                  
                                     <li>
+                                        <a href="/pages/huong-dan-thanh-toan/">
                                         <button type="button" class="btn btn-outline-danger"><img
                                                 style="max-width: 18px;max-height: 18px;"
                                                 src="//theme.hstatic.net/1000026716/1000440777/14/xk2s.png?v=7989">
-                                            Hướng dẫn thanh toán</button>
+                                            Hướng dẫn thanh toán</button></a>
                                     </li>
                                     <li>
+                                        <a href="/pages/chinh-sach-bao-hanh/">
                                         <button type="button" class="btn btn-outline-danger"><img
                                                 style="max-width: 18px;max-height: 18px;"
                                                 src="//theme.hstatic.net/1000026716/1000440777/14/xk4s.png?v=7989">
-                                            Chính sách bảo hành</button>
+                                            Chính sách bảo hành</button></a>
                                     </li>
                                     <li>
+                                        <a href="/pages/chinh-sach-van-chuyen">
                                         <button type="button" class="btn btn-outline-danger"><img
                                                 style="max-width: 18px;max-height: 18px;"
                                                 src="//theme.hstatic.net/1000026716/1000440777/14/xk5s.png?v=7989">
-                                            Chính sách vấn chuyển</button>
+                                            Chính sách vấn chuyển</button></a>
                                     </li>
                                 </ul>
                             </nav>
