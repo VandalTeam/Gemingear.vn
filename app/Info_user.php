@@ -8,5 +8,5 @@ class Info_user extends Model
 {
     //
     protected $table = 'infouser';
-    public $timestamps = false;
+    public $timestamps = true;
 }

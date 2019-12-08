@@ -55,9 +55,15 @@ class Product_model extends ModelSetting
         if (strpos($sub, "price") !== false) {
             $sub = explode("-", $sub);
             if (count($sub) == 2) {
-                return DB::table('product')->where('price', '>', $sub[1] * 1000000)->get();
+                return DB::table('product')->where('price', '>', $sub[1] * 1000000)
+                ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
+                ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category_url)
+                ->get();
             } else {
-                return DB::table('product')->where('price', '>', $sub[1] * 1000000)->where('price', '<', $sub[\count($sub) - 1] * 1000000)->get();
+                return DB::table('product')->where('price', '>', $sub[1] * 1000000)->where('price', '<', $sub[\count($sub) - 1] * 1000000)
+                ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
+                ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category_url)
+                ->get();;
             }
         } else {
             return DB::table('product')

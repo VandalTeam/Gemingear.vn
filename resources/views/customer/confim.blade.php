@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="http://gemingear.vn/">Trang chủ</a></li>
+                        <li><a href="http://doanweb1234.com/">Trang chủ</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 mb-20" style="text-align: center;">
                                         <h2 style="color:chartreuse;">Xin cảm ơn quý khách đã đặt hàng! Đơn hàng của quý khách đã được xác nhận</h2>
-                                        <a href="http://gemingear.vn/" style="margin-top:2%;" class="btn btn-primary">Tiếp tục mua hàng</a>
+                                        <a href="http://doanweb1234.com/" style="margin-top:2%;" class="btn btn-primary">Tiếp tục mua hàng</a>
                                     </div>
                                     <div class="col-lg-12 mb-20" >
                                         <h4>Thông tin người đặt hàng</h4>
@@ -96,7 +96,7 @@
                         <h1>404</h1>
                         <h2>Trang này không tồn tại</h2>
                         <p>Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị <br> xóa, tên đã thay đổi hoặc tạm thời không có.</p>
-                        <a href="http://gemingear.vn/">Trở về trang chủ</a>
+                        <a href="http://doanweb1234.com/">Trở về trang chủ</a>
                     </div>
                 </div>
             </div>  

@@ -10,7 +10,7 @@ class Category_model extends ModelSetting
 {
     //
     protected $table = 'category';
-    public $timestamps = false;
+    public $timestamps = true;
     public function subcategory()
     {
         return $this->HasMany('App\Subcategory_model','category_id');

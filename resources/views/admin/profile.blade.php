@@ -10,7 +10,7 @@
         <div class="col-lg-4 col-md-12">
             <div class="card mcard_3">
                 <div class="body">
-                    <a href="#"><img height="200px" width="200px" src={{$user['img_link']}} class="rounded-circle shadow " alt="profile-image"></a>
+                    <a href="#"><img  style="object-fit: cover;" height="200px" width="200px" src={{$user['img_link']}} class="rounded-circle shadow " alt="profile-image"></a>
                     <h4 class="m-t-10">{{$user['name']}}</h4>                            
                     <div class="row">
                         <div class="col-12">

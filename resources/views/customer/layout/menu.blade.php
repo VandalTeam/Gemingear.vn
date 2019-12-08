@@ -18,7 +18,7 @@
                                 @if (isset(getUser()->name))
                                 <a href="/user/account/profile">
                                     <li>
-                                        <img class="rounded-circle shadow" src="@if (isset(getUser()->image))
+                                        <img class="rounded-circle shadow" style="object-fit: cover;" src="@if (isset(getUser()->image))
                                                 {{getUser()->image}}
                                                 @else
                                                     {{asset('assets/customer/img/blog/comment3.png.jpg')}}

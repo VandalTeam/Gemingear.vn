@@ -91,7 +91,7 @@
                 <div class="card mcard_3">
                     <div class="body">
                         <a href="/admin/profile/1"><img height="200px" width="200px"
-                                src="http://doanweb1234.com/storage/uploads/ZP2GSHXVgUVo2rHgrnm0Bsx4Qog68CGRtCIctb4s.jpeg"
+                            style="object-fit: cover;" src="http://doanweb1234.com/storage/uploads/ZP2GSHXVgUVo2rHgrnm0Bsx4Qog68CGRtCIctb4s.jpeg"
                                 class="rounded-circle shadow " alt="profile-image"></a>
                         <h4 class="m-t-10">Võ Trung Hiếu</h4>
                         <div class="row">

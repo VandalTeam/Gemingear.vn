@@ -7,7 +7,7 @@
     <ul class="list">
         <li>
             <div class="user-info">
-                <a style="pointer-events: none;cursor: default;" class="image" href="#"><img width="40px" height="40px"
+                <a style="pointer-events: none;cursor: default;" class="image" href="#"><img  style="object-fit: cover;" width="50px" height="50px"
                         src="@if(getUser()->image != null) {{getUser()->image}}@else {{asset('assets/customer/img/blog/comment3.png.jpg')}} @endif"
                         alt="User"></a>
                 <div class="detail">
