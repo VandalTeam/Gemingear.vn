@@ -132,28 +132,19 @@ class Home extends Controller
     public function loadData_lv3($category_url, $subcategory_url, $brand_url, Request $request)
     {
         $collection = collect($this->product->loadData_lv3($category_url, $subcategory_url, $brand_url))->paginate(12);
-        if ($request->ajax()) {
-            return view('customer.layout.pagination_search', ['product' => $collection]);
-        }
-        return view('customer.product', ['product' => $collection]);
+        return view('customer.listproduct', ['product' => $collection]);
     }
 
     public function loadData_lv2($category_url, $sub, Request $request)
     {
 
         $collection = collect($this->product->loadData_lv2($category_url, $sub))->paginate(12);
-        if ($request->ajax()) {
-            return view('customer.layout.pagination_search', ['product' => $collection]);
-        }
-        return view('customer.product', ['product' => $collection]);
+        return view('customer.listproduct', ['product' => $collection]);
     }
     public function loaddata_lv1($category, Request $request)
     {
         $collection = collect($this->product->loaddata_lv1($category))->paginate(12);
-        if ($request->ajax()) {
-            return view('customer.layout.pagination_search', ['product' => $collection]);
-        }
-        return view('customer.product', ['product' => $collection]);
+        return view('customer.listproduct', ['product' => $collection]);
     }
     public function searchAjax(Request $res)
     {

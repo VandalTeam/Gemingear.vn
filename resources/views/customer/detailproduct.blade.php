@@ -123,7 +123,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                        <h2>Upsell Products </h2>
+                        <h2>Bạn có thể quan tâm</h2>
                     </div>
                 </div>
             </div>
@@ -132,31 +132,21 @@
                 <article class="single_product">
                     <figure>
                         <div class="product_thumb">
-                            <a class="primary_img" href="product-details.html"><img src="{{$item->image}}" alt=""></a>
-                            <a class="secondary_img" href="product-details.html"><img src="{{$item->image}}" alt=""></a>
+                            <a class="primary_img" href="{{$item->url}}"><img src="{{$item->image}}" alt=""></a>
+                            <a class="secondary_img" href="{{$item->url}}"><img src="{{$item->image}}" alt=""></a>
                             <div class="label_product">
                                 <span class="label_sale">Sale</span>
-                            </div>
-                            <div class="action_links">
-                                <ul>
-                                    <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i
-                                                class="ion-android-favorite-outline"></i></a></li>
-                                    <li class="compare"><a href="#" title="Add to Compare"><i
-                                                class="ion-ios-settings-strong"></i></a></li>
-                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"
-                                            title="quick view"><i class="ion-ios-search-strong"></i></a></li>
-                                </ul>
                             </div>
                         </div>
                         <div class="product_content">
                             <div class="product_content_inner">
                                 <h4 class="product_name"><a href="product-details.html">{{$item->name}}</a></h4>
                                 <div class="price_box">
-                                    @if (isset($item->price_sale))
-                                    <span class="old_price">{{$item->price}}</span>
-                                    <span class="current_price">{{$item->price_sale}}</span>
+                                    @if ($item->price_sale == $item->price or $item->price==0)
+                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                     @else
-                                    <span class="current_price">{{$item->price}}</span>
+                                        <span class="old_price">{{number_format($item->price)}} đ</span>
+                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                     @endif
                                 </div>
                             </div>

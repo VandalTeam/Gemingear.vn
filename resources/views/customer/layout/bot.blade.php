@@ -149,8 +149,8 @@
 
 <script>
     $(document).ready(function () {
-        $('.add_to_cart').click(function (e) { 
-            e.preventDefault();
+        $(document).on('click', '.add_to_cart',function(event){
+            event.preventDefault();
             var id = $(this).attr('data-id');
 			var name = $(this).attr('data-name');
 			var image = $(this).attr('data-image');

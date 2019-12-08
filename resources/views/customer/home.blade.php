@@ -78,91 +78,91 @@
             <div class="categories_product_inner">
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/may-bo-pc"> Máy Bộ PC</a></h4>
+                        <h4><a href="/collections/may-bo-gvn"> Máy Bộ PC</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/may-bo-pc"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/may-bo-gvn"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category11.gif')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/man-hinh"> Màn Hình</a></h4>
+                        <h4><a href="/collections/man-hinh"> Màn Hình</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/man-hinh"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/man-hinh"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category2.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/laptop"> Laptop</a></h4>
+                        <h4><a href="/collections/laptop"> Laptop</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/laptop"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/laptop"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category3.jpg')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/ghe-gaming"> Ghế Gaming</a></h4>
+                        <h4><a href="/collections/ghe-gaming"> Ghế Gaming</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/ghe-gaming"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/ghe-gaming"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category4.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/tai-nghe">Tai Nghe</a></h4>
+                        <h4><a href="/collections/tai-nghe">Tai Nghe</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/tai-nghe"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/tai-nghe"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category5.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/lot-chuot"> Lót Chuột</a></h4>
+                        <h4><a href="/collections/lot-chuot"> Lót Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/lot-chuot"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
+                        <a href="/collections/lot-chuot"><img src="{{asset('assets/customer/img/s-product/category6.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/chuot"> Chuột</a></h4>
+                        <h4><a href="/collections/chuot"> Chuột</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/chuot"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
+                        <a href="/collections/chuot"><img src="{{asset('assets/customer/img/s-product/category7.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/loa-bluetooth"> Loa Bluetooth</a></h4>
+                        <h4><a href="/collections/loa-bluetooth"> Loa Bluetooth</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/loa-bluetooth"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
+                        <a href="/collections/loa-bluetooth"><img src="{{asset('assets/customer/img/s-product/category10.jpg')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/linh-kien"> Linh Kiện</a></h4>
+                        <h4><a href="/collections/linh-kien"> Linh Kiện</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/linh-kien"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
+                        <a href="/collections/linh-kien"><img src="{{asset('assets/customer/img/s-product/category9.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/ban-phim"> Bàn Phím</a></h4>
+                        <h4><a href="/collections/ban-phim"> Bàn Phím</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/ban-phim"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
+                        <a href="/collections/ban-phim"><img src="{{asset('assets/customer/img/s-product/category8.png')}}"
                                 alt=""></a>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
             <div class="tab-content LapTop" data-id="3" >
                 <div class="product">
                     <div class="container LapTop_add">
-                        <div class="row ">
+                        <div class="row">
                             @foreach ($LapTop as $item)
                             <div class="col-lg-3 col-sm-12">
                                 <article class="single_product" >
@@ -204,11 +204,11 @@
                                             <div class="product_content_inner" ">
                                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                                 <div class="price_box">
-                                                    @if ($item->price_sale == $item->price)
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    @if ($item->price_sale == $item->price or $item->price==0)
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @else
-                                                        <span class="old_price">{{number_format($item->price)}} đ</span>
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    <span class="old_price">{{number_format($item->price)}} đ</span>
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop_toolbar t_bottom">{{$LapTop->render()}}</div>
+                <div class="shop_toolbar t_bottom LapTop_remove">{{$LapTop->links()}}</div>
             </div>
         </div>
     </div>
@@ -260,11 +260,11 @@
                                             <div class="product_content_inner" ">
                                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                                 <div class="price_box">
-                                                    @if ($item->price_sale == $item->price)
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    @if ($item->price_sale == $item->price or $item->price==0)
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @else
-                                                        <span class="old_price">{{number_format($item->price)}} đ</span>
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    <span class="old_price">{{number_format($item->price)}} đ</span>
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -280,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop_toolbar t_bottom">{{$ManHinh->render()}}</div>
+                <div class="shop_toolbar t_bottom ManHinh_remove">{{$ManHinh->render()}}</div>
             </div>
         </div>
     </div>
@@ -316,7 +316,7 @@
                                             <div class="product_content_inner" ">
                                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                                 <div class="price_box">
-                                                    @if ($item->price_sale == $item->price)
+                                                    @if ($item->price_sale == $item->price or $item->price==0)
                                                         <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @else
                                                         <span class="old_price">{{number_format($item->price)}} đ</span>
@@ -336,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop_toolbar t_bottom">{{$TaiNghe->render()}}</div>
+                <div class="shop_toolbar t_bottom TaiNghe_remove">{{$TaiNghe->render()}}</div>
             </div>
         </div>
     </div>
@@ -372,11 +372,11 @@
                                             <div class="product_content_inner" ">
                                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                                 <div class="price_box">
-                                                    @if ($item->price_sale == $item->price)
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    @if ($item->price_sale == $item->price or $item->price==0)
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @else
-                                                        <span class="old_price">{{number_format($item->price)}} đ</span>
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    <span class="old_price">{{number_format($item->price)}} đ</span>
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -392,7 +392,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop_toolbar t_bottom">{{$GVN->render()}}</div>
+                <div>
+                <div class="shop_toolbar t_bottom GVN_remove">{{$GVN->render()}}</div></div>
             </div>
         </div>
     </div>
@@ -428,11 +429,11 @@
                                             <div class="product_content_inner" ">
                                                 <h4 class="product_name" style="height:30%; text-overflow: clip;"><a href="{{$item->url}}">{{$item->name}}</a></h4>
                                                 <div class="price_box">
-                                                    @if ($item->price_sale == $item->price)
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    @if ($item->price_sale == $item->price or $item->price==0)
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @else
-                                                        <span class="old_price">{{number_format($item->price)}} đ</span>
-                                                        <span class="current_price">{{number_format($item->price_sale)}} đ</span>
+                                                    <span class="old_price">{{number_format($item->price)}} đ</span>
+                                                    <span class="current_price">{{number_format($item->price_sale)}} đ</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -448,7 +449,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="shop_toolbar t_bottom">{{$BanPhim->render()}}</div>
+                <div>
+                <div class="shop_toolbar t_bottom BanPhim_remove">{{$BanPhim->render()}}</div></div>
             </div>
         </div>
     </div>
@@ -524,63 +526,10 @@
                     datatype: "html"
                     }).done(function(data){
                         $(namecategory+'_add').empty().html(data);
+                        $(namecategory+'_remove').remove();
                     }).fail(function(jqXHR, ajaxOptions, thrownError){
                         alert('No response from server');
             });
     }
 </script>
-{{-- <script>
-    $(document).ready(function () {
-        $('.add_to_cart').click(function (e) { 
-            e.preventDefault();
-            var id = $(this).attr('data-id');
-			var name = $(this).attr('data-name');
-			var image = $(this).attr('data-image');
-			var price = $(this).attr('data-price');
-			var qty = 1;
-			$.ajax({
-				type: "post",
-				url: "/addcart",
-				data: {
-					'id': id,
-					'name':name,
-					'image': image,
-					'price': price,	
-					'qty': qty
-				},
-                dataType: "json",
-				success: function(data) {
-                    $('.cart_price').text(data.total);
-                    $('.cart_count').text(data.total_item);
-                    var str="";
-                    $.each(data.product, function(i, item) {
-                        str +=`<div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="${item.options.size}" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">${item.name}</a>
-                                                <p>Qty: ${item.qty} X <span>${item.price}</span></p>
-                                            </div>
-                                            <div class="cart_remove remove_cart" data-id="${item.rowId}">
-                                                <a><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>`
-                    });
-                    $('.mini_cart_inner').html(str+`<div class="mini_cart_table">
-                                            <div class="cart_total">
-                                                <span>Tổng tiền:</span>
-                                                <span class="price">${data.total}</span>
-                                            </div>
-                                            <div class="cart_total mt-10">
-                                                <span>Thành tiền:</span>
-                                                <span class="price">${data.total}</span>
-                                            </div>
-                                        </div>`);
-                    // location.reload(true);
-				}
-			});
-        });
-    });
-</script> --}}
 @endsection

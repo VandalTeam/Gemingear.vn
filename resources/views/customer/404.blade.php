@@ -7,14 +7,10 @@
                 <div class="col-12">
                     <div class="error_form">
                         <h1>404</h1>
-                        <h2>Opps! PAGE NOT BE FOUND</h2>
-                        <p>Sorry but the page you are looking for does not exist, have been<br> removed, name changed or
-                            is temporarily unavailable.</p>
-                        <form action="#">
-                            <input placeholder="Search..." type="text">
-                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
-                        </form>
-                        <a href="index.html">Back to home page</a>
+                        <h2>Không tìm thấy trang!</h2>
+                        <p>Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị <br> xóa, tên đã thay đổi hoặc
+                        tạm thời không có</p>
+                        <a href="http://gemingear.vn/">Trở về trang chủ</a>
                     </div>
                 </div>
             </div>

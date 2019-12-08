@@ -98,7 +98,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright_area">
-                            <p>Copyright &copy; 2019 <a href="#">Antomi</a>  All Right Reserved.</p>
+                            <p>Vandal Team <a href="http://gemingear.vn/"> Gemingear</a> UIT</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">

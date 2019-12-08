@@ -1,7 +1,7 @@
 @extends('customer.template.customer_template')
 @section('content')
 <div class="shop_area shop_fullwidth">
-    <div class="container data" data-id="@if(isset($name)){{$name}}@endif">
+    <div class="container data">
         <div class="row">
             <div class="col-12">
                 <div class="shop_toolbar_wrapper">
@@ -65,38 +65,4 @@
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-    
-    $(document).ready(function()
-    {
-        $(document).on('click', '.pagination a',function(event)
-        {
-            event.preventDefault();
-            $('li').removeClass('active');
-            $(this).parent('li').addClass('active');
-            var name = $('.data').attr('data-id');
-            alert(name);
-            var myurl = $(this).attr('href');
-            var page=myurl.split('page=')[1];
-            getData(page,name);
-        });
-  
-    });
-  
-    function getData(page,name){
-        $.ajax(
-        {
-            url: '/search?page=' + page,
-            type: "post",
-            data: {'name':name},
-            datatype: "html"   
-        }).done(function(data){
-            $("#tag_container").empty().html(data);
-        }).fail(function(jqXHR, ajaxOptions, thrownError){
-              alert('No response from server');
-        });
-    }
-</script>
 @endsection
