@@ -57,7 +57,7 @@
                                     <tbody class="notify-order">
                                         <?php $i=1?> @foreach ($order as $item)
                                         <tr>
-                                            <td>#BMHH19{{$i}}</td>
+                                            <td>#BMHH19{{$item->id}}</td>
                                             <td>{{$item->name_customer}}</td>
                                             <td>{{$item->phone}}</td>
                                             <td>{{$item->address}}</td>

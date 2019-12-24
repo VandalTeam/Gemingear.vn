@@ -8,7 +8,7 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Jquery DataTables</h2>
+                <h2>Thông tin sản phẩm</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin/index"><i class="zmdi zmdi-home"></i> Trang chủ</a></li>
                     <li class="breadcrumb-item active">Sản phẩm</li>

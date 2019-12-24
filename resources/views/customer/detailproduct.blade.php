@@ -7,7 +7,7 @@
             <div class="product_details">
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
-                        <div class="main">
+                        {{-- <div class="main"> --}}
                             <?php $image = explode('&',$product->image);?>
                             <div class="slider slider-for">
                                 @foreach ($image as $item)
@@ -23,7 +23,7 @@
                                 @endforeach
                             </div>
                             @endif
-                        </div>
+                        {{-- </div> --}}
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="product_d_right">

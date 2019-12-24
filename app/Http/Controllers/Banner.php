@@ -34,7 +34,8 @@ class Banner extends Controller
     public function delete($id,Request $res){
         $where = array('id'=>$id);
         $data = $this->model->getInfo($where);
-        status($res,Storage::delete($data[0]->url) && $this->model->deleteInfo($where));
+        $str = explode('/',$data[0]->url);
+        status($res,unlink(storage_path('app/public/uploads/'.$str[5])) && $this->model->deleteInfo($where));
         return redirect($_SERVER['HTTP_REFERER']);
     }
     public function update(Request $res,$id){

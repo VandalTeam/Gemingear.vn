@@ -77,7 +77,7 @@
   var channel = pusher.subscribe('my-channel');
   channel.bind('my-event', function(data) {
     $.toast({
-                text: "<a href='goole.com'>#MI2019</a>",
+                text: `<a href="/admin/order_detail/${data.message.id}">#BMHH19${data.message.id}</a>`,
                 heading: 'Thông báo',
                 icon: 'info',
                 showHideTransition: 'fade',
