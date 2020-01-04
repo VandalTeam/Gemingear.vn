@@ -44,9 +44,10 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card mcard_4">
                                         <div class="body">
-                                            <img src="{{top10()[0]->image}}" alt="profile-image">
+                                            
+                                            <img src="<?php if(isset(top10()[0])){echo top10()[0]->image;}?>" alt="profile-image">
                                             <div class="user">
-                                                <h5 class="mt-3 mb-1 text-center">{{top10()[0]->name}}</h5>
+                                                <h5 class="mt-3 mb-1 text-center"><?php if(isset(top10()[0])){echo top10()[0]->name;}?></h5>
 
                                             </div>
                                         </div>
@@ -56,7 +57,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
-                                            <h4 class="mt-3 mb-0">{{top10()[0]->DoanhThu}} VNĐ</h4>
+                                            <h4 class="mt-3 mb-0"><?php if(isset(top10()[0])){echo top10()[0]->DoanhThu;}?> VNĐ</h4>
                                             <span class="text-muted">Doanh thu</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -66,8 +67,9 @@
                                     </div>
                                     <div class="card w_data_1">
                                         <div class="body">
+                                            
                                             <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                            <h4 class="mt-3 mb-1">{{price(top10()[0]->name)[0]->SL}}</h4>
+                                            <h4 class="mt-3 mb-1"><?php if(isset(top10()[0])){echo price(top10()[0]->name)[0]->SL;}?></h4>
                                             <span class="text-muted">Số lượng</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -84,10 +86,10 @@
                                     <div class="card mcard_4">
                                         <div class="body">
 
-                                            <img src="{{top10()[1]->image}}" alt="profile-image">
+                                            <img src="<?php if(isset(top10()[1])){echo top10()[1]->image;}?>" alt="profile-image">
 
                                             <div class="user">
-                                                <h5 class="mt-3 mb-1 text-center">{{top10()[1]->name}}</h5>
+                                                <h5 class="mt-3 mb-1 text-center"><?php if(isset(top10()[1])){echo top10()[1]->name;}?></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +98,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
-                                            <h4 class="mt-3 mb-0">{{top10()[1]->DoanhThu}} VNĐ</h4>
+                                            <h4 class="mt-3 mb-0"><?php if(isset(top10()[1])){echo top10()[1]->DoanhThu;}?> VNĐ</h4>
                                             <span class="text-muted">Doanh thu</span>
                                             <div class="w_description text-danger">
                                                 <i class="zmdi zmdi-trending-down"></i>
@@ -107,7 +109,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                            <h4 class="mt-3 mb-1">{{price(top10()[1]->name)[0]->SL}}</h4>
+                                            <h4 class="mt-3 mb-1"><?php if(isset(top10()[1])){echo price(top10()[1]->name)[0]->SL;}?></h4>
                                             <span class="text-muted">Số lượng</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -124,10 +126,10 @@
                                     <div class="card mcard_4">
                                         <div class="body">
 
-                                            <img src="{{top10()[2]->image}}" alt="profile-image">
+                                            <img src="<?php if(isset(top10()[2])){echo top10()[2]->image;}?>" alt="profile-image">
 
                                             <div class="user">
-                                                <h5 class="mt-3 mb-1 text-center">{{top10()[2]->name}}</h5>
+                                                <h5 class="mt-3 mb-1 text-center"><?php if(isset(top10()[2])){echo top10()[2]->name;}?></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +138,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
-                                            <h4 class="mt-3 mb-0">{{top10()[2]->DoanhThu}} VNĐ</h4>
+                                            <h4 class="mt-3 mb-0"><?php if(isset(top10()[2])){echo top10()[2]->DoanhThu;}?> VNĐ</h4>
                                             <span class="text-muted">Doanh thu</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -147,7 +149,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                            <h4 class="mt-3 mb-1">{{price(top10()[2]->name)[0]->SL}}</h4>
+                                            <h4 class="mt-3 mb-1"><?php if(isset(top10()[2])){echo price(top10()[2]->name)[0]->SL;}?></h4>
                                             <span class="text-muted">Số lượng</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -164,10 +166,10 @@
                                     <div class="card mcard_4">
                                         <div class="body">
 
-                                            <img src="{{top10()[3]->image}}" alt="profile-image">
+                                            <img src="<?php if(isset(top10()[3])){echo top10()[3]->image;}?>" alt="profile-image">
 
                                             <div class="user">
-                                                <h5 class="mt-3 mb-1">{{top10()[3]->name}}</h5>
+                                                <h5 class="mt-3 mb-1"><?php if(isset(top10()[3])){echo top10()[3]->name;}?></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +178,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
-                                            <h4 class="mt-3 mb-0">{{top10()[3]->DoanhThu}} VNĐ</h4>
+                                            <h4 class="mt-3 mb-0"><?php if(isset(top10()[3])){echo top10()[3]->DoanhThu;}?> VNĐ</h4>
                                             <span class="text-muted">Doanh thu</span>
                                             <div class="w_description text-danger">
                                                 <i class="zmdi zmdi-trending-down"></i>
@@ -187,7 +189,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                            <h4 class="mt-3 mb-1">{{price(top10()[3]->name)[0]->SL}}</h4>
+                                            <h4 class="mt-3 mb-1"><?php if(isset(top10()[3])){echo price(top10()[3]->name)[0]->SL;}?></h4>
                                             <span class="text-muted">Số lượng</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>
@@ -204,10 +206,10 @@
                                     <div class="card mcard_4">
                                         <div class="body">
 
-                                            <img src="{{top10()[4]->image}}" alt="profile-image">
+                                            <img src="<?php if(isset(top10()[4])){echo top10()[4]->image;}?>" alt="profile-image">
 
                                             <div class="user">
-                                                <h5 class="mt-3 mb-1 text-center">{{top10()[4]->name}}</h5>
+                                                <h5 class="mt-3 mb-1 text-center"><?php if(isset(top10()[4])){echo top10()[4]->name;}?></h5>
 
                                             </div>
                                         </div>
@@ -217,7 +219,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon pink"><i class="zmdi zmdi-money"></i></div>
-                                            <h4 class="mt-3 mb-0">{{top10()[4]->DoanhThu}} VNĐ</h4>
+                                            <h4 class="mt-3 mb-0"><?php if(isset(top10()[4])){echo top10()[4]->DoanhThu;}?> VNĐ</h4>
                                             <span class="text-muted">Doanh thu</span>
                                             <div class="w_description text-danger">
                                                 <i class="zmdi zmdi-trending-down"></i>
@@ -228,7 +230,7 @@
                                     <div class="card w_data_1">
                                         <div class="body">
                                             <div class="w_icon cyan"><i class="zmdi zmdi-ticket-star"></i></div>
-                                            <h4 class="mt-3 mb-1">{{price(top10()[4]->name)[0]->SL}}</h4>
+                                            <h4 class="mt-3 mb-1"><?php if(isset(top10()[4])){echo price(top10()[4]->name)[0]->SL;}?></h4>
                                             <span class="text-muted">Số lượng</span>
                                             <div class="w_description text-success">
                                                 <i class="zmdi zmdi-trending-up"></i>

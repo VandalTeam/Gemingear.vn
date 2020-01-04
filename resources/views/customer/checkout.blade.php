@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="http://gemingear.vn/">Trang chủ</a></li>
+                        <li><a href="http://doanweb1234.com/">Trang chủ</a></li>
                         <li>Thanh toán</li>
                     </ul>
                 </div>
@@ -160,7 +160,7 @@
                     @else
                     <div class="cart_submit" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                         <h3>Giỏ hàng của bạn trống</h3>
-                        <a href="http://gemingear.vn/">>> Mua ngay <<</a>
+                        <a href="http://doanweb1234.com/">>> Mua ngay <<</a>
                     </div>
                     @endif
                 </div>

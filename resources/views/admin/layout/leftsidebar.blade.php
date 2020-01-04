@@ -66,7 +66,6 @@
             $('.cl').click(function (e) { 
                 var userid=$(this).attr("value");
                 $$.post("app.Helpers.Helper.php", {suggest: userid},
-                    
                     "string"
                 );
             });

@@ -196,9 +196,9 @@
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">All Categories</option>
-                                        @foreach (Category() as $item)
+                                        {{-- @foreach (Category() as $item)
                                         <option value="{{$item->id}}">{{$item->name}}</option>
-                                        @endforeach
+                                        @endforeach --}}
                                     </select>
                                 </div>
                                 <div class="search_box">

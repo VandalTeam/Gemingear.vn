@@ -6,8 +6,8 @@
             <!--product details start-->
             <div class="product_details">
                 <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="main">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        {{-- <div class="main"> --}}
                             <?php $image = explode('&',$product->image);?>
                             <div class="slider slider-for">
                                 @foreach ($image as $item)
@@ -23,9 +23,9 @@
                                 @endforeach
                             </div>
                             @endif
-                        </div>
+                        {{-- </div> --}}
                     </div>
-                    <div class="col-lg-7 col-md-6">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="product_d_right">
                             <h3><b>{{$product->name}}</b></h3>
                             <div class="price_box">

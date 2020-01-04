@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12">
                     <form class="card auth_form" action="/signin" method="post">
-                        {{csrf_field()}}
+                        @csrf
                         <div class="header">
                             <img class="logo" src="{{asset('assets/admin/images/logo.svg')}}" alt="">
                             <h5>Log in</h5>

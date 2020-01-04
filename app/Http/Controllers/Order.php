@@ -17,6 +17,8 @@ class Order extends Controller
     }
     
     public function index($status=null,Request $res){
+
+
         if(isset($status))
         {
             $data = $this->model->getInfo(array('status' => $status, ))->toArray();
@@ -24,6 +26,7 @@ class Order extends Controller
             $data = $this->model->getInfo();
         }
         $number =  array_count_values(array_column($this->model->getInfo()->toArray(),'status'));
+
         if(isset($number[0])){
             $status_2 = $number[0];
         }else{
@@ -34,6 +37,11 @@ class Order extends Controller
         }else{
             $status_1 = 0;
         }
+        
+        // echo "<pre>";
+        // print_r ($data);
+        // echo "</pre>";
+        // die;
         $count = array('status_1'=>$status_1,'status_2'=>$status_2);
         return view('admin.order',['order'=>$data,'count'=>$count]);
     }

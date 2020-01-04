@@ -65,7 +65,7 @@ class Products extends Controller
         $data = $data + array(
             'image' => $img_link,
             'url' => '/products/'.to_slug($res['name']),
-            'description' => $this->parse_base64($res->description)
+            'description' => $this->parse_base64($res->description,$res)
         );
         status($res, $this->model->insertInfo($data));
         return redirect('admin/product');
@@ -106,6 +106,8 @@ class Products extends Controller
         foreach ($images as $k => $img) {
             $data = $img->getAttribute('src');
             if(strpos($data,'uploads')==false){
+                if(strlen($data)>10000)
+                {
                 list($type, $data) = explode(';', $data);
                 list(, $data)      = explode(',', $data);
                 $data = base64_decode($data);
@@ -114,6 +116,7 @@ class Products extends Controller
                 file_put_contents($path, $data);
                 $img->removeAttribute('src');
                 $img->setAttribute('src', $res->root().'/'.$image_name);
+                }
             }
         }
         return $dom->saveHTML();

@@ -78,10 +78,10 @@
             <div class="categories_product_inner">
                 <div class="single_categories_product">
                     <div class="categories_product_content">
-                        <h4><a href="/collections/may-bo-pc"> Máy Bộ PC</a></h4>
+                        <h4><a href="/collections/may-bo-gvn"> Máy Bộ PC</a></h4>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="/collections/may-bo-pc"><img class="category-img" style="height: 104px;"
+                        <a href="/collections/may-bo-gvn"><img class="category-img" style="height: 104px;"
                                 src="{{asset('assets/customer/img/s-product/category11.gif')}}" alt=""></a>
                     </div>
                 </div>

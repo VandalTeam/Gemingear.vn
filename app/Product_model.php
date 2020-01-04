@@ -58,12 +58,14 @@ class Product_model extends ModelSetting
                 return DB::table('product')->where('price', '>', $sub[1] * 1000000)
                 ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
                 ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category_url)
+                ->select('product.*')
                 ->get();
             } else {
                 return DB::table('product')->where('price', '>', $sub[1] * 1000000)->where('price', '<', $sub[\count($sub) - 1] * 1000000)
                 ->join('subcategory', 'subcategory.id', '=', 'product.subcategory_id')
                 ->join('category', 'category.id', '=', 'subcategory.category_id')->where('category.url', $category_url)
-                ->get();;
+                ->select('product.*')
+                ->get();
             }
         } else {
             return DB::table('product')

@@ -72,6 +72,7 @@ class Customer extends Controller
             'link' => $res->root().'/customer/update/'.$res->input('email'),
             'email' => $res->input('email'),
         );
+       
         if($this->users->save()){
             Mail::to($res->input('email'))->send(new SendMail('Xác nhận thông tin địa chỉ email tại Gemingear.vn',$message));
             return response()->json(['success'=>'Đăng ký thành công vui lòng kiểm tra email của bạn']);
@@ -83,7 +84,7 @@ class Customer extends Controller
     public function update($email){
         $where = array('email'=>$email);
         if($this->users->updateInfo($where,array('active'=>1))){
-            return redirect::to('http://gemingear.vn');
+            return redirect::to('http://doanweb1234.com/');
         }else{
             return redirect()->back();
         }

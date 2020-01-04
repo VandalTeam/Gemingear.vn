@@ -46,6 +46,7 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
+                                            <th>SHD</th>
                                             <th>Tên khách hàng</th>
                                             <th>Số điện thoại</th>
                                             <th>Địa điểm</th>
@@ -57,7 +58,8 @@
                                     <tbody class="notify-order">
                                         <?php $i=1?> @foreach ($order as $item)
                                         <tr>
-                                            <td>#BMHH19{{$i}}</td>
+                                            <td>{{$i}}</td>
+                                            <td>#BMHH19{{$item->id}}</td>
                                             <td>{{$item->name_customer}}</td>
                                             <td>{{$item->phone}}</td>
                                             <td>{{$item->address}}</td>
