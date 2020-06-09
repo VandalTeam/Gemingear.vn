@@ -90,7 +90,7 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
                         'name' => 'Võ Trung Hiếu',
                         'email' => '17520487@gm.uit.edu.vn',
                         'phone' => '+84 968540305',
-                        'img_link' => 'https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.0-9/p960x960/70906418_1350377618471842_1424057674697277440_o.jpg?_nc_cat=111&_nc_oc=AQnJ85Q1s7u_2J2f7NgnRXVAWmXOZyjbi97iPlmRZC2ydG_A8msjxC3T90uBtHLZeW4&_nc_ht=scontent.fsgn5-3.fna&oh=6d2907fe126a2c994cfe8b151fd28120&oe=5EA1281B',
+                        'img_link' => 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.0-1/p160x160/82241709_1464909500351986_2044917964955713536_n.jpg?_nc_cat=109&_nc_sid=dbb9e7&_nc_oc=AQlw_om-5sqdTwKHm2BK0HUsBJ6wDRNAdF03Va5Nhuk5aW5FmOu0aZ62fFM0Hk6pCl0&_nc_ht=scontent.fsgn5-6.fna&_nc_tp=6&oh=0c107b5261201b8ad552bdff28be6709&oe=5F0455D3',
                         'face_link' => 'https://www.facebook.com/tin.ho.52',
                         'ins_link' => 'https://www.instagram.com/hieuvo044/',
                         'tw_link' => 'https://twitter.com/VTrungH76654611',

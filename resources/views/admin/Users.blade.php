@@ -140,6 +140,7 @@
                     },
                     dataType: "json",
                     success: function(res) {
+                        console.log(res);
                         $(".tenDN").val(res[0].name);
                         $(".Email").val(res[0].email);
                         $(".role option[value="+res[0].role+"]").attr('selected','selected');

@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="http://gemingear.vn/">Trang chủ</a></li>
+                        <li><a href="http://127.0.0.1:8000/">Trang chủ</a></li>
                         <li>Thông tin</li>
                     </ul>
                 </div>

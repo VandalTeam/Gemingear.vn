@@ -16,7 +16,7 @@ class AuthMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()==true && Auth::user()->role == "admin" or Auth::user()->role == "nhanvien"){
+        if(Auth::check()==true){
             return $next($request);
         }else{
             $request->session()->flash('fail', 'Thất Bại');

@@ -51,7 +51,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-6">
                         <div class="logo">
-                            <a href="http://doanweb1234.com/"><img src="{{asset('assets/customer/img/logo/lg.png')}}"
+                            <a href="http://127.0.0.1:8000/"><img src="{{asset('assets/customer/img/logo/lg.png')}}"
                                     alt=""></a>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="http://doanweb1234.com/">Trang chủ</a></li>
+                        <li><a href="http://127.0.0.1:8000/">Trang chủ</a></li>
                         <li>Giỏ hàng</li>
                     </ul>
                 </div>
@@ -58,13 +58,13 @@
                             </div>
                             <div class="cart_submit" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                 {{-- <a href="http://gemingear.vn/"><button>Tiếp tục mua hàng</button></a> --}}
-                                <a href="http://doanweb1234.com/">Tiếp tục mua hàng</a>
+                                <a href="http://127.0.0.1:8000/">Tiếp tục mua hàng</a>
                                 <a href="/checkout">Thanh toán</a>
                             </div>
                             @else
                             <div class="cart_submit" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                 <h3>Giỏ hàng của bạn trống</h3>
-                                <a href="http://doanweb1234.com/">>> Mua ngay <<</a>
+                                <a href="http://127.0.0.1:8000/">>> Mua ngay <<</a>
                             </div>
                             @endif
                         </div>
