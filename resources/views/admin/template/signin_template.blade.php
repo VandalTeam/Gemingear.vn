@@ -51,8 +51,12 @@
                                 <input id="remember_me" type="checkbox">
                                 <label for="remember_me">Remember Me</label>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block waves-effect waves-light dn">SIGN
-                                IN</button>
+                            <button type="submit" class="btn btn-primary btn-block waves-effect waves-light dn">SIGNIN</button>
+                            <div class="signin_with mt-3">
+                                <p class="mb-0">or Sign Up using</p>
+                                <a href="auth/facebook"class="btn btn-primary btn-icon btn-icon-mini btn-round facebook"><i class="zmdi zmdi-facebook"></i></a>
+                                <a href="auth/google" class="btn btn-primary btn-icon btn-icon-mini btn-round google"><i class="zmdi zmdi-google-plus"></i></a>
+                            </div>
                         </div>
                     </form>
                 </div>
