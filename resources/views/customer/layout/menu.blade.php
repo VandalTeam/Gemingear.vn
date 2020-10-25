@@ -13,8 +13,6 @@
                     <div class="col-lg-12 col-md-7">
                         <div class="header_top_settings text-right main_menu menu_position">
                             <ul>
-                                <li><a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a></li>
-                                <li><a href="#"><i class="fas fa-bell"></i>Thông báo</a></li>
                                 @if (isset(getUser()->name))
                                 <a href="/user/account/profile">
                                     <li>

@@ -1,0 +1,16 @@
+[2020-06-15 16:29:19] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"userId":2,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at D:\\Back-End\\Laravel\\Đồ án Web\\Gemingear.vn\\app\\Http\\Middleware\\AuthMiddleware.php:21)
+[stacktrace]
+#0 {main}
+"} 
+[2020-06-15 16:29:29] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"userId":2,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at D:\\Back-End\\Laravel\\Đồ án Web\\Gemingear.vn\\app\\Http\\Middleware\\AuthMiddleware.php:21)
+[stacktrace]
+#0 {main}
+"} 
+[2020-06-15 16:29:38] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"userId":2,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at D:\\Back-End\\Laravel\\Đồ án Web\\Gemingear.vn\\app\\Http\\Middleware\\AuthMiddleware.php:21)
+[stacktrace]
+#0 {main}
+"} 
+[2020-06-15 16:29:51] local.ERROR: Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) {"userId":2,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) at D:\\Back-End\\Laravel\\Đồ án Web\\Gemingear.vn\\app\\Http\\Middleware\\AuthMiddleware.php:21)
+[stacktrace]
+#0 {main}
+"} 
